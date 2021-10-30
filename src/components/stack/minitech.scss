@@ -1,0 +1,25 @@
+.techContainer__minitech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .minitech__imgContainer {
+        background: #F7F9FB;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &>.minitech__title {
+        margin-top: 10px;
+        max-width: 150px;
+        text-align: center;
+        line-height: 20px;
+
+    }
+}
