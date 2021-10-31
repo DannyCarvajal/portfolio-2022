@@ -1,25 +1,3 @@
-import PuzzleItem from "./components/techItem";
-import {useState, useRef} from "react";
-import "./slidepuzzle.scss";
-
-function App() {
-	const {puzzleGenerator} = usePuzzleGenerator();
-	const initialItems = puzzleGenerator();
-
-	const [puzzleItems, setPuzzleItems] = useState(initialItems);
-	const listOfItems = useRef(initialItems);
-
-	return (
-		<div className="puzzleContainer">
-			{puzzleItems.map(item => {
-				return <PuzzleItem item={item} key={item} listOfItems={listOfItems.current} />;
-			})}
-		</div>
-	);
-}
-
-export default App;
-
 const usePuzzleGenerator = () => {
 	const solution = [
 		["html", 1],
@@ -68,3 +46,5 @@ const usePuzzleGenerator = () => {
 
 	return {puzzleGenerator};
 };
+
+export default usePuzzleGenerator;

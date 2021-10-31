@@ -1,4 +1,4 @@
-import "./tech.scss";
+import "./techCard.scss";
 
 const tech = ({techName, description, imgSize}) => {
 	const Image = () => {

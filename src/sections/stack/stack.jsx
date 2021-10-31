@@ -1,9 +1,12 @@
-import Tech from "../../components/stack/tech";
-import Minitech from "../../components/stack/minitech";
-import SecretWord from "../../components/global/secretword";
+import {useState} from "react";
+import Tech from "../../components/stack/techCard.jsx";
+import Minitech from "../../components/stack/techCircleCard.jsx";
+import SecretWord from "../../components/global/secretword.jsx";
 import "./stack.scss";
 
 const stack = () => {
+	const [slidePuzzleSolved, setslidePuzzleSolved] = useState(false);
+
 	const technologies = [
 		{
 			name: "html",

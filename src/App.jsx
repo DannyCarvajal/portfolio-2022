@@ -1,4 +1,4 @@
-import Stack from "./pages/stack/stack";
+import Stack from "./sections/stack/stack.jsx";
 
 function App() {
 	return (

@@ -1,4 +1,4 @@
-import "./minitech.scss";
+import "./techCircleCard.scss";
 
 const minitech = ({techName}) => {
 	return (

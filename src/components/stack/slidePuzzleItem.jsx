@@ -1,4 +1,4 @@
-import "./slideitem.scss";
+import "./slidePuzzleItem.scss";
 import useSlidePuzzle from "../hooks/slidePuzzle";
 
 const PuzzleItem = ({item, listOfItems}) => {
