@@ -1,89 +1,72 @@
 import {useState} from "react";
-import Tech from "../../components/stack/techCard.jsx";
-import Minitech from "../../components/stack/techCircleCard.jsx";
+import {technologies, additionalTechnologies} from "./listOfTechnologies.js";
+import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
+import SlidePuzzle from "../../components/stack/slidePuzzle.jsx";
+import TechCard from "../../components/stack/techCard.jsx";
+import TechCircle from "../../components/stack/techCircleCard.jsx";
 import SecretWord from "../../components/global/secretword.jsx";
+import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
+import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
 import "./stack.scss";
 
-const stack = () => {
-	const [slidePuzzleSolved, setslidePuzzleSolved] = useState(false);
+const Stack = () => {
+	// PUZZLE INITIALIZATION
+	const {newPuzzleCombination, solution} = slidePuzzleGenerator();
+	const [initialPuzzleOrder, setInitialPuzzleOrder] = useState(newPuzzleCombination());
+	const [currentOrder, setCurrentOrder] = useState(newPuzzleCombination());
+	// IS PUZZLE SOLVED?
+	const [isSlidePuzzleSolved, setIsSlidePuzzleSolved] = useState(false);
 
-	const technologies = [
-		{
-			name: "html",
-			description: `The building block, 
-			the first thing that you 
-			learnt about web 
-			development`,
-			size: "normal",
-		},
-		{
-			name: "css",
-			description: `Need some makeup
-			and some cool animations? 
-			yes sir...`,
-			size: "normal",
-		},
-		{
-			name: "javascript",
-			description: `The cousin of Java and
-			the minor genius brother of
-			TypeScript`,
-			size: "medium",
-		},
-		{
-			name: "sass",
-			description: `Css’s mother. Keeping 
-			things clean and 
-			organized. She knows
-			you'll say thanks in the
-			future`,
-			size: "medium",
-		},
-		{
-			name: "git",
-			description: `The reason why you
-			looked silly when you
-			first upload your code
-			to google drive`,
-			size: "normal",
-		},
-		{
-			name: "react",
-			description: `Everything before packaged and tied up, with some instant magic inside`,
-			size: "normal",
-		},
-	];
+	// ADITTIONAL FUNCTIONS
+	const {useScreenSize, fadeOutElement} = slidePuzzleAdditionals(setIsSlidePuzzleSolved);
+	const [isTabletOrDesktop] = useScreenSize();
 
-	const additionalTechnologies = [
-		{
-			name: "figma",
-		},
-		{
-			name: "concept design",
-		},
-		{
-			name: "rdb",
-		},
-	];
+	// INTERACTIVE FUNCTIONS
+	const mixPuzzleAgain = () => {};
 
-	return (
-		<section className="technologiesSection">
-			<header>
-				<h2 className="technologiesSection__title">Technologies</h2>
-			</header>
-			<div className="technologiesSection__techContainer">
-				{technologies.map(({name, description, size}) => {
-					return <Tech key={name} techName={name} description={description} imgSize={size} />;
-				})}
-			</div>
-			<div className="technologiesSection__minitechContainer">
-				{additionalTechnologies.map(({name}) => {
-					return <Minitech key={name} techName={name} />;
-				})}
-			</div>
-			<SecretWord secretLetter="t" />
-		</section>
-	);
+	if (isTabletOrDesktop && !isSlidePuzzleSolved) {
+		return (
+			<section className="technologiesSection">
+				<header>
+					<h2 className="technologiesSection__title">Technologies</h2>
+				</header>
+				<p className="technologiesSection__description">
+					Your <b>stack</b> components <br />
+					are the pieces in your <b>game</b>
+				</p>
+				<img src="img/chessbg.svg" alt="chessbg" className="technologiesSection__chessbg" />
+				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} solution={solution} setCurrentOrder={setCurrentOrder} />
+
+				<div className="technologiesSection__interactionContainer">
+					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} imgName="queen" keyWord="" />
+					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
+				</div>
+				<SecretWord secretLetter="" />
+			</section>
+		);
+	} else {
+		return (
+			<section className="technologiesSection">
+				<header>
+					<h2 className="technologiesSection__title">Technologies</h2>
+				</header>
+				<div className="technologiesSection__techContainer">
+					{technologies.map(({name, description, size}) => {
+						return <TechCard key={name} techName={name} description={description} imgSize={size} />;
+					})}
+				</div>
+				<div className="technologiesSection__techCircleContainer">
+					{additionalTechnologies.map(({name}) => {
+						return <TechCircle key={name} techName={name} />;
+					})}
+				</div>
+				<div className="technologiesSection__interactionContainer">
+					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
+				</div>
+				<SecretWord secretLetter="t" />
+			</section>
+		);
+	}
 };
 
-export default stack;
+export default Stack;

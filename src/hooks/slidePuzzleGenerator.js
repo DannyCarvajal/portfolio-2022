@@ -1,50 +1,38 @@
-const usePuzzleGenerator = () => {
-	const solution = [
-		["html", 1],
-		["css", 2],
-		["javascript", 3],
-		["sass", 4],
-		["git", 5],
-		["figma", 6],
-		["react", 7],
-		["daniel", 8],
-		["blank", null],
-	];
+const puzzleGenerator = () => {
+	const solution = ["html", "css", "javascript", "sass", "git", "figma", "react", "daniel", "blank"];
 
-	const puzzleGenerator = () => {
-		let puzzleItems;
+	const newPuzzleCombination = () => {
+		let shuffledArray;
 		do {
-			puzzleItems = [];
-			while (puzzleItems.length < solution.length - 1) {
+			shuffledArray = [];
+			while (shuffledArray.length < solution.length - 1) {
 				const random = Math.floor(Math.random() * solution.length);
-				if (!puzzleItems.includes(solution[random][0]) && solution[random][0] !== "blank") {
-					puzzleItems.push(solution[random][0]);
+				if (!shuffledArray.includes(solution[random]) && solution[random] !== "blank") {
+					shuffledArray.push(solution[random]);
 				}
 			}
-			puzzleItems.push("blank");
-		} while (!isSlidePuzzleSolvable(puzzleItems));
+			shuffledArray.push("blank");
+		} while (!isSlidePuzzleSolvable(shuffledArray));
 
-		return puzzleItems;
+		return shuffledArray;
 	};
 
-	// CHECK IF SLIDE PUZZLE IS SOLVABLE
-	function isSlidePuzzleSolvable(arrayOfItems) {
-		const arrayOfPositions = arrayOfItems.map(item => {
-			return solution.filter(s => s[0] === item)[0][1];
-		});
-
+	function isSlidePuzzleSolvable(shuffledArray) {
+		const arrayOfPositions = shuffledArray.map(item => solution.indexOf(item));
 		let inversionCount = arrayOfPositions.reduce((acc, curr, index) => {
 			for (let i = index; i < arrayOfPositions.length; i++) {
-				if (arrayOfPositions[i] !== null && arrayOfPositions[i] < curr) {
+				// BLANK ELEMENT SHOULD NOT BE COUNTED
+				if (curr !== "8" && arrayOfPositions[i] < curr) {
 					acc++;
 				}
 			}
 			return acc;
 		}, 0);
+		// EVEN NUMBER OF INVERSIONS MEANS THE PUZZLE IS NOT SOLVABLE
 		return inversionCount % 2 === 0;
 	}
 
-	return {puzzleGenerator};
+	return {newPuzzleCombination, solution};
 };
 
-export default usePuzzleGenerator;
+export default puzzleGenerator;

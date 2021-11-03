@@ -1,8 +1,15 @@
-.puzzleContainer {
-  width: 600px;
-  height: 600px;
-  border-radius: 25px;
-  background-color: gainsboro;
+$CONTAINERSIZE:450px;
+
+.slidePuzzleContainer {
+  padding: 20px;
+  margin: 0 auto;
+  width: $CONTAINERSIZE;
+  height: $CONTAINERSIZE;
+  background: rgba(115, 157, 183, 0.4);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   position: relative;
 }

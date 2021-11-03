@@ -1,0 +1,26 @@
+$CONTAINERWIDTH:450px;
+$PADDING : 40px;
+$EXTRASPACE : 4px;
+
+
+.slideItemBg {
+    width: calc(($CONTAINERWIDTH - $PADDING) /3 - $EXTRASPACE);
+    height: calc(($CONTAINERWIDTH - $PADDING) /3 - $EXTRASPACE);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+    & img {
+        opacity: 0.8;
+    }
+
+    &__title {
+        text-align: center;
+        color: white;
+    }
+
+    &.hide {
+        opacity: 0
+    }
+}

@@ -3,16 +3,17 @@
 
     &__title {
         font-size: 1.7rem;
-        margin: 40px 20px;
+        margin: 30px 30px;
     }
 
+    // TECH CARDS
     &__techContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    &__minitechContainer {
+    &__techCircleContainer {
         margin: 0 auto;
         padding-bottom: 100px;
         width: 80vw;
@@ -21,14 +22,38 @@
         justify-content: space-evenly;
         gap: 20px;
     }
+
+    // SLIDE PUZZLE
+    &--solved {
+        animation: 2.5s ease-in-out 0s forwards slidePuzzle;
+    }
+
+    @keyframes slidePuzzle {
+        0% {
+            opacity: 1
+        }
+
+        50% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 100
+        }
+    }
+
 }
 
 
 @media (min-width:700px) {
 
     /* tablet, landscape iPad */
-    .technologiesSection {
 
+    .technologiesSection {
+        min-height: 80vh;
+
+
+        // TECH CARDS
         &__techContainer {
             flex-direction: row;
             flex-wrap: wrap;
@@ -38,8 +63,27 @@
 
         }
 
-        &__minitechContainer {
+        &__techCircleContainer {
             padding-bottom: 0px;
+        }
+
+        // SLIDE PUZZLE
+        &__description {
+            display: none
+        }
+
+        &__chessbg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        &__interactionContainer {
+            display: none;
         }
     }
 
@@ -49,10 +93,34 @@
 
     /* big landscape tablets, laptops, and desktops */
     .technologiesSection {
+        min-height: 90vh;
+
 
         &__title {
             font-size: 2rem;
         }
+
+        &__description {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 300;
+            position: absolute;
+            top: 40px;
+            right: 25px;
+        }
+
+        &__interactionContainer {
+            display: block;
+            position: absolute;
+            right: 25px;
+            bottom: 50px;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
     }
 
 

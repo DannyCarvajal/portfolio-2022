@@ -1,0 +1,61 @@
+.personalData {
+
+    width: 100%;
+
+    &__message {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 200;
+        color: white;
+        line-height: 40px
+    }
+
+    &__role {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background: linear-gradient(90.09deg, rgba(53, 56, 65, 0.7) -3.61%, rgba(80, 133, 165, 0.7) 111.08%);
+        color: white;
+
+        & h3 {
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+
+
+    &__contact {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+    }
+}
+
+@media (min-width:1100px) {
+
+    /* tablet, landscape iPad */
+    .personalData {
+
+        width: 45%;
+
+        &__message {
+            text-align: left;
+        }
+
+        &__role {
+            justify-content: flex-start;
+        }
+
+
+        &__contact {
+            justify-content: flex-start;
+        }
+    }
+
+
+
+}

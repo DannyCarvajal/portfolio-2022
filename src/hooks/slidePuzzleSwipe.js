@@ -1,12 +1,14 @@
-const useSlidePuzzle = listOfItems => {
+import additionalSlideFunc from "./slidePuzzleAdditionals";
+
+const useSlidePuzzle = (puzzleOrder, setIsSlidePuzzleSolved, setCurrentOrder) => {
+	const DIMENSIONS_SLIDE_ITEM = (450 - 40) / 3; /* CONTAINERWIDTH - PADDING / ITEMS PER ROW */
+	const CONTAINERPADDING = 40 / 2;
 	const itemHandler = e => {
-		let item = e.target.id;
-		// CHECK IF ELEMENT CAN MOVE
-		let [allowedMove] = checkIfAllowedMovement(item);
+		let itemName = e.target.id;
+		let [allowedMove] = checkIfAllowedMovement(itemName);
 		// IF A MOVE IS ALLOWED SWIPE THE ELEMENTS
 		if (allowedMove === 0 || allowedMove) {
-			slideItem(e.target, item, allowedMove);
-			// CHECK IF THE GAME IS FINISHED
+			slideItem(e.target, itemName, allowedMove);
 			checkCompleted();
 		}
 	};
@@ -15,7 +17,7 @@ const useSlidePuzzle = listOfItems => {
 		let [line, position] = positionOfElelement(item);
 		let possibleIndexes = [];
 
-		// CHECK UP DOWN LEFT AND RIGHT AND CHECK IF ELEMENT EXISTS
+		// CHECK UP DOWN LEFT AND RIGHT FOR ALLOWED MOVEMENT
 		if (position + 1 <= 2) {
 			possibleIndexes.push(lineAndPositionToIndex(line, position + 1));
 		}
@@ -33,33 +35,32 @@ const useSlidePuzzle = listOfItems => {
 		}
 
 		// CHECK IF POSSIBLE INDEXES ARE EQUALS TO BLANK SPACE
-		return possibleIndexes.filter(index => listOfItems[index] === "blank");
+		return possibleIndexes.filter(index => puzzleOrder[index] === "blank");
 	};
 
 	const positionOfElelement = item => {
-		let line = Math.floor(listOfItems.indexOf(item) / 3);
-		let position = listOfItems.indexOf(item) % 3;
-		return [line, position, 200 * line, 200 * position];
+		let line = Math.floor(puzzleOrder.indexOf(item) / 3);
+		let position = puzzleOrder.indexOf(item) % 3;
+		return [line, position, DIMENSIONS_SLIDE_ITEM * line + CONTAINERPADDING, DIMENSIONS_SLIDE_ITEM * position + CONTAINERPADDING];
 	};
 
 	const lineAndPositionToIndex = (line, position) => line * 3 + position;
 
 	const slideItem = (itemElement, item, indexBlank) => {
-		let indexItem = listOfItems.indexOf(item);
+		let indexItem = puzzleOrder.indexOf(item);
 		const blankElement = document.getElementsByClassName("emptyElement")[0];
-		// MOVE THE ITEMS WITH TRANSITION FOR BETTER PERFORMANCE
+		// MOVE THE ITEMS WITH TRANSITION ANIMATION FOR BETTER PERFORMANCE
 		let [, , top, left] = positionOfElelement(item);
 		let [elementTranslation, blankTranslation] = translationMovement([top, left], [+blankElement.style.top.slice(0, -2), +blankElement.style.left.slice(0, -2)]);
 		itemElement.style.transform = elementTranslation;
 		blankElement.style.transform = blankTranslation;
 
 		// SWIPE THE ITEMS IN THE USEREF
-		let swipedArray = listOfItems;
+		let swipedArray = puzzleOrder;
 		swipedArray[indexBlank] = swipedArray.splice(indexItem, 1, "blank")[0];
-		listOfItems = swipedArray;
-		console.log(listOfItems);
+		setCurrentOrder(swipedArray);
 
-		// UPDATE TOP AND LEFT OF ITEMS MOVED
+		// UPDATE TOP AND LEFT OF ITEMS MOVED AND RESTART TRANSFORM ANIMATION
 		const [, , topElement, leftElement] = positionOfElelement(item);
 		itemElement.style.transform = "";
 		itemElement.style.top = topElement + "px";
@@ -71,25 +72,27 @@ const useSlidePuzzle = listOfItems => {
 	};
 	const translationMovement = ([currentTop, currentLeft], [newTop, newLeft]) => {
 		if (currentTop === newTop) {
+			// IF MOVEMENT IS HORIZONTAL
 			return [`translate(${newLeft - currentLeft}px)`, `translate(${currentLeft - newLeft}px)`];
 		} else {
+			// IF MOVEMENT IS VERTICAL
 			return [`translate(0,${newTop - currentTop}px)`, `translate(0,${currentTop - newTop}px)`];
 		}
 	};
 
 	const checkCompleted = () => {
 		let slideAnswer = ["html", "css", "javascript", "sass", "git", "figma", "react", "daniel", "blank"];
-		console.log("cheking...");
+		let {fadeOutElement} = additionalSlideFunc(setIsSlidePuzzleSolved);
 
 		// CHECK IF THE TWO ARRAYS ARE EQUALS
-		if (listOfItems.join("") === slideAnswer.join("")) {
+		if (puzzleOrder.join("") === slideAnswer.join("")) {
 			setTimeout(() => {
-				alert("You win!");
+				fadeOutElement(true);
 			}, 1000);
 		}
 	};
 
-	return {itemHandler, positionOfElelement, checkCompleted};
+	return {itemHandler, positionOfElelement};
 };
 
 export default useSlidePuzzle;

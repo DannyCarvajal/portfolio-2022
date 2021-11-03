@@ -1,22 +1,19 @@
-import {useState, useRef} from "react";
-import PuzzleItem from "./components/techItem";
-import usePuzzleGenerator from "../../hooks/slidePuzzleGenerator";
+import PuzzleItem from "./slidePuzzleItem.jsx";
+import SlideItemBg from "./slideItemBg.jsx";
 import "./slidePuzzle.scss";
 
-const slidePuzzle = () => {
-	const {puzzleGenerator} = usePuzzleGenerator();
-	const initialItems = puzzleGenerator();
-
-	const [puzzleItems, setPuzzleItems] = useState(initialItems);
-	const listOfItems = useRef(initialItems);
-
+const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrentOrder}) => {
 	return (
-		<div className="puzzleContainer">
-			{puzzleItems.map(item => {
-				return <PuzzleItem item={item} key={item} listOfItems={listOfItems.current} />;
+		<div className="slidePuzzleContainer">
+			{solution.map(item => {
+				return <SlideItemBg key={item + "bg"} item={item} />;
+			})}
+
+			{currentOrder.map(item => {
+				return <PuzzleItem item={item} puzzleOrder={currentOrder} setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} key={item} setCurrentOrder={setCurrentOrder} />;
 			})}
 		</div>
 	);
 };
 
-export default slidePuzzle;
+export default SlidePuzzle;
