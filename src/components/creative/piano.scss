@@ -9,6 +9,18 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        margin: 0 0.5px;
+
+        .c {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .b {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+        }
     }
 
 

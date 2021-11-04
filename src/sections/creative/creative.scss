@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
 
     // DESCRIPTION
 
@@ -14,8 +15,9 @@
         width: 100vw;
         margin-top: 30px;
         height: 100%;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: linear-gradient(268.54deg, #FFFFFF 2.16%, rgba(255, 255, 255, 0.4) 108.67%);
 
         .descContainer__desc {
@@ -47,6 +49,12 @@
             font-weight: 500;
         }
 
+
+        .behance__arrow {
+            display: none;
+        }
+
+
     }
 
     // PIANO
@@ -54,12 +62,14 @@
         padding-bottom: 30px;
         opacity: 0.7;
 
+
+
     }
 
     .whiteKey {
         width: 40px;
         height: 200px;
-        border: 1px solid #C5BEBE;
+        border: 0.5px solid #e2dcdc;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
 
@@ -94,6 +104,64 @@
             top: 0;
             left: 227px;
         }
+
+
+    }
+
+}
+
+
+@media (min-width:1100px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .creativeSection {
+        min-height: 100vh;
+        background: linear-gradient(108.32deg, #E4B7F3 0.93%, #988EBD 54.81%, #66769A 81.51%, #669796 99.27%);
+        opacity: 1;
+
+        // DESCRIPTION
+        &__descContainer {
+
+            .descContainer__desc {
+                margin-left: 40%;
+                max-width: 40vw;
+            }
+        }
+
+        // BEHANCE CONTACT
+
+        &__behance {
+            width: 400px;
+            position: absolute;
+            top: 40%;
+            right: 10px;
+
+            & a {
+                position: relative;
+                bottom: -100px;
+            }
+
+            & .behance__arrow {
+                display: block;
+                position: absolute;
+                right: 45px;
+                top: 30px;
+                transform: rotate(-10deg);
+            }
+
+        }
+
+
+        // PIANO
+        .piano {
+            padding-bottom: 0px;
+            transform: scale(1.9) rotate(22deg) translateY(100px) translateX(-10px);
+            opacity: 1;
+            box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.781);
+            ;
+
+        }
+
 
 
     }

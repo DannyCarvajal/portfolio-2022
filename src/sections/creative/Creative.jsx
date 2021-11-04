@@ -11,6 +11,7 @@ const Creative = () => {
 			</div>
 			<div className="creativeSection__behance">
 				<h2 className="behance__desc">Check out my behance</h2>
+				<img src="img/behancearrow.png" alt="arrow" className="behance__arrow" />
 				<a href="https://www.behance.net/oliver-daniel" target="_blank" rel="noreferrer">
 					<img src="img/behancecontact.png" alt="behance" className="behance__contactimg" />
 				</a>

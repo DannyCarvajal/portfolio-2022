@@ -21,7 +21,7 @@
         display: flex;
         justify-content: space-evenly;
         padding-bottom: 240px;
-
+        position: relative;
     }
 
     &__decorationLine {
@@ -42,6 +42,13 @@
         transition: 1s ease-in-out;
         transform: rotate(360deg);
     }
+
+    // HAND INDICATOR
+    .clickIndication {
+        bottom: 90px;
+        right: 125px;
+        pointer-events: none;
+    }
 }
 
 
@@ -50,12 +57,6 @@
     /* tablet, landscape iPad */
     .logicSection {
         min-height: 90vh;
-
-
-        &__puzzleContainer {
-            padding-bottom: 150px;
-
-        }
     }
 
 }
@@ -92,6 +93,12 @@
         .colorItem {
             width: 60px;
             height: 60px;
+        }
+
+        // HAND INDICATOR
+        .clickIndication {
+            left: -130px;
+            bottom: -110px;
         }
 
 

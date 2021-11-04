@@ -14,6 +14,10 @@ const Rubik = ({colorArray, index, isRubikSolved, setIsRubikSolved, solution, ru
 	};
 
 	const positionHandler = () => setCurrentPosition(currentPosition + 1);
+	const hideHandIndicator = () => {
+		const handIndicator = document.querySelector(".clickIndication");
+		handIndicator.classList.add("hideAnimation");
+	};
 
 	useEffect(() => {
 		const newStatus = [...isRubikSolved];
@@ -31,7 +35,13 @@ const Rubik = ({colorArray, index, isRubikSolved, setIsRubikSolved, solution, ru
 				<div className={`${rubikItemClass} ${colorHandler(currentPosition + 0)}`}></div>
 				<div className={`${rubikItemClass} ${colorHandler(currentPosition + 1)}`}></div>
 				<div className={`${rubikItemClass} ${colorHandler(currentPosition + 2)}`}></div>
-				<button className="rubikscta" onClick={positionHandler}></button>
+				<button
+					className="rubikscta"
+					onClick={() => {
+						positionHandler();
+						hideHandIndicator();
+					}}
+				></button>
 			</div>
 		</>
 	);

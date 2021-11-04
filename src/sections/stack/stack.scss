@@ -50,6 +50,12 @@
         display: none;
     }
 
+    // HAND INDICATOR
+
+    .slideIndicator {
+        display: none;
+    }
+
 }
 
 
@@ -91,6 +97,8 @@
             z-index: -1;
         }
 
+
+
     }
 
 }
@@ -131,5 +139,6 @@
             top: 40px;
             right: 25px;
         }
+
     }
 }

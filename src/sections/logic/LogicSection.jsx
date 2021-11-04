@@ -1,6 +1,7 @@
 import {useEffect, useState, useRef} from "react";
 import Rubik from "../../components/rubiks/rubik";
 import SecretWord from "../../components/global/secretword";
+import ClickIndication from "../../components/global/clickIndication";
 import "./logicSection.scss";
 
 const Logic = () => {
@@ -30,6 +31,7 @@ const Logic = () => {
 				{columnColors.map((column, index) => (
 					<Rubik colorArray={columnColors[index]} index={index} isRubikSolved={isRubikSolved} setIsRubikSolved={setIsRubikSolved} solution={solutions[index]} rubikItemClass="colorItem" key={column.join("")} />
 				))}
+				<ClickIndication message="Try pressing something.." containerClass="logicIndicator" />
 			</div>
 			<SecretWord secretLetter={checkIfSolved() === true ? "m" : ""} bgcolor="#353841" letterColor="white" />
 		</div>

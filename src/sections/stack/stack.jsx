@@ -7,6 +7,7 @@ import TechCircle from "../../components/stack/techCircleCard.jsx";
 import SecretWord from "../../components/global/secretword.jsx";
 import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
 import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
+import ClickIndication from "../../components/global/clickIndication.jsx";
 import "./stack.scss";
 
 const Stack = () => {
@@ -41,6 +42,7 @@ const Stack = () => {
 					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} imgName="queen" keyWord="" />
 					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
 				</div>
+				<ClickIndication message="Click to slide" containerClass="slideIndicator" />
 				<SecretWord secretLetter="" />
 			</section>
 		);

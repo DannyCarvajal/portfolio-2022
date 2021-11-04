@@ -31,9 +31,11 @@ const Piano = () => {
 
 	return (
 		<div className="piano">
+			<PianoElements octave={2} />
 			<PianoElements octave={3} />
 			<PianoElements octave={4} />
 			<PianoElements octave={5} />
+			<PianoElements octave={6} />
 		</div>
 	);
 };
