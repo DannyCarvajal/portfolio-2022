@@ -1,0 +1,100 @@
+.logicSection {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__story {
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+        width: 90vw;
+        margin-top: 120px;
+    }
+
+    &__puzzleContainer {
+        width: 400px;
+        height: fit-content;
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 240px;
+
+    }
+
+    &__decorationLine {
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    // RUBIKS PUZZLE
+    .colorItem {
+        width: 60px;
+        height: 60px;
+        opacity: 0.8;
+        border-radius: 15px;
+    }
+
+    .solvedAnimation {
+        transition: 1s ease-in-out;
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (min-width:700px) {
+
+    /* tablet, landscape iPad */
+    .logicSection {
+        min-height: 90vh;
+
+
+        &__puzzleContainer {
+            padding-bottom: 150px;
+
+        }
+    }
+
+}
+
+
+@media (min-width:1100px) {
+
+    /* tablet, landscape iPad */
+    .logicSection {
+        min-height: 100vh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__story {
+            max-width: 50vw;
+            margin: 0 auto;
+        }
+
+        &__decorationLine {
+            position: absolute;
+            top: 150px;
+            left: 0;
+        }
+
+
+
+        &__puzzleContainer {
+            padding: 40px;
+            margin-right: 50px;
+        }
+
+        // RUBIKS PUZZLE
+        .colorItem {
+            width: 60px;
+            height: 60px;
+        }
+
+
+    }
+
+}

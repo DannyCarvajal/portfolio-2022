@@ -42,6 +42,14 @@
         }
     }
 
+    &__interactionContainer {
+        display: none;
+    }
+
+    &__chessbg {
+        display: none;
+    }
+
 }
 
 
@@ -73,6 +81,7 @@
         }
 
         &__chessbg {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -82,11 +91,25 @@
             z-index: -1;
         }
 
-        &__interactionContainer {
-            display: none;
-        }
     }
 
+}
+
+@media (min-width: 950px) {
+    .technologiesSection {
+
+        &__interactionContainer {
+            display: block;
+            position: absolute;
+            right: 25px;
+            bottom: 50px;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+    }
 }
 
 @media (min-width:1100px) {
@@ -108,20 +131,5 @@
             top: 40px;
             right: 25px;
         }
-
-        &__interactionContainer {
-            display: block;
-            position: absolute;
-            right: 25px;
-            bottom: 50px;
-            width: 220px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-
-
     }
-
-
 }

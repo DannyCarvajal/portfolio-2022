@@ -1,9 +1,11 @@
 import "./secretword.scss";
 
-const secretword = ({secretLetter}) => {
+const secretword = ({secretLetter, bgcolor, letterColor}) => {
 	return (
-		<div className="secretWord">
-			<p className="secretWord__vowel">{secretLetter}</p>
+		<div className="secretWord" style={{background: bgcolor}}>
+			<p className="secretWord__vowel" style={{color: letterColor}}>
+				{secretLetter}
+			</p>
 		</div>
 	);
 };

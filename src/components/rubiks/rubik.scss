@@ -1,0 +1,32 @@
+.rubiksColumn {
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    .b {
+        background-color: #5085A5
+    }
+
+    .g {
+        background-color: #50A568;
+        ;
+    }
+
+
+
+    .rubikscta {
+        position: absolute;
+        bottom: -100px;
+        width: 55px;
+        border: none;
+        height: 55px;
+        opacity: 0.8;
+        border-radius: 15px;
+        background-color: #8FC1E3;
+
+    }
+}

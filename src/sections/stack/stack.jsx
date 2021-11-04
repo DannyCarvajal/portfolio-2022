@@ -63,7 +63,7 @@ const Stack = () => {
 				<div className="technologiesSection__interactionContainer">
 					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
 				</div>
-				<SecretWord secretLetter="t" />
+				<SecretWord secretLetter="t" bgcolor="#353841" letterColor="white" />
 			</section>
 		);
 	}
