@@ -31,11 +31,11 @@ const Piano = ({pianoGuess}) => {
 
 	return (
 		<div className="piano">
-			<PianoElements octave={2} />
+			{/* <PianoElements octave={2} /> */}
 			<PianoElements octave={3} />
 			<PianoElements octave={4} />
 			<PianoElements octave={5} />
-			<PianoElements octave={6} />
+			{/* <PianoElements octave={6} /> */}
 		</div>
 	);
 };

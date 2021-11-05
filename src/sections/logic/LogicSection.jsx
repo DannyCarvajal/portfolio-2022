@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from "react";
+import {useEffect, useState} from "react";
 import Rubik from "../../components/rubiks/rubik";
 import SecretWord from "../../components/global/secretword";
 import ClickIndication from "../../components/global/clickIndication";
