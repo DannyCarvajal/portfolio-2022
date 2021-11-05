@@ -82,7 +82,7 @@ const Creative = () => {
 				<h2 className="behance__desc">Check out my behance</h2>
 				<img src="img/behancearrow.png" alt="arrow" className="behance__arrow" />
 				<a href="https://www.behance.net/oliver-daniel" target="_blank" rel="noreferrer">
-					<img src="/img/behancecontact.png" alt="behance" className="behance__contactimg" />
+					<img src="img/behancecontanct.png" alt="behance" className="behance__contactimg" />
 				</a>
 			</div>
 			<div className="pianoGame">
@@ -91,7 +91,7 @@ const Creative = () => {
 					<img src="img/playbutton.png" alt="play" className="play" onClick={playPianoHandler} />
 					<p className="levels">{level}/3</p>
 				</div>
-				<img src="images/behancecontanct.png" alt="arrow" className="play__arrow" />
+				<img src="img/playarrow.png" alt="arrow" className="play__arrow" />
 			</div>
 			<Piano pianoGuess={pianoKeyHandler} />
 		</div>

@@ -1,5 +1,4 @@
 import "./clickIndication.scss";
-import React from "react";
 
 const ClickIndication = ({message, containerClass}) => {
 	return (
