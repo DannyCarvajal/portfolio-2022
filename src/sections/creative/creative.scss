@@ -61,24 +61,45 @@
     .piano {
         padding-bottom: 30px;
         opacity: 0.7;
-
-
-
     }
 
     .whiteKey {
         width: 40px;
-        height: 200px;
-        border: 0.5px solid #e2dcdc;
+        height: 180px;
+        border: 0.1px solid #e2dcdc4b;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background: #6c768b4b;
+        }
+
+        &:active {
+            background: #6c768b4b;
+        }
+
+        &.active {
+            background: #6c768b4b;
+        }
 
     }
 
     .blackKey {
+        cursor: pointer;
         position: absolute;
         width: 30px;
-        height: 105px;
+        height: 100px;
+
+        &:hover {
+            background: #333557de;
+        }
+
+
+        &.active {
+            background: #333557de;
+        }
+
 
         &.cs {
             top: 0;
@@ -108,6 +129,12 @@
 
     }
 
+    // PLAY BUTTON 
+
+    .pianoGame {
+        display: none;
+    }
+
 }
 
 
@@ -116,14 +143,16 @@
     /* big landscape tablets, laptops, and desktops */
     .creativeSection {
         min-height: 100vh;
-        background: linear-gradient(108.32deg, #E4B7F3 0.93%, #988EBD 54.81%, #66769A 81.51%, #669796 99.27%);
+        background: linear-gradient(108.32deg, #c9a0d6 1%, #b3a9da 54.81%, #566891 81.51%, #669796 99.27%);
         opacity: 1;
+        position: relative;
 
         // DESCRIPTION
         &__descContainer {
+            height: 250px;
 
             .descContainer__desc {
-                margin-left: 40%;
+                margin-left: 50%;
                 max-width: 40vw;
             }
         }
@@ -155,10 +184,68 @@
         // PIANO
         .piano {
             padding-bottom: 0px;
-            transform: scale(1.9) rotate(22deg) translateY(100px) translateX(-10px);
+            transform: scale(1.9) rotate(22deg) translateX(-100px);
             opacity: 1;
             box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.781);
-            ;
+
+            position: absolute;
+            top: 420px;
+        }
+
+
+        // PLAY BUTTON 
+
+        .pianoGame {
+            display: block;
+            position: absolute;
+            top: 2%;
+            left: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Reenie Beanie', cursive;
+
+            & p {
+                font-size: 2.7rem;
+                font-weight: 500;
+            }
+
+            & .pianoGame__indications {
+                max-width: 20vw;
+                min-width: 230px;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            &__playlevels {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 100px;
+
+                .levels {
+                    position: relative;
+                    bottom: 20px;
+                }
+
+                .play {
+                    cursor: pointer;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .play__arrow {
+                position: absolute;
+                left: 140px;
+                transform: rotate(-10deg);
+                bottom: -50px;
+            }
 
         }
 

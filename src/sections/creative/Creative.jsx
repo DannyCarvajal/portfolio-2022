@@ -1,7 +1,75 @@
+import {useState, useEffect, useRef} from "react";
 import Piano from "../../components/creative/piano";
 import "./creative.scss";
 
 const Creative = () => {
+	// PIANO PUZZLE
+	const level1 = ["a4", "g4", "f4", "as4", "a4"];
+	const level2 = [...level1, "g4", "c5", "d5"];
+	const level3 = [...level2, "c5", "a4"];
+	const noTurn = "Play the song and repeat the notes";
+	const pianoTurn = "Playing...";
+	const userTurn = "Your turn";
+
+	const [currentLevel, setCurrentLevel] = useState(level1);
+	const [level, setLevel] = useState(1);
+	const [turn, setTurn] = useState(noTurn);
+	const [pianoGuess, setPianoGuess] = useState([]);
+	const lastNotePlayed = useRef("");
+
+	const playNote = (note, speed) => {
+		let pianoNote = document.getElementsByClassName(note)[0];
+		pianoNote.click();
+	};
+	const playPianoHandler = () => {
+		setTurn(pianoTurn);
+		const bpm = 100;
+		const speed = (60 / bpm) * 1000;
+		let counter = 0;
+
+		// PLAY EVERY X SECONDS
+		let song = setInterval(() => {
+			if (counter < currentLevel.length) {
+				playNote(currentLevel[counter], speed);
+				counter++;
+			} else {
+				clearInterval(song);
+				setTurn(userTurn);
+			}
+		}, speed);
+	};
+
+	// PIANO GUESS
+	const checkIfLevelPassed = () => {
+		if (pianoGuess.join("").includes(currentLevel.join(""))) {
+			if (level === 3) {
+				console.log("You won!");
+				setTurn("you won");
+			} else {
+				setCurrentLevel(level === 1 ? level2 : level3);
+				setLevel(level + 1);
+			}
+			setPianoGuess([]);
+			setTurn(noTurn);
+			console.log("Level passed");
+		} else {
+			console.log("Level failed");
+		}
+	};
+
+	useEffect(() => {
+		lastNotePlayed.current = pianoGuess[pianoGuess.length - 1];
+		if (turn === userTurn) {
+			checkIfLevelPassed();
+		}
+	});
+
+	const pianoKeyHandler = note => {
+		if (turn === userTurn) {
+			setPianoGuess([...pianoGuess, note]);
+		}
+	};
+
 	return (
 		<div className="creativeSection">
 			<div className="creativeSection__descContainer">
@@ -16,7 +84,15 @@ const Creative = () => {
 					<img src="img/behancecontact.png" alt="behance" className="behance__contactimg" />
 				</a>
 			</div>
-			<Piano />
+			<div className="pianoGame">
+				<p className="pianoGame__indications">{turn}</p>
+				<div className="pianoGame__playlevels">
+					<img src="img/playbutton.png" alt="play" className="play" onClick={playPianoHandler} />
+					<p className="levels">{level}/3</p>
+				</div>
+				<img src="img/playarrow.png" alt="arrow" className="play__arrow" />
+			</div>
+			<Piano pianoGuess={pianoKeyHandler} />
 		</div>
 	);
 };

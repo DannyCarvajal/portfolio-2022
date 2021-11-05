@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import PianoKey from "./pianoKey";
 import "./piano.scss";
 
-const Piano = () => {
+const Piano = ({pianoGuess}) => {
 	const piano = [
 		["c", "white"],
 		["cs", "black"],
@@ -23,7 +23,7 @@ const Piano = () => {
 		return (
 			<div className="pianoContainer">
 				{pianoKeys.map(([note, keyType]) => {
-					return <PianoKey keyType={keyType} note={`${note} ${octave} ${note + octave}`} key={note + octave} />;
+					return <PianoKey keyType={keyType} note={`${note} ${octave} ${note + octave}`} key={note + octave} pianoGuess={pianoGuess} />;
 				})}
 			</div>
 		);
