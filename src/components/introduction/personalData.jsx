@@ -11,9 +11,9 @@ const personalData = ({message, name, role, contact}) => {
 				<h3>{role}</h3>
 			</div>
 			<div className="personalData__contact">
-				{contact.map(([item, link]) => (
+				{contact.map(([item, link, image]) => (
 					<a href={item === "email" ? `mailto:${link}` : link} key={item} target="_blank" rel="noreferrer">
-						<img src={`img/${item}contact.svg`} alt={item} className="contactIcon" />
+						<img src={image} alt={item} className="contactIcon" />
 					</a>
 				))}
 			</div>

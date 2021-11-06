@@ -10,7 +10,7 @@ const PuzzleItem = ({item, puzzleOrder, setIsSlidePuzzleSolved, setCurrentOrder}
 
 	return (
 		<div id={item} className={"tech-item " + isEmptyElement} onClick={itemHandler} style={{top, left}} onMouseDown={preventDragHandler}>
-			<img src={`img/${item}.svg`} alt={item} height={item === "daniel" ? "35spx" : "50px"} />
+			<img src={process.env.PUBLIC_URL + `/img/${item}.svg`} alt={item} height={item === "daniel" ? "35spx" : "50px"} />
 		</div>
 	);
 };

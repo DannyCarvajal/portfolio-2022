@@ -1,10 +1,12 @@
 import "./clickIndication.scss";
+// IMAGES
+import HandIndicator from "../../assets/img/handindicator.png";
 
 const ClickIndication = ({message, containerClass}) => {
 	return (
 		<div className={`clickIndication ${containerClass}`}>
 			<p className="clickIndication__msg">{message}</p>
-			<img src="img/handindicator.png" alt="hand" className="clickIndication__hand" />
+			<img src={HandIndicator} alt="hand" className="clickIndication__hand" />
 		</div>
 	);
 };

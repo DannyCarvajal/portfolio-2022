@@ -1,11 +1,11 @@
 import "./puzzleInteraction.scss";
 
-const PuzzleInteraction = ({description, handler, imgName, keyWord}) => {
+const PuzzleInteraction = ({description, handler, image, keyWord}) => {
 	return (
 		<div className="interactionPuzzleContainer">
 			<p className="interactionPuzzleContainer__desc">{description}</p>
 			<div className="interactionPuzzleContainer__iconContainer" onClick={handler}>
-				<img src={`img/${imgName}.svg`} alt={imgName} height="18px" />
+				<img src={image} alt={keyWord} height="18px" />
 			</div>
 			<h3 className="interactionPuzzleContainer__keyword">{keyWord}</h3>
 		</div>

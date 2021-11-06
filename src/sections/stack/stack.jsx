@@ -9,6 +9,10 @@ import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
 import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
 import ClickIndication from "../../components/global/clickIndication.jsx";
 import "./stack.scss";
+// IMAGES
+import Thunder from "../../assets/img/thunder.svg";
+import Queen from "../../assets/img/queen.svg";
+import ChessBg from "../../assets/img/chessbg.svg";
 
 const Stack = () => {
 	// PUZZLE INITIALIZATION
@@ -35,12 +39,12 @@ const Stack = () => {
 					Your <b>stack</b> components <br />
 					are the pieces in your <b>game</b>
 				</p>
-				<img src="img/chessbg.svg" alt="chessbg" className="technologiesSection__chessbg" />
+				<img src={ChessBg} alt="chessbg" className="technologiesSection__chessbg" />
 				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} solution={solution} setCurrentOrder={setCurrentOrder} />
 
 				<div className="technologiesSection__interactionContainer">
-					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} imgName="queen" keyWord="" />
-					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
+					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} image={Queen} keyWord="" />
+					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
 				<ClickIndication message="Click to slide" containerClass="slideIndicator" />
 				<SecretWord secretLetter="" />
@@ -63,7 +67,7 @@ const Stack = () => {
 					})}
 				</div>
 				<div className="technologiesSection__interactionContainer">
-					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} imgName="thunder" keyWord="MIX" />
+					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
 				<SecretWord secretLetter="t" bgcolor="#353841" letterColor="white" />
 			</section>
