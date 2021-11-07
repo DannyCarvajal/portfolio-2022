@@ -14,7 +14,7 @@ const PianoKey = ({keyType, note, pianoGuess, notePlayingInMelody}) => {
 
 	// CLEAN BG COLOR AFTER CLICKING IT
 	useEffect(() => {
-		let cleanColor = setTimeout(() => setbgColor(""), 200);
+		let cleanColor = setTimeout(() => setbgColor(""), 400);
 		return () => clearTimeout(cleanColor);
 	}, [bgColor]);
 

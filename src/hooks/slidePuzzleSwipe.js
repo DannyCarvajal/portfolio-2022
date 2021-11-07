@@ -8,6 +8,7 @@ const useSlidePuzzle = (puzzleOrder, setIsSlidePuzzleSolved, setCurrentOrder) =>
 		let [allowedMove] = checkIfAllowedMovement(itemName);
 		// IF A MOVE IS ALLOWED SWIPE THE ELEMENTS
 		if (allowedMove === 0 || allowedMove) {
+			console.log("allowedMove", allowedMove);
 			slideItem(e.target, itemName, allowedMove);
 			checkCompleted();
 		}

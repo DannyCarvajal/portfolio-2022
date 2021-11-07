@@ -10,7 +10,7 @@ const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrent
 			})}
 
 			{currentOrder.map(item => {
-				return <PuzzleItem item={item} puzzleOrder={currentOrder} setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} key={item} setCurrentOrder={setCurrentOrder} />;
+				return <PuzzleItem item={item} currentOrder={currentOrder} setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} key={item} setCurrentOrder={setCurrentOrder} />;
 			})}
 		</div>
 	);

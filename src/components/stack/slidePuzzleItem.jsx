@@ -1,8 +1,8 @@
 import "./slidePuzzleItem.scss";
 import useSlidePuzzle from "../../hooks/slidePuzzleSwipe";
 
-const PuzzleItem = ({item, puzzleOrder, setIsSlidePuzzleSolved, setCurrentOrder}) => {
-	const {itemHandler, positionOfElelement} = useSlidePuzzle(puzzleOrder, setIsSlidePuzzleSolved, setCurrentOrder);
+const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder}) => {
+	const {itemHandler, positionOfElelement} = useSlidePuzzle(currentOrder, setIsSlidePuzzleSolved, setCurrentOrder);
 
 	let isEmptyElement = item === "blank" ? "emptyElement " : "";
 	let [, , top, left] = positionOfElelement(item);

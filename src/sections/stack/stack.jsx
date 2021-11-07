@@ -40,7 +40,7 @@ const Stack = () => {
 					are the pieces in your <b>game</b>
 				</p>
 				<img src={ChessBg} alt="chessbg" className="technologiesSection__chessbg" />
-				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} solution={solution} setCurrentOrder={setCurrentOrder} />
+				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} setCurrentOrder={setCurrentOrder} solution={solution} />
 
 				<div className="technologiesSection__interactionContainer">
 					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} image={Queen} keyWord="" />

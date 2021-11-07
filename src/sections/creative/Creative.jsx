@@ -47,8 +47,8 @@ const Creative = () => {
 	const checkIfLevelPassed = () => {
 		if (pianoGuess.join("").includes(currentLevel.join(""))) {
 			if (level === 3) {
-				setTurn("We could be heroes, me and you");
-				setLevel("♾️");
+				setTurn(" We could be heroes ");
+				setLevel("solved");
 			} else {
 				setCurrentLevel(level === 1 ? level2 : level3);
 				setLevel(level + 1);
