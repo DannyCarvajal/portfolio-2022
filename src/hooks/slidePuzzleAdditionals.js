@@ -18,10 +18,10 @@ const additionalSlideFunc = setIsSlidePuzzleSolved => {
 		return [isTabletOrDesktop];
 	};
 
-	const fadeOutElement = puzzleSolved => {
+	const fadeOutElement = booleanSolved => {
 		const techSection = document.getElementsByClassName("technologiesSection")[0];
 		techSection.classList.add("technologiesSection--solved");
-		setTimeout(() => setIsSlidePuzzleSolved(puzzleSolved), 1250);
+		setTimeout(() => setIsSlidePuzzleSolved(booleanSolved), 1250);
 		setTimeout(() => techSection.classList.remove("technologiesSection--solved"), 2500);
 	};
 

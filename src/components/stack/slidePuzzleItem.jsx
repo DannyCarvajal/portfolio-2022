@@ -12,6 +12,7 @@ const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder
 	const itemHandler = () => {
 		let [allowedMove] = checkIfAllowedMovement(item);
 		// IF A MOVE IS ALLOWED SWIPE THE ELEMENTS
+		console.log("The item is clicked");
 		if (allowedMove === 0 || allowedMove) {
 			let swipedArray = currentOrder;
 			swipedArray[allowedMove] = swipedArray.splice(currentIndex, 1, "blank")[0];
@@ -21,7 +22,9 @@ const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder
 	};
 
 	useEffect(() => {
+		console.log("the child recharged");
 		setpositionStyles({top, left});
+		setCurrentIndex(lineAndPositionToIndex(line, indexLine));
 		checkCompleted();
 	}, [currentOrder, currentIndex]);
 

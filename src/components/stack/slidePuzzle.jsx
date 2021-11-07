@@ -1,8 +1,15 @@
+import {useEffect} from "react";
 import PuzzleItem from "./slidePuzzleItem.jsx";
 import SlideItemBg from "./slideItemBg.jsx";
 import "./slidePuzzle.scss";
 
 const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrentOrder}) => {
+	console.log("joined the slidepuzzle");
+
+	useEffect(() => {
+		console.log("I got a new current order in parent ", currentOrder);
+	}, [currentOrder]);
+
 	return (
 		<div className="slidePuzzleContainer">
 			{solution.map(item => {

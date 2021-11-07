@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {technologies, additionalTechnologies} from "./listOfTechnologies.js";
 import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
 import SlidePuzzle from "../../components/stack/slidePuzzle.jsx";
@@ -17,7 +17,6 @@ import ChessBg from "../../assets/img/chessbg.svg";
 const Stack = () => {
 	// PUZZLE INITIALIZATION
 	const {newPuzzleCombination, solution} = slidePuzzleGenerator();
-	const [initialPuzzleOrder, setInitialPuzzleOrder] = useState(newPuzzleCombination());
 	const [currentOrder, setCurrentOrder] = useState(newPuzzleCombination());
 	// IS PUZZLE SOLVED?
 	const [isSlidePuzzleSolved, setIsSlidePuzzleSolved] = useState(false);
@@ -29,7 +28,12 @@ const Stack = () => {
 	// INTERACTIVE FUNCTIONS
 	const mixPuzzleAgain = () => {
 		setCurrentOrder(newPuzzleCombination());
+		fadeOutElement(false);
 	};
+
+	useEffect(() => {
+		console.log("reload in parent currentorderchanged ");
+	}, [currentOrder]);
 
 	if (isTabletOrDesktop && !isSlidePuzzleSolved) {
 		return (
@@ -46,7 +50,6 @@ const Stack = () => {
 
 				<div className="technologiesSection__interactionContainer">
 					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} image={Queen} keyWord="" />
-					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
 				<ClickIndication message="Click to slide" containerClass="slideIndicator" />
 				<SecretWord secretLetter="" />
