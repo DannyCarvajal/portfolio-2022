@@ -6,11 +6,11 @@ const tech = ({techName, description, imgSize}) => {
 			return (
 				<>
 					<h3 className="tech__name">{techName.toUpperCase()}</h3>
-					<img className="tech__icon" src={`img/${techName}.svg`} alt={techName} width="60px" />
+					<img className="tech__icon" src={process.env.PUBLIC_URL + `/img/${techName}.svg`} alt={techName} width="60px" />
 				</>
 			);
 		} else {
-			return <img className="tech__icon" src={`img/${techName}.svg`} alt={techName} width="70px" />;
+			return <img className="tech__icon" src={process.env.PUBLIC_URL + `/img/${techName}.svg`} alt={techName} width="70px" />;
 		}
 	};
 	return (

@@ -27,7 +27,9 @@ const Stack = () => {
 	const [isTabletOrDesktop] = useScreenSize();
 
 	// INTERACTIVE FUNCTIONS
-	const mixPuzzleAgain = () => {};
+	const mixPuzzleAgain = () => {
+		setCurrentOrder(newPuzzleCombination());
+	};
 
 	if (isTabletOrDesktop && !isSlidePuzzleSolved) {
 		return (
