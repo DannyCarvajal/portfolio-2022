@@ -9,7 +9,7 @@ import Github from "../../assets/img/githubcontact.svg";
 import Email from "../../assets/img/emailcontact.svg";
 const Intro = () => {
 	return (
-		<div className="introSection">
+		<section className="introSection">
 			<img src={Logo} alt="Danny Carvajal" className="introSection__logo" />
 			<img src={Danny} alt="Danny carvajal" className="introSection__oliverimage" />
 			<PersonalData
@@ -24,7 +24,7 @@ const Intro = () => {
 				className="introSection__personalData"
 			/>
 			<SecretWord secretLetter="S" bgcolor="white" letterColor="#353841" />
-		</div>
+		</section>
 	);
 };
 

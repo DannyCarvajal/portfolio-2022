@@ -19,7 +19,7 @@ const usePianoLogic = () => {
 
 	const playPianoHandler = () => {
 		setTurn(pianoTurn);
-		const bpm = 100;
+		const bpm = 110;
 		const speed = (60 / bpm) * 1000;
 		let counter = 0;
 

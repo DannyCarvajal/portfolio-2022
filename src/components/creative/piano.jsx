@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import PianoKey from "./pianoKey";
 import "./piano.scss";
 
@@ -17,13 +16,12 @@ const Piano = ({pianoGuess, notePlayingInMelody}) => {
 		["as", "black"],
 		["b", "white"],
 	];
-	const [pianoKeys, setpianoKeys] = useState(piano);
-	const [octaves, setoctaves] = useState([2, 3, 4, 5, 6]);
+	const octaves = [2, 3, 4, 5, 6];
 
 	const PianoElements = ({octave}) => {
 		return (
 			<div className="pianoContainer">
-				{pianoKeys.map(([note, keyType]) => {
+				{piano.map(([note, keyType]) => {
 					return <PianoKey keyType={keyType} note={`${note} ${octave} ${note + octave}`} key={note + octave} pianoGuess={pianoGuess} notePlayingInMelody={notePlayingInMelody} />;
 				})}
 			</div>

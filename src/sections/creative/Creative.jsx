@@ -3,7 +3,6 @@ import Piano from "../../components/creative/piano";
 import usePianoLogic from "../../hooks/pianoLogic";
 import SecretWord from "../../components/global/secretword";
 import AlertIndication from "../../components/global/alertIndication";
-
 import "./creative.scss";
 //IMAGES
 import Behance from "../../assets/img/behancecontact.png";
@@ -17,7 +16,7 @@ const Creative = () => {
 	const bgColorAnimation = "linear-gradient(164.62deg, #765492 10.78%, #B396E6 95.15%)";
 
 	return (
-		<div className="creativeSection">
+		<section className="creativeSection">
 			<div className="creativeSection__descContainer">
 				<p className="descContainer__desc">
 					For sure, most problems that come to be can be solved in various ways, but is not until <b>design</b> comes in, that the inner magic comes out
@@ -42,7 +41,7 @@ const Creative = () => {
 			{/* ANIMATION OF SOLVED */}
 			{level === "solved" && <AlertIndication found="oo" message="Two letters Found" bgcolor={bgColorAnimation} />}
 			<SecretWord secretLetter={level === "solved" ? "oo" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={level === "solved" ? "animation" : ""} />
-		</div>
+		</section>
 	);
 };
 

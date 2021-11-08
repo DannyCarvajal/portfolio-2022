@@ -21,7 +21,7 @@ const Logic = () => {
 	const solutions = [2, 1, 3];
 
 	return (
-		<div className="logicSection">
+		<section className="logicSection">
 			<img src={DecorationLine} alt="decorationLine" className="logicSection__decorationLine" />
 			<p className="logicSection__story">
 				Since I was a child I spent time solving <b>puzzles</b> , from the Rubik’s cube to chess. You know you are having fun because you can be with puzzles for a long time, ‘til you find the next big challenge...
@@ -36,7 +36,7 @@ const Logic = () => {
 			{/* ANIMATION OF SOLVED */}
 			{checkIfSolved() && <AlertIndication found="m" message="Letter Found" bgcolor="#353841" />}
 			<SecretWord secretLetter={checkIfSolved() ? "m" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
-		</div>
+		</section>
 	);
 };
 
