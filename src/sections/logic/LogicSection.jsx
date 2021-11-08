@@ -30,7 +30,7 @@ const Logic = () => {
 				{columnColors.map((column, index) => (
 					<Rubik colorArray={columnColors[index]} index={index} isRubikSolved={isRubikSolved} setIsRubikSolved={setIsRubikSolved} solution={solutions[index]} rubikItemClass="colorItem" key={column.join("")} />
 				))}
-				<ClickIndication message="Press the arrows.." containerClass="logicIndicator" />
+				<ClickIndication message="Press the arrows.." containerClass="logicIndicator" elemntsToFade=".downArrowRubik" />
 			</div>
 			<p className="logicSection__tip">Tip: Complete the blue face</p>
 			{/* ANIMATION OF SOLVED */}

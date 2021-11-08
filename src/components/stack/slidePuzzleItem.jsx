@@ -32,7 +32,7 @@ const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder
 	const preventDragHandler = e => e.preventDefault();
 
 	return (
-		<div id={item} className={"tech-item " + isEmptyElement} onClick={itemHandler} style={positionStyles} onMouseDown={preventDragHandler}>
+		<div id={item} className={"tech-item " + isEmptyElement + (currentIndex === 5 || currentIndex === 7 ? "slideToFadeHand" : "")} onClick={itemHandler} style={positionStyles} onMouseDown={preventDragHandler}>
 			<img src={process.env.PUBLIC_URL + `/img/${item}.svg`} alt={item} height={item === "daniel" ? "35spx" : "50px"} />
 		</div>
 	);

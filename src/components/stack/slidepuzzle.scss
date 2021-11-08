@@ -12,14 +12,30 @@ $CONTAINERSIZE:450px;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+
+  // HAND INDICATOR
+
+  .slideIndicator {
+    display: none;
+  }
 }
+
 
 @media (min-width:700px) {
 
   /* tablet, landscape iPad */
   .slidePuzzleContainer {
     transform: scale(0.9);
+
+    // HAND INDICATOR
+
+    .slideIndicator {
+      left: -10px;
+      bottom: -20px;
+      display: flex;
+    }
   }
+
 
 }
 

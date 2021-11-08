@@ -7,7 +7,6 @@ import TechCircle from "../../components/stack/techCircleCard.jsx";
 import SecretWord from "../../components/global/secretword.jsx";
 import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
 import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
-import ClickIndication from "../../components/global/clickIndication.jsx";
 import AlertIndication from "../../components/global/alertIndication.jsx";
 import "./stack.scss";
 // IMAGES
@@ -52,7 +51,7 @@ const Stack = () => {
 				<div className="technologiesSection__interactionContainer">
 					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} image={Queen} keyWord="" />
 				</div>
-				<ClickIndication message="Click to slide" containerClass="slideIndicator" />
+
 				<SecretWord secretLetter="" />
 			</section>
 		);

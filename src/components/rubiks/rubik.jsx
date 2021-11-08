@@ -15,9 +15,7 @@ const Rubik = ({colorArray, index, isRubikSolved, setIsRubikSolved, solution, ru
 	};
 
 	const positionHandler = () => setCurrentPosition(currentPosition + 1);
-	const hideHandIndicator = () => {
-		const handIndicator = document.querySelector(".clickIndication");
-		handIndicator.classList.add("hideAnimation");
+	const showTipHandler = () => {
 		const tip = document.querySelector(".logicSection__tip");
 		tip.classList.add("showAnimation");
 	};
@@ -46,10 +44,10 @@ const Rubik = ({colorArray, index, isRubikSolved, setIsRubikSolved, solution, ru
 				<div className={`${rubikItemClass} ${colorHandler(currentPosition + 1)} ${activeArrow ? "active" : ""}`}></div>
 				<div className={`${rubikItemClass} ${colorHandler(currentPosition + 2)} ${activeArrow ? "active" : ""}`}></div>
 				<button
-					className="rubikscta"
+					className="rubikscta downArrowRubik"
 					onClick={() => {
 						positionHandler();
-						hideHandIndicator();
+						showTipHandler();
 						arrowAnimation();
 					}}
 				>

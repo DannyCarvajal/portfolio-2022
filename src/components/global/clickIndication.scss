@@ -18,3 +18,18 @@
 
     }
 }
+
+.fadeOut {
+    animation: hide 2s forwards ease-in-out;
+}
+
+@keyframes hide {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
