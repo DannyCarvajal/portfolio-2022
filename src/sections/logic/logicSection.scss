@@ -36,6 +36,24 @@
         height: 60px;
         opacity: 0.8;
         border-radius: 15px;
+
+        &.active {
+            animation: fadeAndShow 0.4s ease-in-out;
+        }
+
+        @keyframes fadeAndShow {
+            0% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.9;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
     }
 
     .solvedAnimation {
@@ -45,9 +63,22 @@
 
     // HAND INDICATOR
     .clickIndication {
-        bottom: 90px;
-        right: 125px;
+        bottom: 80px;
+        left: 22%;
         pointer-events: none;
+
+        &__hand {
+            display: none;
+        }
+    }
+
+    // INSTRUCTION TO SOLVE
+    &__tip {
+        opacity: 0;
+        position: absolute;
+        bottom: 80px;
+        font-family: 'Reenie Beanie';
+        font-size: 1.9rem;
     }
 }
 
@@ -57,6 +88,8 @@
     /* tablet, landscape iPad */
     .logicSection {
         min-height: 90vh;
+
+
     }
 
 }
@@ -99,7 +132,22 @@
         .clickIndication {
             left: -130px;
             bottom: -110px;
+
+
+            &__hand {
+                display: block;
+            }
         }
+
+        // INSTRUCTION TO SOLVE
+        &__tip {
+            position: absolute;
+            top: 22%;
+            font-size: 2rem;
+            right: 100px;
+            height: 50px;
+        }
+
 
 
     }
