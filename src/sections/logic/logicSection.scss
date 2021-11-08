@@ -87,7 +87,8 @@
 
     /* tablet, landscape iPad */
     .logicSection {
-        min-height: 90vh;
+        min-height: 700px;
+        max-height: 70vh;
 
 
     }
@@ -99,7 +100,6 @@
 
     /* tablet, landscape iPad */
     .logicSection {
-        min-height: 100vh;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

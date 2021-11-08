@@ -1,4 +1,3 @@
-import {useState, useEffect, useRef} from "react";
 import Piano from "../../components/creative/piano";
 import usePianoLogic from "../../hooks/pianoLogic";
 import SecretWord from "../../components/global/secretword";
