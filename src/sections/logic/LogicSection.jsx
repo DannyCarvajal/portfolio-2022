@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Rubik from "../../components/rubiks/rubik";
 import SecretWord from "../../components/global/secretword";
 import ClickIndication from "../../components/global/clickIndication";
+import AlertIndication from "../../components/global/alertIndication";
 import "./logicSection.scss";
 // IMAGES
 import DecorationLine from "../../assets/img/decorationLine.png";
@@ -19,10 +20,6 @@ const Logic = () => {
 
 	const solutions = [2, 1, 3];
 
-	useEffect(() => {
-		checkIfSolved() && console.log("SOLVED!");
-	});
-
 	return (
 		<div className="logicSection">
 			<img src={DecorationLine} alt="decorationLine" className="logicSection__decorationLine" />
@@ -35,7 +32,9 @@ const Logic = () => {
 				))}
 				<ClickIndication message="Press the lightblue buttons.." containerClass="logicIndicator" />
 			</div>
-			<SecretWord secretLetter={checkIfSolved() === true ? "m" : ""} bgcolor="#353841" letterColor="white" />
+			{/* ANIMATION OF SOLVED */}
+			{checkIfSolved() && <AlertIndication found="m" message="Letter Found" bgcolor="#353841" />}
+			<SecretWord secretLetter={checkIfSolved() ? "m" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
 		</div>
 	);
 };

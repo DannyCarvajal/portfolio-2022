@@ -1,0 +1,47 @@
+.alertIndication {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 370px;
+    border-radius: 30px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: appearFromBottom 3s ease-in-out forwards;
+
+    &__letterFound {
+        font-family: 'Reenie Beanie', cursive;
+        font-size: 17rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    &__message {
+        position: absolute;
+        font-size: 1.5rem;
+        bottom: 25px;
+        font-weight: 300;
+        color: white;
+    }
+
+    @keyframes appearFromBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(10%);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}

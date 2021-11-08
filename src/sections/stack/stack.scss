@@ -56,6 +56,10 @@
         display: none;
     }
 
+    .alertIndication {
+        top: 16%;
+    }
+
 }
 
 
@@ -64,10 +68,9 @@
     /* tablet, landscape iPad */
 
     .technologiesSection {
-        min-height: 80vh;
+        height: 95vh;
+        min-height: 90vh; // TECH CARDS
 
-
-        // TECH CARDS
         &__techContainer {
             flex-direction: row;
             flex-wrap: wrap;

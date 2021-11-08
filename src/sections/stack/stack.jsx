@@ -8,6 +8,7 @@ import SecretWord from "../../components/global/secretword.jsx";
 import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
 import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
 import ClickIndication from "../../components/global/clickIndication.jsx";
+import AlertIndication from "../../components/global/alertIndication.jsx";
 import "./stack.scss";
 // IMAGES
 import Thunder from "../../assets/img/thunder.svg";
@@ -74,7 +75,9 @@ const Stack = () => {
 				<div className="technologiesSection__interactionContainer">
 					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
-				<SecretWord secretLetter="t" bgcolor="#353841" letterColor="white" />
+				{/* ANIMATION OF SOLVED */}
+				{isSlidePuzzleSolved && <AlertIndication found="t" message="Letter Found" bgcolor="#353841" />}
+				<SecretWord secretLetter={isSlidePuzzleSolved ? "t" : ""} bgcolor="#353841" letterColor="white" animation={isSlidePuzzleSolved ? "animation" : ""} />
 			</section>
 		);
 	}
