@@ -71,7 +71,7 @@ const Stack = () => {
 						return <TechCircle key={name} techName={name} />;
 					})}
 				</div>
-				<div className="technologiesSection__interactionContainer">
+				<div className="technologiesSection__interactionContainer solved">
 					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
 				{/* ANIMATION OF SOLVED */}
