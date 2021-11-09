@@ -57,7 +57,7 @@ const Stack = () => {
 		);
 	} else {
 		return (
-			<section className="technologiesSection">
+			<section className="technologiesSection solved">
 				<header>
 					<h2 className="technologiesSection__title">Technologies</h2>
 				</header>

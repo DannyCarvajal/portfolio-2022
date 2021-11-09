@@ -32,7 +32,7 @@ const Logic = () => {
 				))}
 				<ClickIndication message="Press the arrows.." containerClass="logicIndicator" elemntsToFade=".downArrowRubik" />
 			</div>
-			<p className="logicSection__tip">Tip: Complete the blue face</p>
+			<p className="logicSection__tip">Fill all the squares with blue</p>
 			{/* ANIMATION OF SOLVED */}
 			{checkIfSolved() && <AlertIndication found="m" message="Letter Found" bgcolor="#353841" />}
 			<SecretWord secretLetter={checkIfSolved() ? "m" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
