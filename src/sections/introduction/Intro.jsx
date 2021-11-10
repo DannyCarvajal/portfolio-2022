@@ -23,7 +23,7 @@ const Intro = () => {
 				]}
 				className="introSection__personalData"
 			/>
-			<SecretWord secretLetter="S" bgcolor="white" letterColor="#353841" />
+			<SecretWord secretLetter="r" bgcolor="white" letterColor="#353841" />
 		</section>
 	);
 };

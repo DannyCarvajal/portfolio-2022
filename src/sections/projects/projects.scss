@@ -1,5 +1,5 @@
 .projectsSection {
-    height: 100vh;
+    height: fit-content;
     background-color: #353841;
     overflow-y: hidden;
 
@@ -9,4 +9,55 @@
         margin: 30px 30px;
         text-align: left
     }
+
+    &__brushedbg {
+        display: none;
+    }
+}
+
+@media (min-width:700px) {
+
+    /* tablet, landscape iPad */
+
+    .projectsSection {
+        position: relative;
+        overflow-x: hidden;
+
+        &__title {
+            text-align: right
+        }
+
+        & .projectItemContainer {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
+
+    }
+}
+
+
+
+
+@media (min-width:1100px) {
+
+    .projectsSection {
+        min-height: 670px;
+
+        &__title {
+            text-align: right
+        }
+
+        & .projectItemContainer {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
+    }
+
+
 }
