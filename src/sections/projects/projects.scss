@@ -1,0 +1,12 @@
+.projectsSection {
+    height: 100vh;
+    background-color: #353841;
+    overflow-y: hidden;
+
+    &__title {
+        color: #fff;
+        font-size: 1.7rem;
+        margin: 30px 30px;
+        text-align: left
+    }
+}
