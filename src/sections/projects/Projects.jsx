@@ -29,12 +29,11 @@ const Projects = () => {
 
 	const [projects, setProjects] = useState(initProjects);
 	const [currProject, setCurrProject] = useState([initProjects[0]]);
-	const positionCounter = useRef(0);
 
 	const Projects = projects => {
 		return projects.map(project => {
 			let nameWithoutSpacesOrCases = project.name.replace(/\s/g, "").toLowerCase();
-			return <ProjectItem key={project.name} image={process.env.PUBLIC_URL + `/img/${nameWithoutSpacesOrCases}.png`} name={project.name} links={project.links} description={project.description} />;
+			return <ProjectItem key={project.name} image={process.env.PUBLIC_URL + `/img/${nameWithoutSpacesOrCases}.png`} name={project.name} links={project.links} description={project.description} currProject={currProject} setCurrProject={setCurrProject} projects={initProjects} />;
 		});
 	};
 
