@@ -29,10 +29,13 @@ const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder
 	}, [currentOrder, currentIndex]);
 
 	let isEmptyElement = item === "blank" ? "emptyElement " : "";
-	const preventDragHandler = e => e.preventDefault();
+	const preventDragHandler = e => {
+		e.preventDefault();
+		itemHandler();
+	};
 
 	return (
-		<div id={item} className={"tech-item " + isEmptyElement + (currentIndex === 5 || currentIndex === 7 ? "slideToFadeHand" : "")} onClick={itemHandler} style={positionStyles} onMouseDown={preventDragHandler}>
+		<div id={item} className={"tech-item " + isEmptyElement + (currentIndex === 5 || currentIndex === 7 ? "slideToFadeHand" : "")} style={positionStyles} onMouseDown={preventDragHandler}>
 			<img src={process.env.PUBLIC_URL + `/img/${item}.svg`} alt={item} height={item === "daniel" ? "35spx" : "50px"} />
 		</div>
 	);

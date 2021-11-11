@@ -2,6 +2,9 @@
     height: fit-content;
     background-color: #353841;
     overflow-y: hidden;
+    position: relative;
+
+
 
     &__title {
         color: #fff;
@@ -20,6 +23,7 @@
     /* tablet, landscape iPad */
 
     .projectsSection {
+        margin-top: 30px;
         position: relative;
         overflow-x: hidden;
 

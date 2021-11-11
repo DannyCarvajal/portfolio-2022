@@ -12,6 +12,11 @@ const ClickIndication = ({message, containerClass, elemntsToFade}) => {
 				setshow("fadeOut");
 			})
 		);
+		elements.forEach(el =>
+			el.addEventListener("dragStart", () => {
+				setshow("fadeOut");
+			})
+		);
 	};
 
 	useEffect(() => {

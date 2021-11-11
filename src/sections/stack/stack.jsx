@@ -6,7 +6,7 @@ import TechCard from "../../components/stack/techCard.jsx";
 import TechCircle from "../../components/stack/techCircleCard.jsx";
 import SecretWord from "../../components/global/secretword.jsx";
 import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
-import slidePuzzleAdditionals from "../../hooks/slidePuzzleAdditionals";
+import slidePuzzleAdditionals from "../../hooks/helpers";
 import AlertIndication from "../../components/global/alertIndication.jsx";
 import "./stack.scss";
 // IMAGES

@@ -15,7 +15,7 @@ const ProjectItem = ({image, name, links, description}) => {
 				<div className="projectItem__linksContainer">
 					{links.map((link, index) => {
 						return (
-							<a href={link} key={link}>
+							<a href={link} key={link} target="_blank" rel="noreferrer">
 								<img src={index === 0 ? GithubContact : index === 1 ? WebContact : BehanceContact} alt="ContactLink" height="35px" />
 							</a>
 						);

@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-import additionalSlideFunc from "./slidePuzzleAdditionals";
+import additionalSlideFunc from "./helpers";
 
 const useSlidePuzzle = (item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder) => {
 	const DIMENSIONS_SLIDE_ITEM = (450 - 40) / 3; /* CONTAINERWIDTH - PADDING / ITEMS PER ROW */

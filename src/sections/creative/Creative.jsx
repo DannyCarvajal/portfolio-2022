@@ -2,6 +2,7 @@ import Piano from "../../components/creative/piano";
 import usePianoLogic from "../../hooks/pianoLogic";
 import SecretWord from "../../components/global/secretword";
 import AlertIndication from "../../components/global/alertIndication";
+import Helpers from "../../hooks/helpers";
 import "./creative.scss";
 //IMAGES
 import Behance from "../../assets/img/behancecontact.png";
@@ -12,7 +13,12 @@ import PlayArrow from "../../assets/img/playarrow.png";
 const Creative = () => {
 	const {playPianoHandler, pianoKeyHandler, notePlayingInMelody, turn, level} = usePianoLogic();
 
+	// SEE SCREEN SIZE
+	const {useScreenSize} = Helpers();
+	const [isTabletOrDesktop] = useScreenSize();
+
 	const bgColorAnimation = "linear-gradient(164.62deg, #765492 10.78%, #B396E6 95.15%)";
+	console.log(isTabletOrDesktop);
 
 	return (
 		<section className="creativeSection">
@@ -39,7 +45,7 @@ const Creative = () => {
 			<Piano pianoGuess={pianoKeyHandler} notePlayingInMelody={notePlayingInMelody} />
 			{/* ANIMATION OF SOLVED */}
 			{level === "solved" && <AlertIndication found="g" message="Letter Found" bgcolor={bgColorAnimation} />}
-			<SecretWord secretLetter={level === "solved" ? "g" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={level === "solved" ? "animation" : ""} />
+			<SecretWord secretLetter={level === "solved" || !isTabletOrDesktop ? "g" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={level === "solved" ? "animation" : ""} />
 		</section>
 	);
 };

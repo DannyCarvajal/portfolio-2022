@@ -73,6 +73,22 @@
             max-height: unset
         }
 
+        &__interactionContainer {
+            display: block;
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            &.solved {
+                display: none;
+
+            }
+        }
+
         &__techContainer {
             flex-direction: row;
             flex-wrap: wrap;
@@ -115,20 +131,22 @@
     .technologiesSection {
 
         &__interactionContainer {
-            display: block;
-            position: absolute;
-            right: 25px;
-            bottom: 25px;
-            width: 220px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
+            //     display: block;
+            //     position: absolute;
+            //     right: 25px;
+            //     bottom: 25px;
+            //     width: 220px;
+            //     display: flex;
+            //     flex-direction: column;
+            //     flex-wrap: wrap;
 
             &.solved {
                 bottom: 20px;
-
+                display: block;
             }
         }
+
+        // }
 
 
         &__title {
