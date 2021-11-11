@@ -28,7 +28,7 @@ const Projects = () => {
 	const [isTabletOrDesktop] = useScreenSize();
 
 	const [projects, setProjects] = useState(initProjects);
-	const [currProject, setCurrProject] = useState(initProjects[0]);
+	const [currProject, setCurrProject] = useState([initProjects[0]]);
 	const positionCounter = useRef(0);
 
 	const Projects = projects => {
@@ -41,7 +41,7 @@ const Projects = () => {
 	return (
 		<div className="projectsSection">
 			<h2 className="projectsSection__title">Projects</h2>
-			<div className="projectItemContainer">{!isTabletOrDesktop && Projects(projects)}</div>
+			<div className="projectItemContainer">{isTabletOrDesktop ? Projects(currProject) : Projects(projects)}</div>
 			<SecretWord secretLetter="t" bgcolor="white" letterColor="#353841" />
 		</div>
 	);
