@@ -17,7 +17,7 @@ const PianoKey = ({keyType, note, pianoGuess, notePlayingInMelody}) => {
 		}
 	}, [notePlayingInMelody]);
 
-	return <div className={`${keyType}Key ${note} ${isActive ? "active" : ""}`} onClick={keyHandler}></div>;
+	return <div className={`${keyType}Key ${note} ${isActive ? "active" : ""} notPlaying`} onClick={keyHandler}></div>;
 };
 
 export default PianoKey;

@@ -71,14 +71,6 @@
         border-bottom-right-radius: 4px;
         cursor: pointer;
 
-        &:hover {
-            background: #6c768b4b;
-        }
-
-        &:active {
-            background: #6c768b4b;
-        }
-
         &.active {
             background: #6c768b4b;
         }
@@ -90,10 +82,6 @@
         position: absolute;
         width: 30px;
         height: 100px;
-
-        &:hover {
-            background: #333557de;
-        }
 
 
         &.active {

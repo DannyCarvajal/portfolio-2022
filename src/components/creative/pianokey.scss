@@ -5,13 +5,18 @@
     background-color: #fff;
     border-radius: 2px;
 
-    &:hover {
-        box-shadow: 0 0 10px rgba(184, 183, 183, 0.5);
+    &.notPlaying {
+        &:hover {
+            box-shadow: 0 0 10px rgba(184, 183, 183, 0.5);
+        }
+
+        &:hover {
+            background: #6c768b4b;
+        }
+
+
     }
 
-    &.active {
-        box-shadow: 0 0 10px rgba(241, 232, 232, 0.5);
-    }
 
 }
 
@@ -22,13 +27,14 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 
+    &.notPlaying {
+        &:hover {
+            box-shadow: 0 0 10px rgba(73, 72, 72, 0.5);
+        }
 
-    &:hover {
-        box-shadow: 0 0 10px rgba(73, 72, 72, 0.5);
-    }
-
-    &.active {
-        box-shadow: 0 0 10px rgba(73, 72, 72, 0.5);
+        &:hover {
+            background: #333557de;
+        }
     }
 
 }

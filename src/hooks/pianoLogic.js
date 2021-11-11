@@ -2,9 +2,9 @@ import {useState, useEffect, useRef} from "react";
 
 const usePianoLogic = () => {
 	// PIANO PUZZLE
-	const level1 = ["a4", "g4", "f4", "as4", "a4"];
-	const level2 = [...level1, "g4", "c5", "d5"];
-	const level3 = [...level2, "c5", "a4"];
+	const level1 = ["a4", "g4", "f4"];
+	const level2 = [...level1, "as4", "a4"];
+	const level3 = [...level2, "g4", "c5", "d5"];
 	const noTurn = "Play the song and repeat the notes";
 	const pianoTurn = "Playing...";
 	const nextTurn = "Play next level";
