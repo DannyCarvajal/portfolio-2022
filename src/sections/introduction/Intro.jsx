@@ -7,6 +7,7 @@ import Danny from "../../assets/img/olivercircle.png";
 import Linkedin from "../../assets/img/linkedincontact.svg";
 import Github from "../../assets/img/githubcontact.svg";
 import Email from "../../assets/img/emailcontact.svg";
+
 const Intro = () => {
 	return (
 		<section className="introSection">
@@ -17,9 +18,9 @@ const Intro = () => {
 				name="Danny Carvajal"
 				role="Front-end Developer"
 				contact={[
-					["linkedin", "https://www.linkedin.com/in/oliver-daniel-carvajal", Linkedin],
-					["github", "https://github.com/DannyCarvajal", Github],
-					["email", "juan-daniel1914@hotmail.com", Email],
+					["linkedin", "https://www.linkedin.com/in/dannycarvajal1", Linkedin],
+					["github", "https://github.com/dannycarvajal", Github],
+					["email", "oliverdanielcarvajal@hotmail.com", Email],
 				]}
 				className="introSection__personalData"
 			/>
