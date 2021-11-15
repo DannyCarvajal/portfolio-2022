@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .logicSection {
     min-height: 80vh;
     display: flex;
@@ -12,6 +14,7 @@
         text-align: justify;
         width: 90vw;
         margin-top: 120px;
+        max-width: 700px;
     }
 
     &__puzzleContainer {
@@ -28,14 +31,13 @@
     &__decorationLine {
         position: absolute;
         top: 60px;
-        left: 0;
+        left: -120px;
     }
 
     // RUBIKS PUZZLE
     .colorItem {
-        width: 60px;
-        height: 60px;
-        opacity: 0.8;
+        width: 65px;
+        height: 65px;
         border-radius: 15px;
 
         &.active {
@@ -83,56 +85,53 @@
     }
 }
 
-
 @media (min-width:700px) {
+    /* tablet, landscape iPad */
+
+    .logicSection {
+        min-height: unset;
+
+        &__story {
+            font-size: 1.3rem;
+        }
+
+    }
+}
+
+
+
+@media (min-width:1000px) {
 
     /* tablet, landscape iPad */
     .logicSection {
         min-height: 700px;
-        max-height: 70vh;
-
-
-    }
-
-}
-
-
-@media (min-width:1100px) {
-
-    /* tablet, landscape iPad */
-    .logicSection {
+        max-height: 900px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
         &__story {
-            max-width: 50vw;
+            font-size: 1.4rem;
+            max-width: 45vw;
             margin: 0 auto;
         }
 
         &__decorationLine {
             position: absolute;
-            top: 150px;
+            top: 100px;
             left: 0;
         }
-
-
 
         &__puzzleContainer {
             padding: 40px;
             margin-right: 50px;
-        }
-
-        // RUBIKS PUZZLE
-        .colorItem {
-            width: 60px;
-            height: 60px;
+            margin-bottom: 20px;
         }
 
         // HAND INDICATOR
         .clickIndication {
             left: -130px;
-            bottom: -110px;
+            bottom: -120px;
 
 
             &__hand {
@@ -143,10 +142,12 @@
         // INSTRUCTION TO SOLVE
         &__tip {
             position: absolute;
+            width: 400px;
             top: 22%;
             font-size: 2rem;
-            right: 100px;
+            right: 50px;
             height: 50px;
+            text-align: center;
         }
 
 

@@ -1,5 +1,8 @@
+@import '../../index.scss';
+
 .rubiksColumn {
-    height: 230px;
+
+    height: 240px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -7,11 +10,11 @@
     position: relative;
 
     .b {
-        background-color: #5085A5
+        background-color: $blue;
     }
 
     .g {
-        background-color: #50A568;
+        background-color: $green;
         ;
     }
 
@@ -22,11 +25,10 @@
         position: absolute;
         border: none;
         bottom: -100px;
-        width: 55px;
-        height: 55px;
-        opacity: 0.8;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        background-color: #8FC1E3;
+        background-color: $darkBlue;
         border: 1px linear #8FC1E3;
         color: white;
         display: flex;
@@ -34,10 +36,12 @@
         align-items: center;
 
         & i {
-            font-size: 2rem;
+            font-size: 1.7rem;
 
             &.active {
                 animation: moveToBottom 0.4s ease-in-out;
+                background-color: #00161ea2;
+
             }
 
 

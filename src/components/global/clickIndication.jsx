@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import "./clickIndication.scss";
 // IMAGES
 import HandIndicator from "../../assets/img/handindicator.png";
