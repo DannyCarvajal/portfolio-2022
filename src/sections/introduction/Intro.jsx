@@ -1,6 +1,8 @@
-import "./intro.scss";
+// COMPONENTS
 import PersonalData from "../../components/introduction/personalData.jsx";
 import SecretWord from "../../components/global/secretword.jsx";
+// STYLES
+import "./intro.scss";
 // IMAGES
 import Logo from "../../assets/img/logo.png";
 import Danny from "../../assets/img/olivercircle.png";
