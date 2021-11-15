@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .personalData {
 
     width: 100%;
@@ -7,7 +9,7 @@
 
     &__message {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 2rem;
         font-weight: 200;
         color: white;
         line-height: 40px
@@ -19,7 +21,7 @@
         justify-content: center;
         align-items: center;
         height: 50px;
-        background: linear-gradient(90.09deg, rgba(53, 56, 65, 0.7) -3.61%, rgba(80, 133, 165, 0.7) 111.08%);
+        background: linear-gradient(90.09deg, $darkBlue 2.84%, rgba(92, 190, 226, 0.7) 111.08%);
         color: white;
 
         & h3 {
@@ -42,9 +44,18 @@
             justify-content: center;
             align-items: center;
 
-            & .contactIcon {
-                height: 35px;
+            & .contactemail {
+                height: 31.5px;
+            }
 
+
+            & .contactgithub {
+                height: 38px;
+            }
+
+
+            & .contactlinkedin {
+                height: 36px;
             }
 
         }
@@ -65,7 +76,6 @@
 
         &__role {
             width: 55vw;
-
             justify-content: flex-start;
         }
 
@@ -87,7 +97,7 @@
         left: 100px;
 
         &__message {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
         }
 
         &__role {

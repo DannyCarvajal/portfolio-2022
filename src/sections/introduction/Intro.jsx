@@ -1,6 +1,6 @@
 // COMPONENTS
-import PersonalData from "../../components/introduction/personalData.jsx";
-import SecretWord from "../../components/global/secretword.jsx";
+import PersonalData from "../../components/introduction/PersonalData.jsx";
+import SecretWord from "../../components/global/Secretword.jsx";
 // STYLES
 import "./intro.scss";
 // IMAGES

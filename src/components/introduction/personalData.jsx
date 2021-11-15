@@ -1,6 +1,6 @@
 import "./personalData.scss";
 
-const personalData = ({message, name, role, contact}) => {
+const PersonalData = ({message, name, role, contact}) => {
 	return (
 		<div className="personalData">
 			<p className="personalData__message">
@@ -13,7 +13,7 @@ const personalData = ({message, name, role, contact}) => {
 			<div className="personalData__contact">
 				{contact.map(([item, link, image]) => (
 					<a href={item === "email" ? `mailto:${link}` : link} key={item} target="_blank" rel="noreferrer">
-						<img src={image} alt={item} className="contactIcon" />
+						<img src={image} alt={item} className={`contact${item}`} />
 					</a>
 				))}
 			</div>
@@ -21,4 +21,4 @@ const personalData = ({message, name, role, contact}) => {
 	);
 };
 
-export default personalData;
+export default PersonalData;
