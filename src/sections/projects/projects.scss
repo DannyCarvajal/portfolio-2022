@@ -1,6 +1,9 @@
 .projectsSection {
     height: fit-content;
     background-color: #353841;
+    background-image: url(../../assets/img/speedlightbg.png);
+    background-repeat: no-repeat;
+    // background-size: cover;
     overflow-y: hidden;
     position: relative;
 
@@ -23,6 +26,7 @@
         position: relative;
         overflow-x: hidden;
         min-height: 670px;
+        background-image: url(../../assets/img/desktopspeedlight.png);
 
         &__title {
             text-align: right
