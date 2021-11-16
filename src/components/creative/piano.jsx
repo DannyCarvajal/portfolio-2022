@@ -1,4 +1,4 @@
-import PianoKey from "./pianoKey";
+import PianoKey from "./PianoKey";
 import "./piano.scss";
 
 const Piano = ({pianoGuess, notePlayingInMelody}) => {

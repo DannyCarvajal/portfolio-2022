@@ -1,6 +1,6 @@
 .creativeSection {
     // min-height: 100vh;
-    background: linear-gradient(161.9deg, #C971E6 -5.5%, #918CB8 55.45%, #4D7D85 106.66%);
+    background: linear-gradient(106.17deg, #F98DEE 0%, #00a78b 100%);
     opacity: 0.9;
     overflow: hidden;
     display: flex;
@@ -72,9 +72,10 @@
         cursor: pointer;
 
         &.active {
+
+            background-color: #f98deebe;
             background: #6c768b4b;
         }
-
     }
 
     .blackKey {
@@ -131,7 +132,7 @@
     /* big landscape tablets, laptops, and desktops */
     .creativeSection {
         min-height: 700px;
-        background: linear-gradient(108.32deg, #c9a0d6 1%, #b3a9da 54.81%, #566891 81.51%, #669796 99.27%);
+        background: linear-gradient(106.17deg, #F98DEE -3.5%, #8461B3 42.49%, #00C3A4 72.82%, #353841 102.41%);
         opacity: 1;
         position: relative;
 
@@ -148,7 +149,7 @@
         // BEHANCE CONTACT
 
         &__behance {
-            width: 400px;
+            width: 300px;
             position: absolute;
             top: 40%;
             right: 10px;
@@ -172,7 +173,7 @@
         // PIANO
         .piano {
             padding-bottom: 0px;
-            transform: scale(1.9) rotate(22deg) translateX(-100px);
+            transform: scale(1.9) rotate(22deg) translateX(-150px);
             opacity: 1;
             box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.781);
 

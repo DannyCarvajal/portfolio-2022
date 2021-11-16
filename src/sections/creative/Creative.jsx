@@ -1,8 +1,10 @@
-import Piano from "../../components/creative/piano";
+// COMPONENTS
+import Piano from "../../components/creative/Piano.jsx";
 import usePianoLogic from "../../hooks/pianoLogic";
-import SecretWord from "../../components/global/secretword";
+import SecretWord from "../../components/global/Secretword";
 import AlertIndication from "../../components/global/alertIndication";
 import Helpers from "../../hooks/helpers";
+// STYLES
 import "./creative.scss";
 //IMAGES
 import Behance from "../../assets/img/behancecontact.png";
@@ -17,14 +19,14 @@ const Creative = () => {
 	const {useScreenSize} = Helpers();
 	const [isTabletOrDesktop] = useScreenSize();
 
-	const bgColorAnimation = "linear-gradient(164.62deg, #765492 10.78%, #B396E6 95.15%)";
+	const bgColorAnimation = "linear-gradient(180deg, #ca74c2e5 0%, rgba(53, 56, 65, 0.3) 100%)";
 	console.log(isTabletOrDesktop);
 
 	return (
 		<section className="creativeSection">
 			<div className="creativeSection__descContainer">
 				<p className="descContainer__desc">
-					For sure, most problems that come to be can be solved in various ways, but is not until <b>design</b> comes in, that the inner magic comes out
+					Most problems that come to be can be solved in various ways. But is not until <b>design</b> comes in that the inner magic comes out. That’s why I have serious interest for <b>UI/UX</b> design
 				</p>
 			</div>
 			<div className="creativeSection__behance">
@@ -44,8 +46,8 @@ const Creative = () => {
 			</div>
 			<Piano pianoGuess={pianoKeyHandler} notePlayingInMelody={notePlayingInMelody} />
 			{/* ANIMATION OF SOLVED */}
-			{level === "solved" && <AlertIndication found="g" message="Letter Found" bgcolor={bgColorAnimation} />}
-			<SecretWord secretLetter={level === "solved" || !isTabletOrDesktop ? "g" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={level === "solved" ? "animation" : ""} />
+			{turn === "Melody solved" && <AlertIndication found="g" message="Letter Found" bgcolor={bgColorAnimation} />}
+			<SecretWord secretLetter={turn === "Melody solved" || !isTabletOrDesktop ? "g" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
 		</section>
 	);
 };

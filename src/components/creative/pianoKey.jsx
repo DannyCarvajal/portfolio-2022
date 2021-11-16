@@ -13,7 +13,7 @@ const PianoKey = ({keyType, note, pianoGuess, notePlayingInMelody}) => {
 	useEffect(() => {
 		if (notePlayingInMelody === noteOctave) {
 			setisActive(true);
-			keyHandler();
+			// keyHandler();
 		}
 	}, [notePlayingInMelody]);
 
