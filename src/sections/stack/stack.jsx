@@ -1,13 +1,16 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
+// LOGIC
 import {technologies, additionalTechnologies} from "./listOfTechnologies.js";
 import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
-import SlidePuzzle from "../../components/stack/slidePuzzle.jsx";
-import TechCard from "../../components/stack/techCard.jsx";
-import TechCircle from "../../components/stack/techCircleCard.jsx";
-import SecretWord from "../../components/global/secretword.jsx";
-import PuzzleInteraction from "../../components/stack/puzzleInteraction.jsx";
 import slidePuzzleAdditionals from "../../hooks/helpers";
-import AlertIndication from "../../components/global/alertIndication.jsx";
+// COMPONENTS
+import SlidePuzzle from "../../components/stack/SlidePuzzle";
+import TechCard from "../../components/stack/TechCard";
+import TechCircle from "../../components/stack/TechCircleCard";
+import SecretWord from "../../components/global/Secretword";
+import PuzzleInteraction from "../../components/stack/PuzzleInteraction";
+import AlertIndication from "../../components/global/AlertIndication";
+// STYLES
 import "./stack.scss";
 // IMAGES
 import Thunder from "../../assets/img/thunder.svg";
@@ -26,18 +29,19 @@ const Stack = () => {
 	const [isTabletOrDesktop] = useScreenSize();
 
 	// INTERACTIVE FUNCTIONS
+	const [activeAnimation, setActiveAnimation] = useState(false);
 	const mixPuzzleAgain = () => {
+		fadeOutElement(setActiveAnimation, false);
 		setCurrentOrder(newPuzzleCombination());
-		fadeOutElement(false);
 	};
 
-	useEffect(() => {
-		console.log("reload in parent currentorderchanged ");
-	}, [currentOrder]);
-
+	/* 	// useEffect(() => {
+	// 	console.log("reload in parent currentorderchanged ");
+	// }, [currentOrder]);
+ */
 	if (isTabletOrDesktop && !isSlidePuzzleSolved) {
 		return (
-			<section className="technologiesSection">
+			<section className={"technologiesSection " + (activeAnimation ? "activeAnimation" : "")}>
 				<header>
 					<h2 className="technologiesSection__title">Technologies</h2>
 				</header>
@@ -49,7 +53,7 @@ const Stack = () => {
 				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} setCurrentOrder={setCurrentOrder} solution={solution} />
 
 				<div className="technologiesSection__interactionContainer">
-					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(true)} image={Queen} keyWord="" />
+					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(setActiveAnimation, true)} image={Queen} keyWord="" />
 				</div>
 
 				<SecretWord secretLetter="" />
@@ -57,7 +61,7 @@ const Stack = () => {
 		);
 	} else {
 		return (
-			<section className="technologiesSection solved">
+			<section className={"technologiesSection solved " + (activeAnimation ? "activeAnimation" : "")}>
 				<header>
 					<h2 className="technologiesSection__title">Technologies</h2>
 				</header>

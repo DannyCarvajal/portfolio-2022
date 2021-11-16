@@ -1,7 +1,7 @@
 import {useEffect} from "react";
-import PuzzleItem from "./slidePuzzleItem.jsx";
-import SlideItemBg from "./slideItemBg.jsx";
-import ClickIndication from "../global/clickIndication.jsx";
+import PuzzleItem from "./SlidePuzzleItem.jsx";
+import SlideItemBg from "./SlideItemBg.jsx";
+import ClickIndication from "../global/ClickIndication.jsx";
 import "./slidePuzzle.scss";
 
 const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrentOrder}) => {

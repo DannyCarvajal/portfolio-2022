@@ -1,6 +1,6 @@
 import Intro from "./sections/introduction/Intro";
 import Logic from "./sections/logic/LogicSection";
-import Stack from "./sections/stack/stack.jsx";
+import Stack from "./sections/stack/Stack.jsx";
 import Creative from "./sections/creative/Creative";
 import Projects from "./sections/projects/Projects";
 import Contact from "./sections/contact/Contact";
