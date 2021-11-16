@@ -1,6 +1,6 @@
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import ProjectItem from "../../components/projects/ProjectItem";
-import SecretWord from "../../components/global/secretword";
+import SecretWord from "../../components/global/Secretword";
 import Helpers from "../../hooks/helpers";
 import "./projects.scss";
 

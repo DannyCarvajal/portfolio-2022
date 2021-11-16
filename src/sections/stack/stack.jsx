@@ -1,8 +1,8 @@
-import {useState, useEffect, useRef} from "react";
+import {useState} from "react";
 // LOGIC
 import {technologies, additionalTechnologies} from "./listOfTechnologies.js";
 import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
-import slidePuzzleAdditionals from "../../hooks/helpers";
+import useSlidePuzzleAdditionals from "../../hooks/helpers";
 // COMPONENTS
 import SlidePuzzle from "../../components/stack/SlidePuzzle";
 import TechCard from "../../components/stack/TechCard";
@@ -25,20 +25,15 @@ const Stack = () => {
 	const [isSlidePuzzleSolved, setIsSlidePuzzleSolved] = useState(false);
 
 	// ADITTIONAL FUNCTIONS
-	const {useScreenSize, fadeOutElement} = slidePuzzleAdditionals(setIsSlidePuzzleSolved);
+	const {useScreenSize, activeAnimation, startAnimation} = useSlidePuzzleAdditionals(setIsSlidePuzzleSolved);
 	const [isTabletOrDesktop] = useScreenSize();
 
 	// INTERACTIVE FUNCTIONS
-	const [activeAnimation, setActiveAnimation] = useState(false);
 	const mixPuzzleAgain = () => {
-		fadeOutElement(setActiveAnimation, false);
+		startAnimation(false);
 		setCurrentOrder(newPuzzleCombination());
 	};
 
-	/* 	// useEffect(() => {
-	// 	console.log("reload in parent currentorderchanged ");
-	// }, [currentOrder]);
- */
 	if (isTabletOrDesktop && !isSlidePuzzleSolved) {
 		return (
 			<section className={"technologiesSection " + (activeAnimation ? "activeAnimation" : "")}>
@@ -50,10 +45,10 @@ const Stack = () => {
 					are the pieces in your <b>game</b>
 				</p>
 				<img src={ChessBg} alt="chessbg" className="technologiesSection__chessbg" />
-				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} setCurrentOrder={setCurrentOrder} solution={solution} />
+				<SlidePuzzle setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} currentOrder={currentOrder} setCurrentOrder={setCurrentOrder} solution={solution} solvedHandler={() => startAnimation(true)} />
 
 				<div className="technologiesSection__interactionContainer">
-					<PuzzleInteraction description="Automatic solve" handler={() => fadeOutElement(setActiveAnimation, true)} image={Queen} keyWord="" />
+					<PuzzleInteraction description="Automatic solve" handler={() => startAnimation(true)} image={Queen} keyWord="" />
 				</div>
 
 				<SecretWord secretLetter="" />

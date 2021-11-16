@@ -8,12 +8,7 @@ const ClickIndication = ({message, containerClass, elemntsToFade}) => {
 	const fadeOut = () => {
 		let elements = document.querySelectorAll(`${elemntsToFade}`);
 		elements.forEach(el =>
-			el.addEventListener("click", () => {
-				setshow("fadeOut");
-			})
-		);
-		elements.forEach(el =>
-			el.addEventListener("dragStart", () => {
+			el.addEventListener("mousedown", () => {
 				setshow("fadeOut");
 			})
 		);

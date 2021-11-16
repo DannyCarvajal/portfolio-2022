@@ -3,7 +3,7 @@ import {useState} from "react";
 import Rubik from "../../components/rubiks/Rubik";
 import SecretWord from "../../components/global/Secretword";
 import ClickIndication from "../../components/global/ClickIndication";
-import AlertIndication from "../../components/global/alertIndication";
+import AlertIndication from "../../components/global/AlertIndication";
 // STYLES
 import "./logicSection.scss";
 // IMAGES

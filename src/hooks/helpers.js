@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-const additionalSlideFunc = setIsSlidePuzzleSolved => {
+const useAdditionalSlideFunc = setIsSlidePuzzleSolved => {
 	const useScreenSize = () => {
 		const [isTabletOrDesktop, setIsTabletOrDesktop] = useState(window.innerWidth > 700);
 		useEffect(() => {
@@ -18,13 +18,14 @@ const additionalSlideFunc = setIsSlidePuzzleSolved => {
 		return [isTabletOrDesktop];
 	};
 
-	const fadeOutElement = (setActiveAnimation, booleanSolved) => {
+	const [activeAnimation, setActiveAnimation] = useState(false);
+	const startAnimation = booleanSolved => {
 		setActiveAnimation(true);
 		setTimeout(() => setIsSlidePuzzleSolved(booleanSolved), 1250);
 		setTimeout(() => setActiveAnimation(false), 2500);
 	};
 
-	return {useScreenSize, fadeOutElement};
+	return {useScreenSize, activeAnimation, startAnimation};
 };
 
-export default additionalSlideFunc;
+export default useAdditionalSlideFunc;

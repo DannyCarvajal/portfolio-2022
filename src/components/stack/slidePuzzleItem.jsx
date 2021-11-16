@@ -1,38 +1,20 @@
-import React, {useState, useEffect} from "react";
-import "./slidePuzzleItem.scss";
+// LOGIC
 import useSlidePuzzle from "../../hooks/slidePuzzleSwipe";
+// STYLES
+import "./slidePuzzleItem.scss";
 
-const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder}) => {
-	const {checkCompleted, checkIfAllowedMovement, positionOfElelement, lineAndPositionToIndex} = useSlidePuzzle(item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder);
-
-	let [line, indexLine, top, left] = positionOfElelement(item);
-	const [positionStyles, setpositionStyles] = useState({top, left});
-	const [currentIndex, setCurrentIndex] = useState(lineAndPositionToIndex(line, indexLine));
-
-	const itemHandler = () => {
-		let [allowedMove] = checkIfAllowedMovement(item);
-		// IF A MOVE IS ALLOWED SWIPE THE ELEMENTS
-		console.log("The item is clicked");
-		if (allowedMove === 0 || allowedMove) {
-			let swipedArray = currentOrder;
-			swipedArray[allowedMove] = swipedArray.splice(currentIndex, 1, "blank")[0];
-			setCurrentIndex(allowedMove);
-			setCurrentOrder(swipedArray);
+const PuzzleItem = ({item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder, solution, solvedHandler}) => {
+	const checkIfSolved = () => {
+		if (currentOrder.join("") === solution.join("")) {
+			setTimeout(() => {
+				solvedHandler();
+			}, 500);
 		}
 	};
 
-	useEffect(() => {
-		console.log("the child recharged");
-		setpositionStyles({top, left});
-		setCurrentIndex(lineAndPositionToIndex(line, indexLine));
-		checkCompleted();
-	}, [currentOrder, currentIndex]);
+	const {positionStyles, preventDragHandler, currentIndex} = useSlidePuzzle(item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder, checkIfSolved);
 
 	let isEmptyElement = item === "blank" ? "emptyElement " : "";
-	const preventDragHandler = e => {
-		e.preventDefault();
-		itemHandler();
-	};
 
 	return (
 		<div id={item} className={"tech-item " + isEmptyElement + (currentIndex === 5 || currentIndex === 7 ? "slideToFadeHand" : "")} style={positionStyles} onMouseDown={preventDragHandler}>

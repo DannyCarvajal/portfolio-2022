@@ -1,9 +1,10 @@
+// LOGIC
+import usePianoLogic from "../../hooks/pianoLogic";
+import Helpers from "../../hooks/helpers";
 // COMPONENTS
 import Piano from "../../components/creative/Piano.jsx";
-import usePianoLogic from "../../hooks/pianoLogic";
 import SecretWord from "../../components/global/Secretword";
-import AlertIndication from "../../components/global/alertIndication";
-import Helpers from "../../hooks/helpers";
+import AlertIndication from "../../components/global/AlertIndication";
 // STYLES
 import "./creative.scss";
 //IMAGES
@@ -20,7 +21,6 @@ const Creative = () => {
 	const [isTabletOrDesktop] = useScreenSize();
 
 	const bgColorAnimation = "linear-gradient(180deg, #ca74c2e5 0%, rgba(53, 56, 65, 0.3) 100%)";
-	console.log(isTabletOrDesktop);
 
 	return (
 		<section className="creativeSection">

@@ -1,16 +1,11 @@
-import {useEffect} from "react";
+// COMPONENTS
 import PuzzleItem from "./SlidePuzzleItem.jsx";
 import SlideItemBg from "./SlideItemBg.jsx";
 import ClickIndication from "../global/ClickIndication.jsx";
+// STYLES
 import "./slidePuzzle.scss";
 
-const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrentOrder}) => {
-	console.log("joined the slidepuzzle");
-
-	useEffect(() => {
-		console.log("I got a new current order in parent ", currentOrder);
-	}, [currentOrder]);
-
+const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrentOrder, solvedHandler}) => {
 	return (
 		<div className="slidePuzzleContainer">
 			{solution.map(item => {
@@ -18,7 +13,7 @@ const SlidePuzzle = ({setIsSlidePuzzleSolved, currentOrder, solution, setCurrent
 			})}
 
 			{currentOrder.map(item => {
-				return <PuzzleItem item={item} currentOrder={currentOrder} setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} key={item} setCurrentOrder={setCurrentOrder} />;
+				return <PuzzleItem item={item} currentOrder={currentOrder} setIsSlidePuzzleSolved={setIsSlidePuzzleSolved} key={item} setCurrentOrder={setCurrentOrder} solution={solution} solvedHandler={solvedHandler} />;
 			})}
 			<ClickIndication message="Click to slide" containerClass="slideIndicator" elemntsToFade=".slideToFadeHand" />
 		</div>

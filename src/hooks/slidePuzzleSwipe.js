@@ -1,12 +1,36 @@
 import {useState, useEffect} from "react";
 
-import additionalSlideFunc from "./helpers";
-
-const useSlidePuzzle = (item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder) => {
+const useSlidePuzzle = (item, currentOrder, setIsSlidePuzzleSolved, setCurrentOrder, checkIfSolved) => {
 	const DIMENSIONS_SLIDE_ITEM = (450 - 40) / 3; /* CONTAINERWIDTH - PADDING / ITEMS PER ROW */
 	const CONTAINERPADDING = 40 / 2;
 
-	const checkIfAllowedMovement = item => {
+	let [line, indexLine, top, left] = positionOfElelement(item);
+	const [positionStyles, setpositionStyles] = useState({top, left});
+	const [currentIndex, setCurrentIndex] = useState(lineAndPositionToIndex(line, indexLine));
+
+	const itemHandler = () => {
+		let [allowedMove] = checkIfAllowedMovement(item);
+		// IF A MOVE IS ALLOWED SWIPE THE ELEMENTS
+		if (allowedMove === 0 || allowedMove) {
+			let swipedArray = currentOrder;
+			swipedArray[allowedMove] = swipedArray.splice(currentIndex, 1, "blank")[0];
+			setCurrentIndex(allowedMove);
+			setCurrentOrder(swipedArray);
+		}
+	};
+
+	useEffect(() => {
+		setpositionStyles({top, left});
+		setCurrentIndex(lineAndPositionToIndex(line, indexLine));
+		checkIfSolved();
+	}, [currentOrder, currentIndex]);
+
+	const preventDragHandler = e => {
+		e.preventDefault();
+		itemHandler();
+	};
+
+	function checkIfAllowedMovement(item) {
 		let [line, position] = positionOfElelement(item);
 		let possibleIndexes = [];
 
@@ -29,7 +53,7 @@ const useSlidePuzzle = (item, currentOrder, setIsSlidePuzzleSolved, setCurrentOr
 
 		// CHECK IF POSSIBLE INDEXES ARE EQUALS TO BLANK SPACE
 		return possibleIndexes.filter(index => currentOrder[index] === "blank");
-	};
+	}
 
 	function positionOfElelement(item) {
 		let line = Math.floor(currentOrder.indexOf(item) / 3);
@@ -41,19 +65,7 @@ const useSlidePuzzle = (item, currentOrder, setIsSlidePuzzleSolved, setCurrentOr
 		return line * 3 + position;
 	}
 
-	const checkCompleted = () => {
-		let slideAnswer = ["html", "css", "javascript", "sass", "git", "figma", "react", "daniel", "blank"];
-		let {fadeOutElement} = additionalSlideFunc(setIsSlidePuzzleSolved);
-
-		// CHECK IF THE TWO ARRAYS ARE EQUALS
-		if (currentOrder.join("") === slideAnswer.join("")) {
-			setTimeout(() => {
-				fadeOutElement(true);
-			}, 500);
-		}
-	};
-
-	return {checkCompleted, checkIfAllowedMovement, positionOfElelement, lineAndPositionToIndex};
+	return {positionStyles, preventDragHandler, currentIndex};
 };
 
 export default useSlidePuzzle;
