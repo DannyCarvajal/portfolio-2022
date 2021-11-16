@@ -6,9 +6,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(0deg, rgba(247, 249, 251, 0.2), rgba(247, 249, 251, 0.2));
+    padding: 30px 0px 70px 0px;
+
+    &:last-child {
+        margin-bottom: 100px;
+    }
 
     &__imgContainer {
         max-width: 90vw;
+        order: -1;
+
         background-color: transparent;
 
         & .projectimage {
@@ -26,7 +34,7 @@
     &__description {
         width: 85vw;
         color: white;
-        margin-bottom: 20px;
+        margin: 20px 0px;
         position: relative;
 
         & .title {
@@ -37,9 +45,10 @@
 
             background: #353841;
             /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F7F9F9, #5084a5);
+            background: -webkit-linear-gradient(to right, #5CBEE2 8.73%, #F7F9FB 124.95%);
+            ;
             /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F7F9F9, #5084a5);
+            background: linear-gradient(to right, #5CBEE2 8.73%, #F7F9FB 124.95%);
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             -webkit-background-clip: text;
             background-clip: text;
@@ -47,8 +56,10 @@
         }
 
         & p {
+            font-size: 1.25rem;
             font-weight: 300;
             text-align: justify;
+            // line-height: 35px;
 
         }
 

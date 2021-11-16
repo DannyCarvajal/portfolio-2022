@@ -1,7 +1,7 @@
 import "./projectitem.scss";
-import BehanceContact from "../../assets/img/behancecontact.svg";
-import WebContact from "../../assets/img/webcontact.svg";
-import GithubContact from "../../assets/img/githubcontact.svg";
+import BehanceContact from "../../assets/img/behancespacecontact.svg";
+import WebContact from "../../assets/img/webspacecontact.png";
+import GithubContact from "../../assets/img/githubspacecontact.png";
 import projectItemHandlers from "../../hooks/projectItem";
 
 const ProjectItem = ({image, name, links, description, projects, currProject, setCurrProject}) => {
