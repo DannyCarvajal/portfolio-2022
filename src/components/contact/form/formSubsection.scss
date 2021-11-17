@@ -1,0 +1,164 @@
+.formSubsection {
+
+
+    &__title {
+        font-size: 1.7rem;
+        margin: 25px 0px 25px 20px;
+
+        background: #353841;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0099D2 0%, #4DD5C0 14%);
+        ;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0099D2 0%, #4DD5C0 14%);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+    }
+
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        // PARENT OF CHARACTER AND TOP FORM
+        & .form__topSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // PARENT OF INPUTS
+            & .topSection__inputs {
+
+                // INDIDIAUL INPUT PARENT
+                & .inputContainer {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    margin-top: 20px;
+
+                    label {
+                        align-self: flex-start;
+                        font-style: italic;
+                        font-weight: 300;
+                    }
+
+                    & i {
+                        left: 10px;
+                        bottom: 10px;
+                        font-size: 1.3rem;
+                        position: absolute;
+                    }
+
+                    .form__name,
+                    .form__mail {
+                        width: 87vw;
+                        max-width: 500px;
+                        height: 40px;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        font-size: 1rem;
+                        background: #DEF2F9;
+                        padding-left: 50px;
+
+                    }
+
+                }
+
+
+
+            }
+
+
+        }
+
+
+        & .form__bottomSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            & label {
+                font-style: italic;
+                font-weight: 300;
+                align-self: flex-start;
+            }
+
+            & textarea {
+                max-width: 500px;
+                border-radius: 10px;
+                height: 200px;
+                width: 87vw;
+                background-color: #5CBEE230;
+                border: none;
+                outline: none;
+                resize: none;
+                padding: 20px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+            }
+        }
+
+
+    }
+}
+
+
+@media (min-width:1100px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .formSubsection {
+        width: 65vw;
+
+        &__title {
+            font-size: 2.3rem;
+        }
+
+        & form {
+            align-items: flex-start;
+            margin-left: 65px; // PARENT OF CHARACTER AND TOP FORM
+
+            & .form__topSection {
+                flex-direction: row-reverse;
+
+                .namesCharacter {
+                    margin-left: 70px;
+                }
+
+                & .topSection__inputs {
+
+                    // INDIDIAUL INPUT PARENT
+                    & .inputContainer {
+
+                        .form__name,
+                        .form__mail {
+                            max-width: 400px;
+
+                        }
+                    }
+                }
+            }
+
+            &>.form__bottomSection {
+                &>textarea {
+                    max-width: 636px;
+                }
+            }
+        }
+
+    }
+}

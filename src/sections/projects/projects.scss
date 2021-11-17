@@ -12,7 +12,7 @@
     &__title {
         color: #fff;
         font-size: 1.7rem;
-        margin: 30px 30px;
+        margin: 25px 20px;
         text-align: left
     }
 
@@ -29,7 +29,9 @@
         background-image: url(../../assets/img/desktopspeedlight.png);
 
         &__title {
-            text-align: right
+            text-align: right;
+            margin: 30px 30px;
+
         }
 
         & .projectItemContainer {

@@ -1,0 +1,32 @@
+.submitButton {
+    width: 60vw;
+    max-width: 300px;
+    border: none;
+    background: #5CBEE2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    &__message {
+        display: flex;
+        gap: 20px;
+        color: #fff;
+        position: relative;
+
+        & h2 {
+            font-weight: 600;
+        }
+    }
+
+    & i {
+        position: absolute;
+        right: -40px;
+        bottom: 2px;
+        color: #fff;
+        font-size: 1.5rem;
+        transform: rotate(50deg);
+
+    }
+}

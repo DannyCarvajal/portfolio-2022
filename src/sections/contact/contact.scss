@@ -1,3 +1,24 @@
 .contactSection {
-    min-height: 90vh;
+
+    &__container {
+        min-height: 95vh;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+@media (min-width:1100px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .contactSection {
+
+        &__container {
+            height: 90vh;
+            flex-direction: row;
+
+        }
+    }
 }
