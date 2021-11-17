@@ -117,6 +117,14 @@
     }
 }
 
+@media (min-width:700px) {
+
+    /* tablet, landscape iPad */
+    .formSubesction {
+        max-height: 700px;
+    }
+}
+
 
 @media (min-width:1100px) {
 

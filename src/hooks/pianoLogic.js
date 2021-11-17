@@ -18,6 +18,9 @@ const usePianoLogic = () => {
 	const [notePlayingInMelody, setNotePlayingInMelody] = useState("");
 
 	const playPianoHandler = () => {
+		// PREVENT PLAYING TWICE
+		if (turn === pianoTurn) return null;
+
 		setTurn(pianoTurn);
 		const bpm = 110;
 		const speed = (60 / bpm) * 1000;

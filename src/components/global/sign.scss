@@ -1,0 +1,15 @@
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &__name {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+
+    & i {
+        font-size: 1.7rem;
+    }
+}

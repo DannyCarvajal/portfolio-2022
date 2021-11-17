@@ -14,9 +14,14 @@
 
     /* big landscape tablets, laptops, and desktops */
     .contactSection {
+        height: 700px;
+
+        & .formSubsection {
+            margin-top: 20px;
+        }
 
         &__container {
-            height: 90vh;
+            height: 100%;
             flex-direction: row;
 
         }

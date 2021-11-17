@@ -1,5 +1,6 @@
 .wordSubsection {
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, #5CBEE2 11%, #D54DD0 84.38%);
+        background: linear-gradient(90deg, #8461B3 12.21%, #4DD5C0 100.15%);
         z-index: -1;
     }
 
@@ -54,6 +55,19 @@
 
 }
 
+
+
+
+@media (min-width:700px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .wordSubsection {
+        height: 100%;
+        max-height: 700px;
+    }
+
+
+}
 
 
 @media (min-width:1100px) {

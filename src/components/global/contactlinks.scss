@@ -1,0 +1,13 @@
+@import '../../index.scss';
+
+.contactLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & i {
+        color: $darkBlue;
+        font-size: 2rem;
+    }
+}
