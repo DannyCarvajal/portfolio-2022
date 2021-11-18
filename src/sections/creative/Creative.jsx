@@ -26,7 +26,7 @@ const Creative = () => {
 		<section className="creativeSection">
 			<div className="creativeSection__descContainer">
 				<p className="descContainer__desc">
-					Most problems that come to be can be solved in various ways. But is not until <b>design</b> comes in that the inner magic comes out. That’s why I have serious interest for <b>UI/UX</b> design
+					Problems can be solved in various ways. But is not until <b>design</b> comes in that the inner magic comes out. I have a serious interest for <b>UI/UX</b> design because it can be a differencial for meaninful experiences
 				</p>
 			</div>
 			<div className="creativeSection__behance">

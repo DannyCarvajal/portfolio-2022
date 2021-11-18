@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: appearFromBottom 3s ease-in-out forwards;
+    animation: appearFromBottom 4s ease-in-out forwards;
 
     &__letterFound {
         font-family: 'Reenie Beanie', cursive;
@@ -36,9 +36,13 @@
             transform: translateY(10%);
         }
 
-        60% {
+        40% {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        70% {
+            opacity: 1;
         }
 
         100% {
