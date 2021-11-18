@@ -1,6 +1,5 @@
 // COMPONENTS
 import PersonalData from "../../components/introduction/PersonalData.jsx";
-import SecretWord from "../../components/global/Secretword.jsx";
 import MainLogo from "../../components/global/MainLogo.jsx";
 // STYLES
 import "./intro.scss";
@@ -26,7 +25,6 @@ const Intro = () => {
 				]}
 				className="introSection__personalData"
 			/>
-			<SecretWord secretLetter="r" bgcolor="white" letterColor="#353841" />
 		</section>
 	);
 };

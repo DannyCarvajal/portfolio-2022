@@ -1,7 +1,7 @@
 // STYLES
 import "./mainlogo.scss";
 // IMAGES
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/img/finallogo.png";
 
 const MainLogo = () => {
 	return (

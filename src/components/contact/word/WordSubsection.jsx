@@ -9,7 +9,6 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 
 	useEffect(() => {
 		if (guessSecret === "right") setSecretFound("PENDING");
-		console.log(guessSecret);
 	}, [guessSecret]);
 
 	const gradient = secretFound === true ? " linear-gradient(179.4deg, rgba(247, 249, 251, 0.8) 3.83%, rgba(255, 255, 255, 0) 98.27%)" : "linear-gradient(180.26deg, #00161E 36.68%, rgba(79, 124, 140, 0.46) 98.53%)";
@@ -23,7 +22,7 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 		if (!secretFound) {
 			return (
 				<div className="wordSubsection__guessContainer">
-					<input type="text" className="wordSubsection__word" maxLength="5" value={guessSecret} onChange={e => setGuessSecret(e.target.value)} autoFocus />
+					<input type="text" className="wordSubsection__word" maxLength="5" value={guessSecret} onChange={e => setGuessSecret(e.target.value)} autoFocus={guessSecret.length > 0} />
 					<h2 className="indication">Write the secret word</h2>
 				</div>
 			);

@@ -2,7 +2,6 @@
 import FormSubsection from "../../components/contact/form/FormSubsection";
 import WordSubsection from "../../components/contact/word/WordSubsection";
 import Footer from "../../components/contact/Footer";
-
 // STYLES
 import "./contact.scss";
 

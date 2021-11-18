@@ -37,8 +37,8 @@ const Logic = () => {
 			</div>
 			<p className="logicSection__tip">{messageIndication}</p>
 			{/* ANIMATION OF SOLVED */}
-			{checkIfSolved() && <AlertIndication found="i" message="Letter Found" bgcolor="#353841" />}
-			<SecretWord secretLetter={checkIfSolved() ? "i" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
+			{checkIfSolved() && <AlertIndication found="r" message="Letter Found" bgcolor="#353841" />}
+			<SecretWord secretLetter={checkIfSolved() ? "r" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
 		</section>
 	);
 };
