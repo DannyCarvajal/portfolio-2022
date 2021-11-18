@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.70a4d45f.chunk.css",
+    "main.js": "/portfolio/static/js/main.feba7a37.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.feba7a37.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.b3cc0d0e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.b3cc0d0e.js.map",
+    "static/js/2.e115f05b.chunk.js": "/portfolio/static/js/2.e115f05b.chunk.js",
+    "static/js/2.e115f05b.chunk.js.map": "/portfolio/static/js/2.e115f05b.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.70a4d45f.chunk.css.map": "/portfolio/static/css/main.70a4d45f.chunk.css.map",
+    "static/js/2.e115f05b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e115f05b.chunk.js.LICENSE.txt",
+    "static/media/behancecontact.4b67bc25.png": "/portfolio/static/media/behancecontact.4b67bc25.png",
+    "static/media/behancespacecontact.960fbe0b.svg": "/portfolio/static/media/behancespacecontact.960fbe0b.svg",
+    "static/media/chessbg.88ccf36d.svg": "/portfolio/static/media/chessbg.88ccf36d.svg",
+    "static/media/projects.scss": "/portfolio/static/media/speedlightbg.a0e1fdc5.png",
+    "static/media/emailcontact.dc4eee62.svg": "/portfolio/static/media/emailcontact.dc4eee62.svg",
+    "static/media/githubcontact.f85e105f.svg": "/portfolio/static/media/githubcontact.f85e105f.svg",
+    "static/media/linkedincontact.0857320d.svg": "/portfolio/static/media/linkedincontact.0857320d.svg",
+    "static/media/olivercircle.019e1975.png": "/portfolio/static/media/olivercircle.019e1975.png",
+    "static/media/queen.a82f7908.svg": "/portfolio/static/media/queen.a82f7908.svg",
+    "static/media/thunder.9b75ac74.svg": "/portfolio/static/media/thunder.9b75ac74.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3cc0d0e.js",
+    "static/js/2.e115f05b.chunk.js",
+    "static/css/main.70a4d45f.chunk.css",
+    "static/js/main.feba7a37.chunk.js"
+  ]
+}
