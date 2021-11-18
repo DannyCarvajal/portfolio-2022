@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.227975ff.chunk.css",
-    "main.js": "/static/js/main.9e3f2306.chunk.js",
-    "main.js.map": "/static/js/main.9e3f2306.chunk.js.map",
+    "main.css": "/static/css/main.ff0fb6b0.chunk.css",
+    "main.js": "/static/js/main.5de55085.chunk.js",
+    "main.js.map": "/static/js/main.5de55085.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1c8e3017.js",
     "runtime-main.js.map": "/static/js/runtime-main.1c8e3017.js.map",
     "static/js/2.e115f05b.chunk.js": "/static/js/2.e115f05b.chunk.js",
     "static/js/2.e115f05b.chunk.js.map": "/static/js/2.e115f05b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.227975ff.chunk.css.map": "/static/css/main.227975ff.chunk.css.map",
+    "static/css/main.ff0fb6b0.chunk.css.map": "/static/css/main.ff0fb6b0.chunk.css.map",
     "static/js/2.e115f05b.chunk.js.LICENSE.txt": "/static/js/2.e115f05b.chunk.js.LICENSE.txt",
     "static/media/behancecontact.4b67bc25.png": "/static/media/behancecontact.4b67bc25.png",
     "static/media/behancespacecontact.960fbe0b.svg": "/static/media/behancespacecontact.960fbe0b.svg",
     "static/media/chessbg.88ccf36d.svg": "/static/media/chessbg.88ccf36d.svg",
-    "static/media/dannydesktop.2928ff91.png": "/static/media/dannydesktop.2928ff91.png",
+    "static/media/dannydesktop.08b5f8e1.png": "/static/media/dannydesktop.08b5f8e1.png",
     "static/media/dannymobile.0a8c4db9.png": "/static/media/dannymobile.0a8c4db9.png",
     "static/media/projects.scss": "/static/media/speedlightbg.a0e1fdc5.png",
     "static/media/emailcontact.dc4eee62.svg": "/static/media/emailcontact.dc4eee62.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.1c8e3017.js",
     "static/js/2.e115f05b.chunk.js",
-    "static/css/main.227975ff.chunk.css",
-    "static/js/main.9e3f2306.chunk.js"
+    "static/css/main.ff0fb6b0.chunk.css",
+    "static/js/main.5de55085.chunk.js"
   ]
 }
