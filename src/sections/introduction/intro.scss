@@ -18,13 +18,6 @@
         background: #01263338;
         border-radius: 50%;
     }
-
-    &__logo {
-        position: absolute;
-        width: 50px;
-        top: 40px;
-        left: 40px;
-    }
 }
 
 @media (min-width:700px) {
@@ -41,11 +34,6 @@
             margin: 0;
             background: transparent;
 
-        }
-
-        &__logo {
-            top: 50px;
-            left: 50px;
         }
     }
 

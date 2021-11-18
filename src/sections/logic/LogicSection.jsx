@@ -27,7 +27,7 @@ const Logic = () => {
 		<section className="logicSection">
 			<img src={DecorationLine} alt="decorationLine" className="logicSection__decorationLine" />
 			<p className="logicSection__story">
-				Since I was a child I've loved <b>puzzles </b> , from the Rubik’s cube to chess. Completing a puzzle challenge is similar to finishing a project as a <b>Front-End developer</b> , but there’s always more....
+				Since I was a child I've loved <b>puzzles</b>, from the Rubik’s cube to chess. Finishing a project is like completing a puzzle, but as a <b>Front-End developer</b> there’s always more....
 			</p>
 			<div className="logicSection__puzzleContainer">
 				{columnColors.map((column, index) => (

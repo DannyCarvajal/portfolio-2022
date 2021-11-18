@@ -1,10 +1,10 @@
 // COMPONENTS
 import PersonalData from "../../components/introduction/PersonalData.jsx";
 import SecretWord from "../../components/global/Secretword.jsx";
+import MainLogo from "../../components/global/MainLogo.jsx";
 // STYLES
 import "./intro.scss";
 // IMAGES
-import Logo from "../../assets/img/logo.png";
 import Danny from "../../assets/img/olivercircle.png";
 import Linkedin from "../../assets/img/linkedincontact.svg";
 import Github from "../../assets/img/githubcontact.svg";
@@ -13,7 +13,7 @@ import Email from "../../assets/img/emailcontact.svg";
 const Intro = () => {
 	return (
 		<section className="introSection">
-			<img src={Logo} alt="Danny Carvajal" className="introSection__logo" />
+			<MainLogo />
 			<img src={Danny} alt="Danny carvajal" className="introSection__oliverimage" />
 			<PersonalData
 				message="Hello there!"

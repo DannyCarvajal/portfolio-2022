@@ -1,0 +1,15 @@
+.mainlogo {
+    position: absolute;
+    width: 50px;
+    top: 40px;
+    left: 40px;
+}
+
+@media (min-width:700px) {
+
+    /* tablet, landscape iPad */
+    .mainlogo {
+        top: 50px;
+        left: 50px;
+    }
+}
