@@ -1,10 +1,10 @@
+// STATE FALSE
 .wordSubsection {
     height: 100vh;
     min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180.26deg, #00161E 36.68%, rgba(79, 124, 140, 0.46) 98.53%);
     position: relative;
 
     &__gradientBg {
@@ -15,9 +15,9 @@
         height: 100%;
         background: linear-gradient(90deg, #8461B3 12.21%, #4DD5C0 100.15%);
         z-index: -1;
+
+        transition-duration: 2s ease-in-out;
     }
-
-
 
     &__guessContainer {
         width: 100%;
@@ -55,6 +55,58 @@
 
 }
 
+// STATE PENDING
+.arrowContainer {
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: white;
+    position: relative;
+
+    border-radius: 20px;
+    animation: fadeInFromBottom 1.5s ease-in-out forwards, indicationToPress 3s ease-in-out infinite;
+    cursor: pointer;
+
+    & i {
+        color: rgba(53, 56, 65, 0.836);
+        font-size: 3.2rem;
+    }
+
+    & .pressme {
+        font-size: 1.3rem;
+        position: absolute;
+        bottom: -40px;
+        color: white;
+        font-weight: 500;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes indicationToPress {
+    0% {}
+
+    30% {
+        background-color: #6cbeb2;
+        opacity: 1;
+    }
+
+    100% {
+        background-color: white
+    }
+}
 
 
 

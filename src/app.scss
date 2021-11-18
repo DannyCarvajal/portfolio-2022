@@ -1,0 +1,13 @@
+.AppSecret {
+    animation: fadeIn 3s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

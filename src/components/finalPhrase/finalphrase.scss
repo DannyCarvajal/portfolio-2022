@@ -1,6 +1,146 @@
 .finalPhrase {
-    height: 100vw;
-    max-height: 700px;
+    height: 750px;
+    max-height: 750px;
     background: linear-gradient(89.9deg, #003244 -1.12%, #00161E 94.86%);
     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & picture {
+
+        & source,
+        img {
+            position: absolute;
+            left: 0px;
+            mix-blend-mode: lighten;
+            // transform: scale(1.05);
+            bottom: -80px;
+            width: 380px;
+            height: 800px;
+            // pointer-events: none;
+        }
+    }
+
+    & blockquote {
+        color: white;
+        max-width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        margin-left: 140px;
+
+        & .phrase {
+            font-size: 2.2rem;
+            font-weight: 200;
+            padding-right: 10px;
+
+            & .wordFound {
+                color: white;
+                font-weight: 700;
+                animation: fadeInFromBottom 5s ease-in-out;
+            }
+
+            @keyframes fadeInFromBottom {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+
+        }
+    }
+
+    & .name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+}
+
+@media (min-width:700px) {
+
+    /* tablet, landscape iPad */
+    .finalPhrase {
+        & picture {
+
+            & source,
+            img {
+                left: -300px;
+                bottom: -20px;
+                width: unset;
+                height: unset;
+            }
+        }
+
+        & blockquote {
+            max-width: 450px;
+
+            & .name {
+                align-self: flex-end;
+            }
+        }
+    }
+
+}
+
+@media (min-width:900px) {
+
+    /* tablet, landscape iPad */
+    .finalPhrase {
+        & picture {
+
+            & source,
+            img {
+                left: -200px;
+                bottom: -20px;
+                width: unset;
+                height: unset;
+            }
+        }
+
+        & blockquote {
+            max-width: 450px;
+            margin-top: 50px;
+            margin-right: 5%;
+
+            & .name {
+                align-self: flex-end;
+            }
+        }
+    }
+
+}
+
+@media (min-width:1100px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .finalPhrase {
+        max-height: 100vh;
+
+        & picture {
+
+            & source,
+            img {
+                left: -7vw;
+                bottom: -90px;
+            }
+        }
+
+        & blockquote {
+            max-width: 600px;
+            margin-right: 10%;
+        }
+    }
 }

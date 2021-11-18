@@ -44,7 +44,6 @@ const FormSubsection = () => {
 				{statusEmail === "SENTSUCCESS" && <Message bgColor="#4DD5C0" message="Email succesfully sent!" />}
 				{statusEmail === "SENTERROR" && <Message bgColor="#F44336" message="Couldn't send email! Please send it from your mail app" />}
 			</form>
-			<h2>{firstName}</h2>
 		</div>
 	);
 };

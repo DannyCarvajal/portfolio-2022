@@ -6,13 +6,13 @@ import Footer from "../../components/contact/Footer";
 // STYLES
 import "./contact.scss";
 
-const Contact = () => {
+const Contact = ({secretFound, setSecretFound}) => {
 	return (
 		<>
 			<div className="contactSection">
 				<div className="contactSection__container">
 					<FormSubsection />
-					<WordSubsection />
+					<WordSubsection secretFound={secretFound} setSecretFound={setSecretFound} />
 				</div>
 			</div>
 			<Footer />

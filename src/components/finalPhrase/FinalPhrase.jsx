@@ -11,13 +11,15 @@ const FinalPhrase = () => {
 		<section className="finalPhrase">
 			<MainLogo />
 			<picture>
-				<source media="(min-width:700px)" srcset={DannyDesktop} />
-				<source media="(min-width:200px)" srcset={DannyMobile} />
+				<source media="(min-width:720px)" srcSet={DannyDesktop} />
+				<source media="(min-width:200px)" srcSet={DannyMobile} />
 				<img src={DannyDesktop} alt="Danny carvajal" />
 			</picture>
 			<blockquote>
-				<p>“If you are having fun you’re probably in the right way”</p>
-				<cite>Danny Carvajal</cite>
+				<p className="phrase">
+					“If you are having fun you’re <br /> probably in the <span className="wordFound">right</span> way”
+				</p>
+				<cite className="name">Danny Carvajal</cite>
 			</blockquote>
 		</section>
 	);
