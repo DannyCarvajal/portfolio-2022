@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff0fb6b0.chunk.css",
-    "main.js": "/static/js/main.5de55085.chunk.js",
-    "main.js.map": "/static/js/main.5de55085.chunk.js.map",
+    "main.css": "/static/css/main.43818e7e.chunk.css",
+    "main.js": "/static/js/main.7cda5698.chunk.js",
+    "main.js.map": "/static/js/main.7cda5698.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1c8e3017.js",
     "runtime-main.js.map": "/static/js/runtime-main.1c8e3017.js.map",
     "static/js/2.e115f05b.chunk.js": "/static/js/2.e115f05b.chunk.js",
     "static/js/2.e115f05b.chunk.js.map": "/static/js/2.e115f05b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ff0fb6b0.chunk.css.map": "/static/css/main.ff0fb6b0.chunk.css.map",
+    "static/css/main.43818e7e.chunk.css.map": "/static/css/main.43818e7e.chunk.css.map",
     "static/js/2.e115f05b.chunk.js.LICENSE.txt": "/static/js/2.e115f05b.chunk.js.LICENSE.txt",
     "static/media/behancecontact.4b67bc25.png": "/static/media/behancecontact.4b67bc25.png",
     "static/media/behancespacecontact.960fbe0b.svg": "/static/media/behancespacecontact.960fbe0b.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.1c8e3017.js",
     "static/js/2.e115f05b.chunk.js",
-    "static/css/main.ff0fb6b0.chunk.css",
-    "static/js/main.5de55085.chunk.js"
+    "static/css/main.43818e7e.chunk.css",
+    "static/js/main.7cda5698.chunk.js"
   ]
 }
