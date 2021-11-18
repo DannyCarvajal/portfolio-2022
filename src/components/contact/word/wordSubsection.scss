@@ -64,6 +64,15 @@
     .wordSubsection {
         height: 100%;
         max-height: 700px;
+
+
+        &__guessContainer {
+
+            & .wordSubsection__word {
+                width: 80%;
+                max-width: 400px;
+            }
+        }
     }
 
 
