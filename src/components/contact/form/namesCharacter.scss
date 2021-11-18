@@ -4,21 +4,15 @@
     height: 150px;
     position: relative;
 
-
-
     &__characterContainer {
         width: 38.19951338199513vw;
-        // width: 150px;
         background: linear-gradient(82.49deg, rgba(92, 190, 226, 0) -8.78%, #5CBEE2 67.79%);
-
-
 
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-
 
         & .character {
             position: relative;
@@ -41,9 +35,9 @@
     }
 }
 
+
 @media (min-width:1100px) {
     /* big landscape tablets, laptops, and desktops */
-
 
     .namesCharacter {
         width: 170px;
