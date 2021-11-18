@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 // COMPONENTS
 import Intro from "./sections/introduction/Intro";
 import Logic from "./sections/logic/LogicSection";
@@ -14,6 +14,10 @@ import "./app.scss";
 function App() {
 	// FALSE, PENDING, TRUE
 	const [secretFound, setSecretFound] = useState(false);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const Main = () => {
 		if (secretFound === true) {
