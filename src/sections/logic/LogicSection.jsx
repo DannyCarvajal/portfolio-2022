@@ -27,7 +27,7 @@ const Logic = () => {
 		<section className="logicSection">
 			<img src={DecorationLine} alt="decorationLine" className="logicSection__decorationLine" />
 			<p className="logicSection__story">
-				When I was a child I met the Rubik's cube. I really liked it and my interest for <i>puzzles</i> leaded me to try chess and got me closer to the <b>Front-End</b> development. Your portfolio is like your home and that's why you'll find in here some mini-puzzles that will give you letters to find the secret word, good luck....
+				When I was a child I met the Rubik's cube. I really liked it and my interest for <i>puzzles</i> leaded me to try chess and got me closer to the <b>Front-End</b> development. Your portfolio is like your home and that's why you'll find in here some tiny puzzles that will give you letters to find the secret word. Good luck....
 			</p>
 			<div className="logicSection__puzzleContainer">
 				{columnColors.map((column, index) => (

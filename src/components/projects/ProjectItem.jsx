@@ -23,7 +23,9 @@ const ProjectItem = ({image, name, links, description, projects, currProject, se
 				<p>{description}</p>
 			</div>
 			<div className="projectItem__imgContainer">
-				<img src={image} alt={name} className="projectimage" />
+				<a href={links[1]} target="_blank" rel="noreferrer">
+					<img src={image} alt={name} className="projectimage" />
+				</a>
 			</div>
 			<div className="projectItem__projectButtons">
 				<button className="leftButton" onClick={leftButtonHandler}>

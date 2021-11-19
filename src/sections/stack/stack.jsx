@@ -41,7 +41,8 @@ const Stack = () => {
 					<h2 className="technologiesSection__title">Technologies</h2>
 				</header>
 				<p className="technologiesSection__description">
-					Your <b>stack</b> components <br />
+					Your technologies <b>stack</b>
+					<br />
 					are the pieces in your <b>game</b>
 				</p>
 				<img src={ChessBg} alt="chessbg" className="technologiesSection__chessbg" />

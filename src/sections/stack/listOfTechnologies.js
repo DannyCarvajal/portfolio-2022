@@ -50,7 +50,7 @@ const additionalTechnologies = [
 		name: "figma",
 	},
 	{
-		name: "concept design",
+		name: "creativity",
 	},
 	{
 		name: "rdb",

@@ -17,7 +17,7 @@ const Intro = () => {
 			<PersonalData
 				message="Hello there!"
 				name="Danny Carvajal"
-				role="Front-end Developer"
+				role="Front-End Developer"
 				contact={[
 					["linkedin", "https://www.linkedin.com/in/dannycarvajal1", Linkedin],
 					["github", "https://github.com/dannycarvajal", Github],
