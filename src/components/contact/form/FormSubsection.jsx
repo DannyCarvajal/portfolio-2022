@@ -15,7 +15,7 @@ const FormSubsection = () => {
 	const [firstName, setFirstName] = useState("");
 
 	const handleFirstName = name => {
-		if (name.includes(" ")) setFirstName(name.split(" ")[0]);
+		if (name.includes(" ")) setFirstName(name.split(" ")[0].toLowerCase());
 	};
 
 	return (
