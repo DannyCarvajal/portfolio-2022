@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.43818e7e.chunk.css",
-    "main.js": "/static/js/main.9f8f8f88.chunk.js",
-    "main.js.map": "/static/js/main.9f8f8f88.chunk.js.map",
+    "main.css": "/static/css/main.c2842c27.chunk.css",
+    "main.js": "/static/js/main.238169dd.chunk.js",
+    "main.js.map": "/static/js/main.238169dd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1c8e3017.js",
     "runtime-main.js.map": "/static/js/runtime-main.1c8e3017.js.map",
     "static/js/2.e115f05b.chunk.js": "/static/js/2.e115f05b.chunk.js",
     "static/js/2.e115f05b.chunk.js.map": "/static/js/2.e115f05b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.43818e7e.chunk.css.map": "/static/css/main.43818e7e.chunk.css.map",
+    "static/css/main.c2842c27.chunk.css.map": "/static/css/main.c2842c27.chunk.css.map",
     "static/js/2.e115f05b.chunk.js.LICENSE.txt": "/static/js/2.e115f05b.chunk.js.LICENSE.txt",
     "static/media/behancecontact.4b67bc25.png": "/static/media/behancecontact.4b67bc25.png",
-    "static/media/behancespacecontact.960fbe0b.svg": "/static/media/behancespacecontact.960fbe0b.svg",
+    "static/media/behancespacecontact.b59e9f67.svg": "/static/media/behancespacecontact.b59e9f67.svg",
     "static/media/chessbg.88ccf36d.svg": "/static/media/chessbg.88ccf36d.svg",
     "static/media/dannydesktop.08b5f8e1.png": "/static/media/dannydesktop.08b5f8e1.png",
     "static/media/dannymobile.0a8c4db9.png": "/static/media/dannymobile.0a8c4db9.png",
     "static/media/projects.scss": "/static/media/speedlightbg.a0e1fdc5.png",
-    "static/media/emailcontact.dc4eee62.svg": "/static/media/emailcontact.dc4eee62.svg",
+    "static/media/emailcontact.5e510f22.svg": "/static/media/emailcontact.5e510f22.svg",
     "static/media/finallogo.543a7b9a.png": "/static/media/finallogo.543a7b9a.png",
-    "static/media/githubcontact.f85e105f.svg": "/static/media/githubcontact.f85e105f.svg",
-    "static/media/linkedincontact.0857320d.svg": "/static/media/linkedincontact.0857320d.svg",
+    "static/media/githubcontact.04197bb0.svg": "/static/media/githubcontact.04197bb0.svg",
+    "static/media/linkedincontact.5df1631c.svg": "/static/media/linkedincontact.5df1631c.svg",
     "static/media/olivercircle.019e1975.png": "/static/media/olivercircle.019e1975.png",
     "static/media/queen.a82f7908.svg": "/static/media/queen.a82f7908.svg",
     "static/media/thunder.9b75ac74.svg": "/static/media/thunder.9b75ac74.svg"
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.1c8e3017.js",
     "static/js/2.e115f05b.chunk.js",
-    "static/css/main.43818e7e.chunk.css",
-    "static/js/main.9f8f8f88.chunk.js"
+    "static/css/main.c2842c27.chunk.css",
+    "static/js/main.238169dd.chunk.js"
   ]
 }
