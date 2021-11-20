@@ -72,9 +72,8 @@
         cursor: pointer;
 
         &.active {
+            background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
 
-            background-color: #f98deebe;
-            background: #6c768b4b;
         }
     }
 
@@ -86,7 +85,7 @@
 
 
         &.active {
-            background: #333557de;
+            background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
         }
 
 

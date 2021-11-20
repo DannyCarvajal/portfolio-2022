@@ -18,6 +18,12 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 		window.scrollTo(0, 0);
 	};
 
+	const goBackHandler = () => {
+		window.scrollTo(0, 0);
+		setSecretFound(false);
+		setGuessSecret("");
+	};
+
 	const InnerWordSection = () => {
 		if (!secretFound) {
 			return (
@@ -36,7 +42,14 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 				</>
 			);
 		} else {
-			return <img src={FinalLogo} alt="finallogo" height="200px" width="200px" />;
+			return (
+				<>
+					<div className="arrowContainer" onClick={goBackHandler}>
+						<i className="fas fa-arrow-down"></i>
+						<h2 className="pressme">Go back?</h2>
+					</div>
+				</>
+			);
 		}
 	};
 

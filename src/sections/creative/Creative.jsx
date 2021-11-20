@@ -20,7 +20,7 @@ const Creative = () => {
 	const {useScreenSize} = Helpers();
 	const [isTabletOrDesktop] = useScreenSize();
 
-	const bgColorAnimation = "linear-gradient(180deg, #ca74c2e5 0%, rgba(53, 56, 65, 0.3) 100%)";
+	const bgColorAnimation = "linear-gradient(180deg, rgba(202, 116, 194, 0.9)  0%, rgba(53, 56, 65, 0.45) 100%)";
 
 	return (
 		<section className="creativeSection">
