@@ -1,6 +1,7 @@
 import {useRef, useState} from "react";
 // LOGIC
 import sendEmail from "./formLogic";
+import {useScreenSize} from "../../../hooks/helpers";
 // COMPONENTS
 import NamesCharacter from "./NamesCharacter";
 import SubmitButton from "./SubmitButton";
@@ -15,6 +16,8 @@ const FormSubsection = ({secretFound}) => {
 	const [firstName, setFirstName] = useState("");
 	const [fullName, setFullName] = useState("");
 
+	const [, isDesktop] = useScreenSize();
+
 	const handleName = () => {
 		if (fullName.includes(" ")) {
 			setFirstName(fullName.split(" ")[0].toLowerCase());
@@ -23,7 +26,7 @@ const FormSubsection = ({secretFound}) => {
 		}
 	};
 
-	const titleFormSection = secretFound === true ? "Let's start building experiences together" : "Let’s talk..";
+	const titleFormSection = secretFound === true && !isDesktop ? "Contact me to start building experiences together" : "Let’s talk..";
 
 	return (
 		<div className="formSubsection">

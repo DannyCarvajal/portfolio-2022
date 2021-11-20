@@ -61,7 +61,7 @@
 
         & .contactLinks {
             position: relative;
-            top: 40px;
+            top: 20px;
 
             & i {
                 font-size: 2.5rem;
@@ -98,6 +98,10 @@
             max-width: 450px;
 
             & .name {
+                align-self: flex-end;
+            }
+
+            & .contactLinks {
                 align-self: flex-end;
             }
         }
@@ -139,6 +143,7 @@
 
     /* big landscape tablets, laptops, and desktops */
     .finalPhrase {
+        min-height: 680px;
         max-height: 100vh;
 
         & picture {
@@ -154,6 +159,29 @@
         & blockquote {
             max-width: 600px;
             margin-right: 10%;
+
+            & .contactLinks {
+
+                &::after {
+                    content: "Contact me to start building experiences together 🪐";
+                    color: white;
+                    font-size: 1.3rem;
+                    position: absolute;
+                    bottom: -165px;
+                    background: #353841;
+                    /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #0099D2 0%, #4DD5C0 14%);
+                    /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #0099D2 0%, #4DD5C0 14%);
+                    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    width: 700px;
+                    z-index: 1;
+                }
+
+            }
         }
 
     }

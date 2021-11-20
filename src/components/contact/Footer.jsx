@@ -3,10 +3,6 @@ import ContactLinks from "../global/ContactLinks";
 import Sign from "../global/Sign";
 // STYLES
 import "./footer.scss";
-// IMAGES
-import BehanceFooter from "../../assets/img/behancefooter.png";
-import GithubFooter from "../../assets/img/githubfooter.png";
-import LinkedInFooter from "../../assets/img/linkedinfooter.png";
 
 const Footer = () => {
 	return (
@@ -17,7 +13,6 @@ const Footer = () => {
 					{
 						item: "Linkedin",
 						link: "https://www.linkedin.com/in/dannycarvajal1",
-						image: LinkedInFooter,
 					},
 					{
 						item: "Github",
