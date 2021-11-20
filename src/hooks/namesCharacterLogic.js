@@ -31,30 +31,25 @@ const useRandomCharacter = name => {
 		// LOOK IF NAME HAS SPECIFFIC PICTURE
 		if (femaleNames.includes(name)) {
 			setCurrentCharacter(`${name}`);
-			console.log("female and no photo");
 			return;
 		}
 
 		if (maleNames.includes(name)) {
 			setCurrentCharacter(`${name}`);
-			console.log("male and no photo");
 			return;
 		}
 
 		// ASSIGNED RANDOM PICTURE BASED ON NAME
 		if (gender === "female") {
 			setCurrentCharacter(`f${randNumber()}`);
-			console.log("female");
 		}
 
 		if (gender === "male") {
 			setCurrentCharacter(`m${randNumber()}`);
-			console.log("male");
 		}
 
 		if (gender === "unknown") {
 			setCurrentCharacter(`o${randNumber()}`);
-			console.log("unknown");
 		}
 	}, [name]);
 

@@ -16,15 +16,12 @@ const sendEmail = (e, form, setStatusEmail) => {
 		.sendForm(process.env.REACT_APP_EMAILID, process.env.REACT_APP_TEMPLATEID, form.current, process.env.REACT_APP_USERID)
 		.then(
 			result => {
-				console.log(result.text);
-				console.log(result);
 				setStatusEmail("SENTSUCCESS");
 				localStorage.setItem("alreadysent", "true");
 				localStorage.setItem("ptbr", "true");
 				sessionStorage.setItem("alreadysent", "true");
 			},
 			error => {
-				console.log(error.text);
 				setStatusEmail("SENTERROR");
 			}
 		)
