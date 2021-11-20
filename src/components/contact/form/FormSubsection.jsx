@@ -13,9 +13,15 @@ const FormSubsection = () => {
 	// STATUS : "", SENDING, SENTSUCESS, SENTERROR, ALREADYSENT
 	const [statusEmail, setStatusEmail] = useState("");
 	const [firstName, setFirstName] = useState("");
+	const [fullName, setFullName] = useState("");
 
-	const handleFirstName = name => {
-		if (name.includes(" ")) setFirstName(name.split(" ")[0].toLowerCase());
+	const handleName = () => {
+		if (fullName.includes(" ")) {
+			setFirstName(fullName.split(" ")[0].toLowerCase());
+		} else {
+			setFirstName(fullName.toLowerCase());
+		}
+		console.log(firstName);
 	};
 
 	return (
@@ -26,7 +32,7 @@ const FormSubsection = () => {
 				<div className="inputContainer">
 					<label htmlFor="name">Name</label>
 					<i className="fas fa-user"></i>
-					<input type="text" name="name" id="name" className="form__name" autoComplete="off" required onChange={e => handleFirstName(e.target.value)} />
+					<input type="text" name="name" id="name" className="form__name" autoComplete="off" required onChange={e => setFullName(e.target.value)} onBlur={handleName} />
 				</div>
 
 				<div className="inputContainer">

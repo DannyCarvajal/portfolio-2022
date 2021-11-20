@@ -30,6 +30,7 @@
         flex-grow: 2;
 
         &>h3 {
+            line-height: 20px;
             color: white;
         }
     }
@@ -58,14 +59,15 @@
         &__title {
             width: 221px;
             height: 20px;
-            top: -30px;
+            top: -35px;
             right: -25px;
             background-color: transparent;
             position: absolute;
 
             &>h3 {
                 color: black;
-                font-weight: 700;
+                font-weight: 300;
+                font-style: italic;
             }
         }
     }
