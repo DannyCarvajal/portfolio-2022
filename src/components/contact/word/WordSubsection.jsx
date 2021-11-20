@@ -20,7 +20,7 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 
 	const goBackHandler = () => {
 		window.scrollTo(0, 0);
-		setSecretFound(false);
+		setSecretFound("PENDING");
 		setGuessSecret("");
 	};
 

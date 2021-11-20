@@ -5,7 +5,6 @@ import useRandomCharacter from "../../../hooks/namesCharacterLogic";
 
 const NamesCharacter = ({name}) => {
 	const [currentCharacter] = useRandomCharacter(name);
-	// console.log(currentCharacter);
 	const characterIndication = currentCharacter === "transparent" ? "Type your name to find your character" : "Your name's character";
 
 	return (

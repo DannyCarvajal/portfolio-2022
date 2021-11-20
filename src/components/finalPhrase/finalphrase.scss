@@ -57,7 +57,16 @@
                     transform: translateY(0px);
                 }
             }
+        }
 
+        & .contactLinks {
+            position: relative;
+            top: 40px;
+
+            & i {
+                font-size: 2.5rem;
+                color: white;
+            }
         }
     }
 
@@ -85,12 +94,15 @@
         }
 
         & blockquote {
+            position: relative;
             max-width: 450px;
 
             & .name {
                 align-self: flex-end;
             }
         }
+
+
     }
 
 }
@@ -143,5 +155,6 @@
             max-width: 600px;
             margin-right: 10%;
         }
+
     }
 }

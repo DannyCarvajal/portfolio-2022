@@ -42,19 +42,6 @@ const usePianoLogic = () => {
 			}
 		};
 		playNote();
-
-		/*
-		let song = setInterval(() => {
-			if (counter < currentLevel.length) {
-				setNotePlayingInMelody(currentLevel[counter]);
-				counter++;
-				new Audio(process.env.PUBLIC_URL + `/music/${notePlayingInMelody}.mp3`).play();
-			} else {
-				clearInterval(song);
-				setNotePlayingInMelody("");
-				setTurn(userTurn);
-			}
-		}, speed); */
 	};
 
 	// PIANO GUESS
