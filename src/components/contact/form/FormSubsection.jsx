@@ -8,7 +8,7 @@ import Message from "../../global/Message";
 // STYLES
 import "./formSubsection.scss";
 
-const FormSubsection = () => {
+const FormSubsection = ({secretFound}) => {
 	const form = useRef();
 	// STATUS : "", SENDING, SENTSUCESS, SENTERROR, ALREADYSENT
 	const [statusEmail, setStatusEmail] = useState("");
@@ -21,12 +21,13 @@ const FormSubsection = () => {
 		} else {
 			setFirstName(fullName.toLowerCase());
 		}
-		console.log(firstName);
 	};
+
+	const titleFormSection = secretFound === true ? "Let's start building experiences together" : "Let’s talk..";
 
 	return (
 		<div className="formSubsection">
-			<h2 className="formSubsection__title">Let’s talk...</h2>
+			<h2 className="formSubsection__title">{titleFormSection}</h2>
 			<NamesCharacter name={firstName} />
 			<form action="#" className="form" onSubmit={e => sendEmail(e, form, setStatusEmail)} ref={form}>
 				<div className="inputContainer">

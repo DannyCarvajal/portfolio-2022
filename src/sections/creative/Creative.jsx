@@ -1,6 +1,6 @@
 // LOGIC
 import usePianoLogic from "../../hooks/pianoLogic";
-import Helpers from "../../hooks/helpers";
+import {useScreenSize} from "../../hooks/helpers";
 // COMPONENTS
 import Piano from "../../components/creative/Piano.jsx";
 import SecretWord from "../../components/global/Secretword";
@@ -17,8 +17,7 @@ const Creative = () => {
 	const {playPianoHandler, pianoKeyHandler, notePlayingInMelody, turn, level} = usePianoLogic();
 
 	// SEE SCREEN SIZE
-	const {useScreenSize} = Helpers();
-	const [isTabletOrDesktop] = useScreenSize();
+	const [, isDesktop] = useScreenSize();
 
 	const bgColorAnimation = "linear-gradient(180deg, rgba(202, 116, 194, 0.9)  0%, rgba(53, 56, 65, 0.45) 100%)";
 
@@ -47,7 +46,7 @@ const Creative = () => {
 			<Piano pianoGuess={pianoKeyHandler} notePlayingInMelody={notePlayingInMelody} />
 			{/* ANIMATION OF SOLVED */}
 			{turn === "Melody solved" && <AlertIndication found="i" message="Letter Found" bgcolor={bgColorAnimation} />}
-			<SecretWord secretLetter={turn === "Melody solved" || !isTabletOrDesktop ? "i" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
+			<SecretWord secretLetter={turn === "Melody solved" || !isDesktop ? "i" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
 		</section>
 	);
 };

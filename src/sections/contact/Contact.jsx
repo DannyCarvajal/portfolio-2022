@@ -10,7 +10,7 @@ const Contact = ({secretFound, setSecretFound}) => {
 		<>
 			<div className="contactSection">
 				<div className="contactSection__container">
-					<FormSubsection />
+					<FormSubsection secretFound={secretFound} />
 					<WordSubsection secretFound={secretFound} setSecretFound={setSecretFound} />
 				</div>
 			</div>

@@ -2,7 +2,7 @@ import {useState} from "react";
 // LOGIC
 import {technologies, additionalTechnologies} from "./listOfTechnologies.js";
 import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
-import useSlidePuzzleAdditionals from "../../hooks/helpers";
+import useSlidePuzzleAdditionals, {useScreenSize} from "../../hooks/helpers";
 // COMPONENTS
 import SlidePuzzle from "../../components/stack/SlidePuzzle";
 import TechCard from "../../components/stack/TechCard";
@@ -25,7 +25,7 @@ const Stack = () => {
 	const [isSlidePuzzleSolved, setIsSlidePuzzleSolved] = useState(false);
 
 	// ADITTIONAL FUNCTIONS
-	const {useScreenSize, activeAnimation, startAnimation} = useSlidePuzzleAdditionals(setIsSlidePuzzleSolved);
+	const {activeAnimation, startAnimation} = useSlidePuzzleAdditionals(setIsSlidePuzzleSolved);
 	const [isTabletOrDesktop] = useScreenSize();
 
 	// INTERACTIVE FUNCTIONS

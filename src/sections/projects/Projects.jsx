@@ -3,14 +3,13 @@ import React, {useState} from "react";
 import ProjectItem from "../../components/projects/ProjectItem";
 import SecretWord from "../../components/global/Secretword";
 // LOGIC
-import Helpers from "../../hooks/helpers";
+import {useScreenSize} from "../../hooks/helpers";
 import projectList from "./projectList";
 // STYLES
 import "./projects.scss";
 
 const Projects = () => {
 	// SEE SCREEN SIZE
-	const {useScreenSize} = Helpers();
 	const [isTabletOrDesktop] = useScreenSize();
 
 	const [projects, setProjects] = useState(projectList);

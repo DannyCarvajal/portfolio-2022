@@ -1,23 +1,6 @@
 import {useState, useEffect} from "react";
 
 const useAdditionalSlideFunc = setIsSlidePuzzleSolved => {
-	const useScreenSize = () => {
-		const [isTabletOrDesktop, setIsTabletOrDesktop] = useState(window.innerWidth > 700);
-		useEffect(() => {
-			const handleResize = () => {
-				if (window.innerWidth > 700) {
-					setIsTabletOrDesktop(true);
-				} else {
-					setIsTabletOrDesktop(false);
-				}
-			};
-			window.addEventListener("resize", handleResize);
-			return () => window.removeEventListener("resize", handleResize);
-		}, [isTabletOrDesktop]);
-
-		return [isTabletOrDesktop];
-	};
-
 	const [activeAnimation, setActiveAnimation] = useState(false);
 	const startAnimation = booleanSolved => {
 		setActiveAnimation(true);
@@ -25,7 +8,33 @@ const useAdditionalSlideFunc = setIsSlidePuzzleSolved => {
 		setTimeout(() => setActiveAnimation(false), 2500);
 	};
 
-	return {useScreenSize, activeAnimation, startAnimation};
+	return {activeAnimation, startAnimation};
+};
+
+const useScreenSize = () => {
+	const [isTabletOrDesktop, setIsTabletOrDesktop] = useState(window.innerWidth > 700);
+	const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1100);
+	const handleResize = () => {
+		if (window.innerWidth > 700) {
+			setIsTabletOrDesktop(true);
+		} else {
+			setIsTabletOrDesktop(false);
+		}
+
+		if (window.innerWidth > 1100) {
+			setIsDesktop(true);
+		} else {
+			setIsDesktop(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, [isTabletOrDesktop, isDesktop]);
+
+	return [isTabletOrDesktop, isDesktop];
 };
 
 export default useAdditionalSlideFunc;
+export {useScreenSize};
