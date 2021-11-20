@@ -23,7 +23,7 @@ const technologies = [
 	},
 	{
 		name: "sass",
-		description: `Css’s mother. Keeping 
+		description: `CSS’s mother. Keeping 
 			things clean and 
 			organized. She knows
 			you'll say thanks in the
