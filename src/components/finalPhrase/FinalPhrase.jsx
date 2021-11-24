@@ -1,10 +1,6 @@
 // COMPONENTS
 import MainLogo from "../global/MainLogo";
-
-// STYLES
-// COMPONENTS
 import ContactLinks from "../global/ContactLinks";
-
 // STYLES
 import "./finalphrase.scss";
 // IMAGES
