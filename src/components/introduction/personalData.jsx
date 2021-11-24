@@ -3,10 +3,7 @@ import "./personalData.scss";
 const PersonalData = ({message, name, role, contact}) => {
 	return (
 		<div className="personalData">
-			<p className="personalData__message">
-				{message} <br />
-				I'm <b>{name}</b>
-			</p>
+			<p className="personalData__message">{message}</p>
 			<div className="personalData__role">
 				<h3>{role}</h3>
 			</div>

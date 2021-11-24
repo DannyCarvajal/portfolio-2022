@@ -1,3 +1,5 @@
+/* THE WHOLE CONCEPT OF THE PORTFOLIO IS BASED ON FINDING A SECRET WORD, THAT WILL SHOW A SPECIAL PHRASE AT THE END OF THE WEBFLOW */
+
 import {useState} from "react";
 // COMPONENTS
 import Intro from "./sections/introduction/Intro";
@@ -15,7 +17,7 @@ function App() {
 	// FALSE, PENDING, TRUE
 	const [secretFound, setSecretFound] = useState(false);
 
-	const Main = () => {
+	const MainContent = () => {
 		if (secretFound === true) {
 			return (
 				<div className="AppSecret">
@@ -36,7 +38,7 @@ function App() {
 	};
 	return (
 		<div className="App">
-			<Main />
+			<MainContent />
 			<Contact secretFound={secretFound} setSecretFound={setSecretFound} />
 		</div>
 	);

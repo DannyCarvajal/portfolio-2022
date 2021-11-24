@@ -3,7 +3,7 @@ import {female, male} from "../helpers/names";
 
 const useRandomCharacter = name => {
 	// IMAGES SAVED BY A SPECIFIC NAME
-	const maleNames = ["sergio", "max", "lewis", "daniel", "danny", "kevin", "barry", "peter", "luis", "reiner"];
+	const maleNames = ["sergio", "max", "lewis", "daniel", "danny", "kevin", "barry", "peter", "luis", "reiner", "miguel", "midudev", "oscar"];
 	const femaleNames = [];
 
 	// HELPFUL FUNCTIONS

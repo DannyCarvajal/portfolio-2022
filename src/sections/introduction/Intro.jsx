@@ -10,13 +10,21 @@ import Github from "../../assets/img/githubcontact.svg";
 import Email from "../../assets/img/emailcontact.svg";
 
 const Intro = () => {
+	const Message = () => {
+		return (
+			<>
+				Hello there! <br />
+				I'm <b>Danny Carvajal</b>
+			</>
+		);
+	};
+
 	return (
 		<section className="introSection">
 			<MainLogo />
 			<img src={Danny} alt="Danny carvajal" className="introSection__oliverimage" />
 			<PersonalData
-				message="Hello there!"
-				name="Danny Carvajal"
+				message={<Message />}
 				role="Front-End Developer"
 				contact={[
 					["linkedin", "https://www.linkedin.com/in/dannycarvajal1", Linkedin],
