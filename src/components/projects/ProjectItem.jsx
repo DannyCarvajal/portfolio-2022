@@ -7,6 +7,12 @@ import projectItemHandlers from "../../hooks/projectItem";
 const ProjectItem = ({image, name, links, description, projects, currProject, setCurrProject}) => {
 	const {leftButtonHandler, rightButtonHandler} = projectItemHandlers(projects, currProject, setCurrProject);
 
+	const ImageAnchor = () => (
+		<a href={links[1]} target="_blank" rel="noreferrer">
+			<img src={image} alt={name} className="projectimage" />
+		</a>
+	);
+
 	return (
 		<div className="projectItem">
 			<div className="projectItem__description">
@@ -22,11 +28,7 @@ const ProjectItem = ({image, name, links, description, projects, currProject, se
 				</div>
 				<p>{description}</p>
 			</div>
-			<div className="projectItem__imgContainer">
-				<a href={links[1]} target="_blank" rel="noreferrer">
-					<img src={image} alt={name} className="projectimage" />
-				</a>
-			</div>
+			<div className="projectItem__imgContainer">{links[1] ? <ImageAnchor /> : <img src={image} alt={name} className="projectimage" />}</div>
 			<div className="projectItem__projectButtons">
 				<button className="leftButton" onClick={leftButtonHandler}>
 					<i className="fas fa-arrow-left"></i>
