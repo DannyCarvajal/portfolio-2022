@@ -19,6 +19,7 @@ const Rubik = ({colorArray, index, isRubikSolved, setIsRubikSolved, solution, ru
 						showTipHandler();
 						arrowAnimation();
 					}}
+					aria-label="Down arrow"
 				>
 					<i className={"fas fa-arrow-down " + (activeArrow ? "active" : "")}></i>
 				</button>

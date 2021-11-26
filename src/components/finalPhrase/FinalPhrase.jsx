@@ -4,8 +4,8 @@ import ContactLinks from "../global/ContactLinks";
 // STYLES
 import "./finalphrase.scss";
 // IMAGES
-import DannyDesktop from "../../assets/img/dannydesktop.png";
-import DannyMobile from "../../assets/img/dannymobile.png";
+import DannyDesktop from "../../assets/img/dannydesktop.webp";
+import DannyMobile from "../../assets/img/dannymobile.webp";
 const FinalPhrase = () => {
 	return (
 		<section className="finalPhrase">

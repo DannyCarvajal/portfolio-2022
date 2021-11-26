@@ -29,8 +29,10 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 		if (!secretFound) {
 			return (
 				<div className="wordSubsection__guessContainer">
-					<input type="text" className="wordSubsection__word" maxLength="5" value={guessSecret} onChange={e => setGuessSecret(e.target.value.toLowerCase())} autoFocus={guessSecret.length > 0} />
-					<h2 className="indication">Write the secret word</h2>
+					<input type="text" className="wordSubsection__word" id="secretWord" maxLength="5" value={guessSecret} onChange={e => setGuessSecret(e.target.value.toLowerCase())} autoFocus={guessSecret.length > 0} />
+					<label htmlFor="secretWord" className="indication">
+						Write the secret word
+					</label>
 				</div>
 			);
 		} else if (secretFound === "PENDING") {
