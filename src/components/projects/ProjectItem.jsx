@@ -30,10 +30,10 @@ const ProjectItem = ({image, name, links, description, projects, currProject, se
 			</div>
 			<div className="projectItem__imgContainer">{links[1] ? <ImageAnchor /> : <img src={image} alt={name} className="projectimage" />}</div>
 			<div className="projectItem__projectButtons">
-				<button className="leftButton" onClick={leftButtonHandler}>
+				<button className="leftButton" onClick={leftButtonHandler} aria-label="leftButton">
 					<i className="fas fa-arrow-left"></i>
 				</button>
-				<button className="rightButton" onClick={rightButtonHandler}>
+				<button className="rightButton" onClick={rightButtonHandler} aria-label="rightButton">
 					<i className="fas fa-arrow-right"></i>
 				</button>
 			</div>

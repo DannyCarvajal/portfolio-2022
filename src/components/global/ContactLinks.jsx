@@ -11,7 +11,7 @@ const ContactLinks = ({contact}) => {
 				let loweredItem = item.toLowerCase();
 
 				return (
-					<a href={item === "envelope" ? `mailto:${link}` : link} key={item + newKey()} target="_blank" rel="noreferrer">
+					<a href={item === "envelope" ? `mailto:${link}` : link} key={item + newKey()} target="_blank" rel="noreferrer" aria-label={item}>
 						<i className={`${initialWordIcon(loweredItem)} fa-${loweredItem}`}></i>
 					</a>
 				);
