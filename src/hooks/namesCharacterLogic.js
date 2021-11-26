@@ -17,7 +17,7 @@ const useRandomCharacter = name => {
 		return "unknown";
 	};
 	// STATE
-	const [currentCharacter, setCurrentCharacter] = useState("");
+	const [currentCharacter, setCurrentCharacter] = useState("transparent");
 
 	useEffect(() => {
 		let gender = findGender();

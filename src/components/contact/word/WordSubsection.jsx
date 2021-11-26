@@ -9,7 +9,6 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 
 	useEffect(() => {
 		if (guessSecret === "right") setSecretFound("PENDING");
-		console.log(guessSecret);
 	}, [guessSecret]);
 
 	const gradient = secretFound === true ? " linear-gradient(179.4deg, rgba(247, 249, 251, 0.8) 3.83%, rgba(255, 255, 255, 0) 98.27%)" : "linear-gradient(180.26deg, #00161E 36.68%, rgba(79, 124, 140, 0.46) 98.53%)";
