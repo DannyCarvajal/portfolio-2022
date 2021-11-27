@@ -1,9 +1,13 @@
 import "./personalData.scss";
 
-const PersonalData = ({message, name, role, contact}) => {
+const PersonalData = ({role, contact}) => {
 	return (
 		<div className="personalData">
-			<p className="personalData__message">{message}</p>
+			<p className="personalData__message">
+				Hello there!
+				<br />
+				I'm <b>Danny Carvajal</b>
+			</p>
 			<div className="personalData__role">
 				<h3>{role}</h3>
 			</div>

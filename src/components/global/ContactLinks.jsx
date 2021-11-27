@@ -1,9 +1,11 @@
+// STYLES
 import "./contactlinks.scss";
+// CONSTANTS
+import contactTypes from "../../helpers/contactTypes";
 
 const ContactLinks = ({contact}) => {
-	// GENERATE A NUMBER BASED ON THE HOUR OF THE DAY
-	const newKey = () => new Date().getTime();
-	const initialWordIcon = item => (item === "envelope" ? "fas" : "fab");
+	const keyBasedOnHour = () => new Date().getTime();
+	const prefixFontAwesome = item => (item === "envelope" ? "fas" : "fab");
 
 	return (
 		<div className="contactLinks">
@@ -11,8 +13,8 @@ const ContactLinks = ({contact}) => {
 				let loweredItem = item.toLowerCase();
 
 				return (
-					<a href={item === "envelope" ? `mailto:${link}` : link} key={item + newKey()} target="_blank" rel="noreferrer" aria-label={item}>
-						<i className={`${initialWordIcon(loweredItem)} fa-${loweredItem}`}></i>
+					<a href={item === "envelope" ? `mailto:${link}` : link} key={item + keyBasedOnHour()} target="_blank" rel="noreferrer" aria-label={item}>
+						<i className={`${prefixFontAwesome(loweredItem)} fa-${loweredItem}`}></i>
 					</a>
 				);
 			})}
