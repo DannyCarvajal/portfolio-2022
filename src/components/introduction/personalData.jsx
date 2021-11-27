@@ -1,3 +1,4 @@
+// STYLES
 import "./personalData.scss";
 
 const PersonalData = ({role, contact}) => {

@@ -20,22 +20,7 @@ const FinalPhrase = () => {
 					“If you are having fun you’re <br /> probably in the <span className="wordFound">right</span> way”
 				</p>
 				<cite className="name">Danny Carvajal</cite>
-				<ContactLinks
-					contact={[
-						{
-							item: "linkedin",
-							link: "https://www.linkedin.com/in/dannycarvajal1",
-						},
-						{
-							item: "github",
-							link: "https://github.com/dannycarvajal",
-						},
-						{
-							item: "envelope",
-							link: "oliverdanielcarvajal@hotmail.com",
-						},
-					]}
-				/>
+				<ContactLinks contacts={["linkedin", "github", "email"]} />
 			</blockquote>
 		</section>
 	);

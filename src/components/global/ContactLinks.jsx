@@ -1,20 +1,22 @@
 // STYLES
 import "./contactlinks.scss";
 // CONSTANTS
-import contactTypes from "../../helpers/contactTypes";
+import {contactTypes} from "../../helpers/contactTypes";
 
-const ContactLinks = ({contact}) => {
+const ContactLinks = ({contacts}) => {
 	const keyBasedOnHour = () => new Date().getTime();
 	const prefixFontAwesome = item => (item === "envelope" ? "fas" : "fab");
 
 	return (
 		<div className="contactLinks">
-			{contact.map(({item, link}) => {
-				let loweredItem = item.toLowerCase();
+			{contacts.map(contact => {
+				let fontAwesomeIcon = contactTypes[contact].icon;
+				let anchorLink = contactTypes[contact].link;
+				let prefix = prefixFontAwesome(fontAwesomeIcon);
 
 				return (
-					<a href={item === "envelope" ? `mailto:${link}` : link} key={item + keyBasedOnHour()} target="_blank" rel="noreferrer" aria-label={item}>
-						<i className={`${prefixFontAwesome(loweredItem)} fa-${loweredItem}`}></i>
+					<a href={anchorLink} key={contact + keyBasedOnHour()} target="_blank" rel="noreferrer" aria-label={contact}>
+						<i className={`${prefix} fa-${fontAwesomeIcon}`}></i>
 					</a>
 				);
 			})}
