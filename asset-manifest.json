@@ -1,33 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.42c5809c.chunk.css",
-    "main.js": "/static/js/main.399f0084.chunk.js",
-    "main.js.map": "/static/js/main.399f0084.chunk.js.map",
+    "main.css": "/static/css/main.690ec233.chunk.css",
+    "main.js": "/static/js/main.385004b0.chunk.js",
+    "main.js.map": "/static/js/main.385004b0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1c8e3017.js",
     "runtime-main.js.map": "/static/js/runtime-main.1c8e3017.js.map",
-    "static/js/2.c92d04c9.chunk.js": "/static/js/2.c92d04c9.chunk.js",
-    "static/js/2.c92d04c9.chunk.js.map": "/static/js/2.c92d04c9.chunk.js.map",
+    "static/js/2.98be2b2a.chunk.js": "/static/js/2.98be2b2a.chunk.js",
+    "static/js/2.98be2b2a.chunk.js.map": "/static/js/2.98be2b2a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.42c5809c.chunk.css.map": "/static/css/main.42c5809c.chunk.css.map",
-    "static/js/2.c92d04c9.chunk.js.LICENSE.txt": "/static/js/2.c92d04c9.chunk.js.LICENSE.txt",
+    "static/css/main.690ec233.chunk.css.map": "/static/css/main.690ec233.chunk.css.map",
+    "static/js/2.98be2b2a.chunk.js.LICENSE.txt": "/static/js/2.98be2b2a.chunk.js.LICENSE.txt",
     "static/media/behancecontact.4b67bc25.png": "/static/media/behancecontact.4b67bc25.png",
-    "static/media/behancespacecontact.b59e9f67.svg": "/static/media/behancespacecontact.b59e9f67.svg",
     "static/media/chessbg.88ccf36d.svg": "/static/media/chessbg.88ccf36d.svg",
     "static/media/dannydesktop.2669de90.webp": "/static/media/dannydesktop.2669de90.webp",
     "static/media/dannymobile.95183d28.webp": "/static/media/dannymobile.95183d28.webp",
     "static/media/projects.scss": "/static/media/speedlightbg.a0e1fdc5.png",
-    "static/media/emailcontact.5e510f22.svg": "/static/media/emailcontact.5e510f22.svg",
     "static/media/finallogo.543a7b9a.png": "/static/media/finallogo.543a7b9a.png",
-    "static/media/githubcontact.04197bb0.svg": "/static/media/githubcontact.04197bb0.svg",
-    "static/media/linkedincontact.5df1631c.svg": "/static/media/linkedincontact.5df1631c.svg",
     "static/media/olivercircle.019e1975.png": "/static/media/olivercircle.019e1975.png",
     "static/media/queen.a82f7908.svg": "/static/media/queen.a82f7908.svg",
     "static/media/thunder.9b75ac74.svg": "/static/media/thunder.9b75ac74.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1c8e3017.js",
-    "static/js/2.c92d04c9.chunk.js",
-    "static/css/main.42c5809c.chunk.css",
-    "static/js/main.399f0084.chunk.js"
+    "static/js/2.98be2b2a.chunk.js",
+    "static/css/main.690ec233.chunk.css",
+    "static/js/main.385004b0.chunk.js"
   ]
 }
