@@ -7,23 +7,24 @@ import {SIZES} from "../../constants/contactlinksizes";
 // HELPERS
 import {keyBasedOnHour} from "../../helpers/helpers";
 
-const ContactLinks = ({contacts, color, size}) => {
-	const iconColor = COLORS[color];
+const ContactLinks = ({contacts, size}) => {
 	const iconSize = SIZES[size];
 
 	const iconStyles = {
-		color: iconColor,
 		fontSize: iconSize,
+		background: COLORS.SPACE,
+		WebkitBackgroundClip: "text",
+		backgroundClip: "text",
+		color: "transparent",
 	};
 
 	return (
 		<div className="contactLinks">
-			{contacts.map(contact => {
-				let fontAwesomeIcon = CONTACT_TYPES[contact].icon;
-				let anchorLink = CONTACT_TYPES[contact].link;
+			{contacts.map(([icon, link]) => {
+				let fontAwesomeIcon = CONTACT_TYPES[icon].icon;
 
 				return (
-					<a href={anchorLink} key={contact + keyBasedOnHour()} target="_blank" rel="noreferrer" aria-label={contact}>
+					<a href={link} key={link + keyBasedOnHour()} target="_blank" rel="noreferrer" aria-label={link}>
 						<i className={fontAwesomeIcon} style={iconStyles}></i>
 					</a>
 				);

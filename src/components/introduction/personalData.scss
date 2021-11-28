@@ -17,18 +17,6 @@
 
     &__role {
         margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        background: linear-gradient(90.09deg, $darkBlue 2.84%, rgba(92, 190, 226, 0.7) 111.08%);
-        color: white;
-
-        & h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            font-style: italic;
-        }
     }
 
 
@@ -37,27 +25,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
 
-        & a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & .contactemail {
-                height: 31.5px;
-            }
-
-
-            & .contactgithub {
-                height: 38px;
-            }
-
-
-            & .contactlinkedin {
-                height: 36px;
-            }
-
+        & .contactLinks {
+            gap: 30px;
         }
     }
 }
@@ -76,9 +46,7 @@
 
         &__role {
             width: 55vw;
-            justify-content: flex-start;
         }
-
 
         &__contact {
             justify-content: flex-start;
@@ -98,12 +66,6 @@
 
         &__message {
             font-size: 2.3rem;
-        }
-
-        &__role {
-            & h3 {
-                font-size: 1.2rem
-            }
         }
     }
 

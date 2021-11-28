@@ -1,11 +1,12 @@
+// 	STYLES
 import "./projectitem.scss";
-import BehanceContact from "../../assets/img/behancespacecontact.svg";
-import WebContact from "../../assets/img/webspacecontact.png";
-import GithubContact from "../../assets/img/githubspacecontact.png";
+// COMPONENTS
+import SpecificLinks from "../global/SpecificLinks";
+// LOGIC
 import projectItemHandlers from "../../hooks/projectItem";
 
 const ProjectItem = ({image, name, links, description, projects, currProject, setCurrProject}) => {
-	const {leftButtonHandler, rightButtonHandler} = projectItemHandlers(projects, currProject, setCurrProject);
+	const {leftBtnHandler, rightBtnHandler, iconLinks} = projectItemHandlers(projects, currProject, setCurrProject, links);
 
 	const ImageAnchor = () => (
 		<a href={links[1]} target="_blank" rel="noreferrer">
@@ -18,22 +19,16 @@ const ProjectItem = ({image, name, links, description, projects, currProject, se
 			<div className="projectItem__description">
 				<div className="projectItem__linksContainer">
 					<h3 className="title">{name}</h3>
-					{links.map((link, index) => {
-						return (
-							<a href={link} key={link} target="_blank" rel="noreferrer">
-								<img src={index === 0 ? GithubContact : index === 1 ? WebContact : BehanceContact} alt="ContactLink" height="30px" />
-							</a>
-						);
-					})}
+					<SpecificLinks contacts={iconLinks} color="WHITE" size="mini" />
 				</div>
 				<p>{description}</p>
 			</div>
 			<div className="projectItem__imgContainer">{links[1] ? <ImageAnchor /> : <img src={image} alt={name} className="projectimage" />}</div>
 			<div className="projectItem__projectButtons">
-				<button className="leftButton" onClick={leftButtonHandler} aria-label="leftButton">
+				<button className="leftButton" onClick={leftBtnHandler} aria-label="leftButton">
 					<i className="fas fa-arrow-left"></i>
 				</button>
-				<button className="rightButton" onClick={rightButtonHandler} aria-label="rightButton">
+				<button className="rightButton" onClick={rightBtnHandler} aria-label="rightButton">
 					<i className="fas fa-arrow-right"></i>
 				</button>
 			</div>

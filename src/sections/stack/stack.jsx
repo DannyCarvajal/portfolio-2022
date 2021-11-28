@@ -75,8 +75,8 @@ const Stack = () => {
 					<PuzzleInteraction description="Try it again!" handler={mixPuzzleAgain} image={Thunder} keyWord="MIX" />
 				</div>
 				{/* ANIMATION OF SOLVED */}
-				{isSlidePuzzleSolved && <AlertIndication found="gh" message="Two letters found" bgcolor="#353841" />}
-				<SecretWord secretLetter="gh" bgcolor="#353841" letterColor="white" animation={isSlidePuzzleSolved ? "animation" : ""} />
+				{isSlidePuzzleSolved && <AlertIndication found="ht" message="Two letters found" bgcolor="#353841" />}
+				<SecretWord secretLetter="ht" bgcolor="#353841" letterColor="white" animation={isSlidePuzzleSolved ? "animation" : ""} />
 			</section>
 		);
 	}

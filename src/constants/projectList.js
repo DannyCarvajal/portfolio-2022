@@ -17,7 +17,7 @@ const projectList = [
 	{
 		name: "Delilah Resto",
 		links: ["https://github.com/DannyCarvajal/DelilahResto"],
-		description: "Developed a REST API for a restaurant business 🥘 in which the clients (users) can register and order the most deluxe plates. The administrator can manage the orders, the plates and the users of the API",
+		description: "Created a REST API for a restaurant business 🥘 in which the clients (users) can register and order the most deluxe plates. The administrator can manage the orders, the plates and the users of the API",
 	},
 ];
 

@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 // COMPONENTS
 import ProjectItem from "../../components/projects/ProjectItem";
-import SecretWord from "../../components/global/Secretword";
 // LOGIC
 import {useScreenSize} from "../../hooks/helpers";
-import projectList from "./projectList";
+import projectList from "../../constants/projectList";
 // STYLES
 import "./projects.scss";
 
@@ -26,7 +25,6 @@ const Projects = () => {
 		<div className="projectsSection">
 			<h2 className="projectsSection__title">Projects</h2>
 			<div className="projectItemContainer">{isTabletOrDesktop ? Projects(currProject) : Projects(projects)}</div>
-			<SecretWord secretLetter="t" bgcolor="white" letterColor="#353841" />
 		</div>
 	);
 };

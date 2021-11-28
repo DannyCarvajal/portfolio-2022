@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {female, male} from "../helpers/names";
+import {FEMALE, MALE} from "../constants/names";
 
 const useRandomCharacter = name => {
 	// IMAGES SAVED BY A SPECIFIC NAME
@@ -12,8 +12,8 @@ const useRandomCharacter = name => {
 	const findGender = () => {
 		if (name.trim() === "") return null;
 
-		if (female.includes(name + " ")) return "female";
-		if (male.includes(name + " ")) return "male";
+		if (FEMALE.includes(name + " ")) return "female";
+		if (MALE.includes(name + " ")) return "male";
 		return "unknown";
 	};
 	// STATE

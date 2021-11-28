@@ -45,8 +45,8 @@ const Creative = () => {
 			</div>
 			<Piano pianoGuess={pianoKeyHandler} notePlayingInMelody={notePlayingInMelody} />
 			{/* ANIMATION OF SOLVED */}
-			{turn === "Melody solved" && <AlertIndication found="i" message="Letter Found" bgcolor={bgColorAnimation} />}
-			<SecretWord secretLetter={turn === "Melody solved" || !isDesktop ? "i" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
+			{turn === "Melody solved" && <AlertIndication found="ig" message="Two letters Found" bgcolor={bgColorAnimation} />}
+			<SecretWord secretLetter={turn === "Melody solved" || !isDesktop ? "ig" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
 		</section>
 	);
 };

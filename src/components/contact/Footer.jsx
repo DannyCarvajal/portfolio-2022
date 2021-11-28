@@ -8,7 +8,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<Sign />
-			<ContactLinks contacts={["linkedin", "github", "behance"]} />
+			<ContactLinks contacts={["linkedin", "github", "behance"]} color="DARK_BLUE" size="small" />
 		</footer>
 	);
 };

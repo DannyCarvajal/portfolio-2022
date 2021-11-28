@@ -1,5 +1,5 @@
-const projectItemHandlers = (projects, currProject, setCurrProject) => {
-	const leftButtonHandler = () => {
+const projectItemHandlers = (projects, currProject, setCurrProject, links) => {
+	const leftBtnHandler = () => {
 		const currIndex = projects.findIndex(project => project.name === currProject[0].name);
 		if (currIndex > 0) {
 			setCurrProject([projects[currIndex - 1]]);
@@ -8,7 +8,7 @@ const projectItemHandlers = (projects, currProject, setCurrProject) => {
 		}
 	};
 
-	const rightButtonHandler = () => {
+	const rightBtnHandler = () => {
 		const currIndex = projects.findIndex(project => project.name === currProject[0].name);
 		if (currIndex < projects.length - 1) {
 			setCurrProject([projects[currIndex + 1]]);
@@ -17,9 +17,24 @@ const projectItemHandlers = (projects, currProject, setCurrProject) => {
 		}
 	};
 
+	const linkType = link => {
+		if (link.includes("behance")) {
+			return "behance";
+		} else if (link.includes("github.com")) {
+			return "github";
+		}
+		return "web";
+	};
+
+	const iconLinks = links.map(link => {
+		let icon = linkType(link);
+		return [icon, link];
+	});
+
 	return {
-		leftButtonHandler,
-		rightButtonHandler,
+		leftBtnHandler,
+		rightBtnHandler,
+		iconLinks,
 	};
 };
 
