@@ -1,9 +1,8 @@
 import {useState} from "react";
 // COMPONENTS
 import Rubik from "../../components/rubiks/Rubik";
-import SecretWord from "../../components/global/Secretword";
 import ClickIndication from "../../components/global/ClickIndication";
-import AlertIndication from "../../components/global/AlertIndication";
+import CheckSecretWord from "../../components/global/CheckSecretWord";
 // STYLES
 import "./logicSection.scss";
 // IMAGES
@@ -36,9 +35,7 @@ const Logic = () => {
 				<ClickIndication message="Press the arrows.." containerClass="logicIndicator" elemntsToFade=".downArrowRubik" />
 			</div>
 			<p className="logicSection__tip">{messageIndication}</p>
-			{/* ANIMATION OF SOLVED */}
-			{checkIfSolved() && <AlertIndication found="r" message="Letter Found" bgcolor="#353841" />}
-			<SecretWord secretLetter={checkIfSolved() ? "r" : ""} bgcolor="#353841" letterColor="white" animation={checkIfSolved() ? "animation" : ""} />
+			<CheckSecretWord solved={checkIfSolved()} letter="r" color="DARK_BLUE" />
 		</section>
 	);
 };

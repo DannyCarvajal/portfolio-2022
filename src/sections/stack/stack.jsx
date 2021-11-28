@@ -7,7 +7,7 @@ import useSlidePuzzleAdditionals, {useScreenSize} from "../../hooks/helpers";
 import SlidePuzzle from "../../components/stack/SlidePuzzle";
 import TechCard from "../../components/stack/TechCard";
 import TechCircle from "../../components/stack/TechCircleCard";
-import SecretWord from "../../components/global/Secretword";
+import SecretWord from "../../components/global/SecretWord";
 import PuzzleInteraction from "../../components/stack/PuzzleInteraction";
 import AlertIndication from "../../components/global/AlertIndication";
 // STYLES

@@ -1,4 +1,4 @@
-const projectList = [
+const PROJECT_LIST = [
 	{
 		name: "Gifos",
 		links: ["https://github.com/DannyCarvajal/gifos", "https://dannycarvajal.github.io/gifos/"],
@@ -21,4 +21,4 @@ const projectList = [
 	},
 ];
 
-export default projectList;
+export default PROJECT_LIST;

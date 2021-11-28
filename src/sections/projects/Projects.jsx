@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import ProjectItem from "../../components/projects/ProjectItem";
 // LOGIC
 import {useScreenSize} from "../../hooks/helpers";
-import projectList from "../../constants/projectList";
+import PROJECT_LIST from "../../constants/projectList";
 // STYLES
 import "./projects.scss";
 
@@ -11,13 +11,13 @@ const Projects = () => {
 	// SEE SCREEN SIZE
 	const [isTabletOrDesktop] = useScreenSize();
 
-	const [projects, setProjects] = useState(projectList);
-	const [currProject, setCurrProject] = useState([projectList[0]]);
+	const [projects, setProjects] = useState(PROJECT_LIST);
+	const [currProject, setCurrProject] = useState([PROJECT_LIST[0]]);
 
 	const Projects = projects => {
 		return projects.map(project => {
 			let nameWithoutSpacesOrCases = project.name.replace(/\s/g, "").toLowerCase();
-			return <ProjectItem key={project.name} image={process.env.PUBLIC_URL + `/img/${nameWithoutSpacesOrCases}.webp`} name={project.name} links={project.links} description={project.description} currProject={currProject} setCurrProject={setCurrProject} projects={projectList} />;
+			return <ProjectItem key={project.name} image={process.env.PUBLIC_URL + `/img/${nameWithoutSpacesOrCases}.webp`} name={project.name} links={project.links} description={project.description} currProject={currProject} setCurrProject={setCurrProject} projects={PROJECT_LIST} />;
 		});
 	};
 

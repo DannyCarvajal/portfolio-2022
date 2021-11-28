@@ -3,7 +3,7 @@ import usePianoLogic from "../../hooks/pianoLogic";
 import {useScreenSize} from "../../hooks/helpers";
 // COMPONENTS
 import Piano from "../../components/creative/Piano.jsx";
-import SecretWord from "../../components/global/Secretword";
+import SecretWord from "../../components/global/SecretWord";
 import AlertIndication from "../../components/global/AlertIndication";
 // STYLES
 import "./creative.scss";
