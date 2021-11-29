@@ -28,36 +28,11 @@
         position: relative;
     }
 
-    &__decorationLine {
-        position: absolute;
+    & .decorationLine {
         top: 60px;
         left: -120px;
     }
 
-    // RUBIKS PUZZLE
-    .colorItem {
-        width: 65px;
-        height: 65px;
-        border-radius: 15px;
-
-        &.active {
-            animation: fadeAndShow 0.4s ease-in-out;
-        }
-
-        @keyframes fadeAndShow {
-            0% {
-                opacity: 1;
-            }
-
-            70% {
-                opacity: 0.9;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-    }
 
     .solvedAnimation {
         transition: 1s ease-in-out;
@@ -115,8 +90,7 @@
             margin: 0 auto;
         }
 
-        &__decorationLine {
-            position: absolute;
+        & .decorationLine {
             top: 100px;
             left: 0;
         }

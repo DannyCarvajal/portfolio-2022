@@ -4,7 +4,7 @@ import {useScreenSize} from "../../hooks/helpers";
 // COMPONENTS
 import Piano from "../../components/creative/Piano.jsx";
 import SecretWord from "../../components/global/SecretWord";
-import AlertIndication from "../../components/global/AlertIndication";
+import CheckSecretWord from "../../components/global/CheckSecretWord";
 // STYLES
 import "./creative.scss";
 //IMAGES
@@ -12,6 +12,9 @@ import Behance from "../../assets/img/behancecontact.png";
 import BehanceArrow from "../../assets/img/behancearrow.png";
 import PlayButton from "../../assets/img/playbutton.png";
 import PlayArrow from "../../assets/img/playarrow.png";
+// CONSTANTS
+import {COLORS} from "../../constants/colors";
+import {PUZZLES_TEXT} from "../../constants/puzzlesText";
 
 const Creative = () => {
 	const {playPianoHandler, pianoKeyHandler, notePlayingInMelody, turn, level} = usePianoLogic();
@@ -19,14 +22,10 @@ const Creative = () => {
 	// SEE SCREEN SIZE
 	const [, isDesktop] = useScreenSize();
 
-	const bgColorAnimation = "linear-gradient(180deg, rgba(202, 116, 194, 0.9)  0%, rgba(53, 56, 65, 0.45) 100%)";
-
 	return (
 		<section className="creativeSection">
 			<div className="creativeSection__descContainer">
-				<p className="descContainer__desc">
-					We can solve problems in different ways. But is not until <i>design</i> comes in that the inner magic comes out. I have a serious interest in <b>UI/UX</b> design because it can be a differential for a remarkable experience.
-				</p>
+				<p className="descContainer__desc" dangerouslySetInnerHTML={{__html: PUZZLES_TEXT["creativity"]}}></p>
 			</div>
 			<div className="creativeSection__behance">
 				<h2 className="behance__desc">Check out my behance</h2>
@@ -44,9 +43,8 @@ const Creative = () => {
 				<img src={PlayArrow} alt="arrow" className="play__arrow" />
 			</div>
 			<Piano pianoGuess={pianoKeyHandler} notePlayingInMelody={notePlayingInMelody} />
-			{/* ANIMATION OF SOLVED */}
-			{turn === "Melody solved" && <AlertIndication found="ig" message="Two letters Found" bgcolor={bgColorAnimation} />}
-			<SecretWord secretLetter={turn === "Melody solved" || !isDesktop ? "ig" : ""} bgcolor={bgColorAnimation} letterColor="white" animation={turn === "Melody solved" ? "animation" : ""} />
+			<CheckSecretWord solved={turn === "Melody solved"} letter="ig" bgColor="PIANO" />
+			<SecretWord secretLetter={!isDesktop ? "ig" : ""} bgcolor={COLORS["PIANO"]} letterColor="white" animation="" />
 		</section>
 	);
 };

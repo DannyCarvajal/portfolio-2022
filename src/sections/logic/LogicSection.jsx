@@ -1,41 +1,35 @@
 import {useState} from "react";
 // COMPONENTS
 import Rubik from "../../components/rubiks/Rubik";
-import ClickIndication from "../../components/global/ClickIndication";
 import CheckSecretWord from "../../components/global/CheckSecretWord";
+import ClickIndication from "../../components/global/ClickIndication";
+import DecorationLine from "../../components/global/DecorationLine";
 // STYLES
 import "./logicSection.scss";
-// IMAGES
-import DecorationLine from "../../assets/img/decorationLine.png";
+// CONSTANTS
+import {PUZZLES_TEXT} from "../../constants/puzzlesText";
+// LOGIC
+import useRubikLogic, {useRubikAnimations} from "../../hooks/rubiksLogic";
 
 const Logic = () => {
-	const [isRubikSolved, setIsRubikSolved] = useState(["f", "f", "f"]);
-	const checkIfSolved = () => !isRubikSolved.includes("f");
-	const messageIndication = checkIfSolved() ? "Rubik's solved!" : "Fill all the squares with blue";
+	const {columnColors, solutions, messageIndication, isRubikSolved, setIsRubikSolved, checkIfSolved} = useRubikLogic();
 
-	// COLOR PUZZLE ARRAYS
-	const columnColors = [
-		["b", "g", "b", "b", "b", "g"],
-		["g", "b", "b", "b", "g", "b"],
-		["g", "b", "g", "b", "b", "b"],
-	];
-
-	const solutions = [2, 1, 3];
+	// INDICATION MESSAGE
+	const {gameStarted, showTipHandler} = useRubikAnimations();
+	const showIndicationMessage = gameStarted.current ? "showAnimation" : "";
 
 	return (
 		<section className="logicSection">
-			<img src={DecorationLine} alt="decorationLine" className="logicSection__decorationLine" />
-			<p className="logicSection__story">
-				When I was a child I met the Rubik's cube. I really liked it and my interest for <i>puzzles</i> leaded me to try chess and got me closer to the <b>Front-End</b> development. Your portfolio is like your home and that's why you'll find in here some tiny puzzles that will give you letters to find the secret word. Good luck....
-			</p>
+			<DecorationLine />
+			<p className="logicSection__story" dangerouslySetInnerHTML={{__html: PUZZLES_TEXT["logic"]}}></p>
 			<div className="logicSection__puzzleContainer">
 				{columnColors.map((column, index) => (
-					<Rubik colorArray={columnColors[index]} index={index} isRubikSolved={isRubikSolved} setIsRubikSolved={setIsRubikSolved} solution={solutions[index]} rubikItemClass="colorItem" key={column.join("")} />
+					<Rubik columnColors={column} index={index} isRubikSolved={isRubikSolved} setIsRubikSolved={setIsRubikSolved} Columnsolution={solutions[index]} key={column.join("")} showTip={showTipHandler} />
 				))}
 				<ClickIndication message="Press the arrows.." containerClass="logicIndicator" elemntsToFade=".downArrowRubik" />
 			</div>
-			<p className="logicSection__tip">{messageIndication}</p>
-			<CheckSecretWord solved={checkIfSolved()} letter="r" color="DARK_BLUE" />
+			<p className={`logicSection__tip ${showIndicationMessage}`}>{messageIndication}</p>
+			<CheckSecretWord solved={checkIfSolved()} letter="r" bgColor="SMOOTH_BLACK" />
 		</section>
 	);
 };

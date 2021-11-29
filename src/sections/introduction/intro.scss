@@ -51,3 +51,15 @@
     }
 
 }
+
+@media (min-width:1400px) {
+    /* big landscape tablets, laptops, and desktops */
+
+    .introSection {
+
+        &__oliverimage {
+            width: 400px;
+        }
+    }
+
+}

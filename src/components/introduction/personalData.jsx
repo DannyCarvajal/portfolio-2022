@@ -7,7 +7,7 @@ import Role from "./Role";
 const PersonalData = ({role, message}) => {
 	return (
 		<div className="personalData">
-			<p className="personalData__message">{message}</p>
+			<p className="personalData__message" dangerouslySetInnerHTML={{__html: message}}></p>
 			<Role role={role} />
 			<div className="personalData__contact">
 				<ContactLinks contacts={["linkedin", "github", "email"]} color="WHITE" size="medium" />

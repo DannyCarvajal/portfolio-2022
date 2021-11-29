@@ -1,8 +1,8 @@
 import "./alertIndication.scss";
 
-const AlertIndication = ({found, message, bgcolor}) => {
+const AlertIndication = ({found, message, bgStyles}) => {
 	return (
-		<div className="alertIndication" style={{background: bgcolor}}>
+		<div className="alertIndication" style={bgStyles}>
 			<div className="alertIndication__letterFound">{found}</div>
 			<p className="alertIndication__message">{message}</p>
 		</div>
