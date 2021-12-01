@@ -1,0 +1,27 @@
+.projectButtons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+
+    & button {
+        width: 45px;
+        height: 45px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    & i {
+        color: rgba(70, 72, 80, 1);
+        font-size: 1.5rem;
+
+
+    }
+}

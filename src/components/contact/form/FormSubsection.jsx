@@ -1,7 +1,7 @@
-import {useRef, useState} from "react";
+import { useRef, useState } from "react";
 // LOGIC
 import sendEmail from "./formLogic";
-import {useScreenSize} from "../../../hooks/helpers";
+import { useScreenSize } from "../../../hooks/additionals";
 // COMPONENTS
 import NamesCharacter from "./NamesCharacter";
 import SubmitButton from "./SubmitButton";
@@ -9,7 +9,7 @@ import Message from "../../global/Message";
 // STYLES
 import "./formSubsection.scss";
 
-const FormSubsection = ({secretFound}) => {
+const FormSubsection = ({ secretFound }) => {
 	const form = useRef();
 	// STATUS : "", SENDING, SENTSUCESS, SENTERROR, ALREADYSENT
 	const [statusEmail, setStatusEmail] = useState("");
@@ -26,17 +26,34 @@ const FormSubsection = ({secretFound}) => {
 		}
 	};
 
-	const titleFormSection = secretFound === true && !isDesktop ? "Contact me to start building experiences together" : "Let’s talk..";
+	const titleFormSection =
+		secretFound === true && !isDesktop
+			? "Contact me to start building experiences together"
+			: "Let’s talk..";
 
 	return (
 		<div className="formSubsection">
 			<h2 className="formSubsection__title">{titleFormSection}</h2>
 			<NamesCharacter name={firstName} />
-			<form action="#" className="form" onSubmit={e => sendEmail(e, form, setStatusEmail)} ref={form}>
+			<form
+				action="#"
+				className="form"
+				onSubmit={e => sendEmail(e, form, setStatusEmail)}
+				ref={form}
+			>
 				<div className="inputContainer">
 					<label htmlFor="name">Name</label>
 					<i className="fas fa-user"></i>
-					<input type="text" name="name" id="name" className="form__name" autoComplete="off" required onChange={e => setFullName(e.target.value)} onBlur={handleName} />
+					<input
+						type="text"
+						name="name"
+						id="name"
+						className="form__name"
+						autoComplete="off"
+						required
+						onChange={e => setFullName(e.target.value)}
+						onBlur={handleName}
+					/>
 				</div>
 
 				<div className="inputContainer">
@@ -50,9 +67,21 @@ const FormSubsection = ({secretFound}) => {
 				</div>
 				<SubmitButton />
 				{statusEmail === "SENDING" && <Message bgColor="#70C6E6" message="Sending..." />}
-				{statusEmail === "ALREADYSENT" && <Message bgColor="#e6de70" message="You already sent an email. Please send it from your mail app" />}
-				{statusEmail === "SENTSUCCESS" && <Message bgColor="#4DD5C0" message="Email succesfully sent!" />}
-				{statusEmail === "SENTERROR" && <Message bgColor="#F44336" message="Couldn't send email! Please send it from your mail app" />}
+				{statusEmail === "ALREADYSENT" && (
+					<Message
+						bgColor="#e6de70"
+						message="You already sent an email. Please send it from your mail app"
+					/>
+				)}
+				{statusEmail === "SENTSUCCESS" && (
+					<Message bgColor="#4DD5C0" message="Email succesfully sent!" />
+				)}
+				{statusEmail === "SENTERROR" && (
+					<Message
+						bgColor="#F44336"
+						message="Couldn't send email! Please send it from your mail app"
+					/>
+				)}
 			</form>
 		</div>
 	);
