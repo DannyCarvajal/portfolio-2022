@@ -1,6 +1,6 @@
 import "./secretword.scss";
 
-const Secretword = ({secretLetter, bgStyles, letterColor, animation = ""}) => {
+const SecretWord = ({secretLetter, bgStyles, letterColor, animation = ""}) => {
 	return (
 		<div className={"secretWord " + animation} style={bgStyles}>
 			<p className="secretWord__vowel" style={{color: letterColor}}>
@@ -9,4 +9,4 @@ const Secretword = ({secretLetter, bgStyles, letterColor, animation = ""}) => {
 		</div>
 	);
 };
-export default Secretword;
+export default SecretWord;

@@ -1,4 +1,3 @@
-import {useState} from "react";
 // COMPONENTS
 import Rubik from "../../components/rubiks/Rubik";
 import CheckSecretWord from "../../components/global/CheckSecretWord";
