@@ -1,0 +1,53 @@
+        // PLAY BUTTON 
+
+        .pianoGame {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Reenie Beanie', cursive;
+
+            & p {
+                font-size: 2.7rem;
+                font-weight: 500;
+            }
+
+            & .pianoGame__indications {
+                max-width: 20vw;
+                min-width: 230px;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            &__playlevels {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 100px;
+
+                .levels {
+                    position: relative;
+                    bottom: 20px;
+                }
+
+                .play {
+                    cursor: pointer;
+                    width: 100px;
+                    height: 100px;
+
+                }
+            }
+
+            .play__arrow {
+                position: absolute;
+                left: 140px;
+                transform: rotate(-10deg);
+                bottom: -50px;
+            }
+
+        }

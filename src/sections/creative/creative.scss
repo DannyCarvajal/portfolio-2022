@@ -1,5 +1,4 @@
 .creativeSection {
-    // min-height: 100vh;
     background: linear-gradient(106.17deg, #F98DEE 0%, #00a78b 100%);
     opacity: 0.9;
     overflow: hidden;
@@ -28,33 +27,6 @@
             color: black;
             padding: 50px 0px;
         }
-    }
-
-
-    // BEHANCE CONTACT
-
-    &__behance {
-        width: 100vw;
-        display: flex;
-        justify-content: space-evenly;
-        font-family: 'Reenie Beanie', cursive;
-        font-size: 30px;
-        color: white;
-        margin: 30px 0;
-
-        .behance__desc {
-            max-width: 40vw;
-            display: grid;
-            place-items: center;
-            font-weight: 500;
-        }
-
-
-        .behance__arrow {
-            display: none;
-        }
-
-
     }
 
     // PIANO
@@ -147,27 +119,10 @@
 
         // BEHANCE CONTACT
 
-        &__behance {
-            width: 300px;
-            position: absolute;
+        & .behanceContact {
             top: 40%;
             right: 10px;
-
-            & a {
-                position: relative;
-                bottom: -100px;
-            }
-
-            & .behance__arrow {
-                display: block;
-                position: absolute;
-                right: 45px;
-                top: 30px;
-                transform: rotate(-10deg);
-            }
-
         }
-
 
         // PIANO
         .piano {
@@ -180,7 +135,6 @@
             top: 420px;
         }
 
-
         // PLAY BUTTON 
 
         .pianoGame {
@@ -191,58 +145,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Reenie Beanie', cursive;
-
-            & p {
-                font-size: 2.7rem;
-                font-weight: 500;
-            }
-
-            & .pianoGame__indications {
-                max-width: 20vw;
-                min-width: 230px;
-                min-height: 150px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-
-            &__playlevels {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                top: 100px;
-
-                .levels {
-                    position: relative;
-                    bottom: 20px;
-                }
-
-                .play {
-                    cursor: pointer;
-                    width: 100px;
-                    height: 100px;
-
-                }
-            }
-
-            .play__arrow {
-                position: absolute;
-                left: 140px;
-                transform: rotate(-10deg);
-                bottom: -50px;
-            }
 
         }
 
         .alertIndication {
             margin-top: 12%;
         }
-
-
     }
-
 }
