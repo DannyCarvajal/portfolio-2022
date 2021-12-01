@@ -1,17 +1,18 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 // STYLES
 import "./wordSubsection.scss";
-// IMAGES
-import FinalLogo from "../../../assets/img/finallogo.png";
 
-const WordSubsection = ({secretFound, setSecretFound}) => {
+const WordSubsection = ({ secretFound, setSecretFound }) => {
 	const [guessSecret, setGuessSecret] = useState("");
 
 	useEffect(() => {
 		if (guessSecret === "right") setSecretFound("PENDING");
-	}, [guessSecret]);
+	}, [guessSecret, setSecretFound]);
 
-	const gradient = secretFound === true ? " linear-gradient(179.4deg, rgba(247, 249, 251, 0.8) 3.83%, rgba(255, 255, 255, 0) 98.27%)" : "linear-gradient(180.26deg, #00161E 36.68%, rgba(79, 124, 140, 0.46) 98.53%)";
+	const gradient =
+		secretFound === true
+			? " linear-gradient(179.4deg, rgba(247, 249, 251, 0.8) 3.83%, rgba(255, 255, 255, 0) 98.27%)"
+			: "linear-gradient(180.26deg, #00161E 36.68%, rgba(79, 124, 140, 0.46) 98.53%)";
 
 	const finalArrowHandler = () => {
 		setSecretFound(true);
@@ -28,7 +29,15 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 		if (!secretFound) {
 			return (
 				<div className="wordSubsection__guessContainer">
-					<input type="text" className="wordSubsection__word" id="secretWord" maxLength="5" value={guessSecret} onChange={e => setGuessSecret(e.target.value.toLowerCase())} autoFocus={guessSecret.length > 0} />
+					<input
+						type="text"
+						className="wordSubsection__word"
+						id="secretWord"
+						maxLength="5"
+						value={guessSecret}
+						onChange={e => setGuessSecret(e.target.value.toLowerCase())}
+						autoFocus={guessSecret.length > 0}
+					/>
 					<label htmlFor="secretWord" className="indication">
 						Write the secret word
 					</label>
@@ -56,7 +65,7 @@ const WordSubsection = ({secretFound, setSecretFound}) => {
 	};
 
 	return (
-		<div className="wordSubsection" style={{background: gradient}}>
+		<div className="wordSubsection" style={{ background: gradient }}>
 			<div className="wordSubsection__gradientBg"></div>
 			<InnerWordSection />
 		</div>

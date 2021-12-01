@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 
 const useRubikLogic = () => {
 	// RUBIKS HAS 3 COLUMNS AND EACH ONB HAS 3 COLORS
@@ -25,15 +25,15 @@ const useRubikLogic = () => {
 };
 
 const useRubikColumnLogic = (colorArray, index, isRubikSolved, setIsRubikSolved, solution) => {
-	const [colors, setColors] = useState(colorArray);
+	// const [colors, setColors] = useState(colorArray);
 	const [currentPosition, setCurrentPosition] = useState(0);
 	const colorHandler = position => {
 		// RESTART COUNTER
 		if (position === 8) setCurrentPosition(0);
 		// RETURN FIRST COLORS AGAIN IF REACHED LAST COLOR
-		if (position >= 6) return colors[position - 6];
+		if (position >= 6) return colorArray[position - 6];
 
-		return colors[position];
+		return colorArray[position];
 	};
 
 	const updatePosition = () => setCurrentPosition(currentPosition + 1);
@@ -77,4 +77,4 @@ const useRubikAnimations = () => {
 };
 
 export default useRubikLogic;
-export {useRubikAnimations, useRubikColumnLogic};
+export { useRubikAnimations, useRubikColumnLogic };

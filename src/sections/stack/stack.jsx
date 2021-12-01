@@ -47,7 +47,6 @@ const Stack = () => {
 					isSlidePuzzleSolved={isSlidePuzzleSolved}
 					isTabletOrDesktop={isTabletOrDesktop}
 				/>
-				;
 			</section>
 		);
 	}
