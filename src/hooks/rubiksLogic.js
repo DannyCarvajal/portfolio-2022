@@ -4,6 +4,7 @@ const useRubikLogic = () => {
 	// RUBIKS HAS 3 COLUMNS AND EACH ONB HAS 3 COLORS
 	const [isRubikSolved, setIsRubikSolved] = useState(["f", "f", "f"]);
 	const checkIfSolved = () => !isRubikSolved.includes("f");
+
 	const messageIndication = checkIfSolved() ? "Rubik's solved!" : "Fill all the squares with blue";
 
 	// COLOR PUZZLE ARRAYS WITH THE SOLUTION (WHEN BLUE COLOR IS FILLED)
@@ -25,7 +26,6 @@ const useRubikLogic = () => {
 };
 
 const useRubikColumnLogic = (colorArray, index, isRubikSolved, setIsRubikSolved, solution) => {
-	// const [colors, setColors] = useState(colorArray);
 	const [currentPosition, setCurrentPosition] = useState(0);
 	const colorHandler = position => {
 		// RESTART COUNTER
@@ -38,6 +38,12 @@ const useRubikColumnLogic = (colorArray, index, isRubikSolved, setIsRubikSolved,
 
 	const updatePosition = () => setCurrentPosition(currentPosition + 1);
 	useEffect(() => {
+		// IF RUBIKS IS SOLVED, KEEP IT SOLVED
+		if (!isRubikSolved.includes("f")) {
+			console.log("you were solved");
+			return;
+		}
+
 		const newStatus = [...isRubikSolved];
 		if (currentPosition === solution) {
 			newStatus[index] = "t";
