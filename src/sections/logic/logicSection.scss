@@ -128,3 +128,26 @@
     }
 
 }
+
+@media (min-width:1400px) {
+
+    /* tablet, landscape iPad */
+    .logicSection {
+
+        &__story {
+            font-size: 1.5rem;
+        }
+
+        &__tip {
+            top: 17%;
+            font-size: 2.5rem;
+            right: 50px;
+
+        }
+
+        &__puzzleContainer {
+            transform: scale(1.15);
+            margin-bottom: 30px;
+        }
+    }
+}

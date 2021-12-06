@@ -23,3 +23,22 @@
 
     }
 }
+
+
+@media (min-width:1400px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .techContainer__minitech {
+
+        .minitech__imgContainer {
+            width: 90px;
+            height: 90px;
+
+        }
+
+        &>.minitech__title {
+            font-size: 1.4rem;
+
+        }
+    }
+}

@@ -29,6 +29,7 @@ const ContactLinks = ({ contacts, color, size }) => {
 						target="_blank"
 						rel="noreferrer"
 						aria-label={contact}
+						className="contactLink"
 					>
 						<i className={fontAwesomeIcon} style={iconStyles}></i>
 					</a>

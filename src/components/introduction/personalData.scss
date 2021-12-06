@@ -72,4 +72,13 @@
 
 }
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    .personalData {
+
+        &__message {
+            font-size: 3rem;
+            line-height: 55px
+        }
+    }
+
+}

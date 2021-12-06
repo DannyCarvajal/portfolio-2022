@@ -35,7 +35,7 @@ const ProjectItem = ({
 					<h3 className="title">{name}</h3>
 					<SpecificLinks contacts={iconLinks} color="WHITE" size="mini" />
 				</div>
-				<p>{description}</p>
+				<p className="projectItem__descriptionText">{description}</p>
 			</div>
 			<div className="projectItem__imgContainer">
 				{links[1] ? <ImageAnchor /> : <img src={image} alt={name} className="projectimage" />}

@@ -9,7 +9,6 @@
     position: relative;
 
     // DESCRIPTION
-
     &__descContainer {
         width: 100vw;
         margin-top: 30px;
@@ -136,7 +135,6 @@
         }
 
         // PLAY BUTTON 
-
         .pianoGame {
             display: block;
             position: absolute;
@@ -151,5 +149,32 @@
         .alertIndication {
             margin-top: 12%;
         }
+    }
+}
+
+
+@media (min-width:1400px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .creativeSection {
+
+        // DESCRIPTION
+        &__descContainer {
+
+            .descContainer__desc {
+                font-size: 1.5rem;
+            }
+        }
+
+        // PIANO 
+        .piano {
+            transform: scale(2) rotate(20deg) translateX(-170px) translateY(10px);
+        }
+
+        .pianoGame {
+            left: 30%;
+            width: 380px;
+        }
+
     }
 }

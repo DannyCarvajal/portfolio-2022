@@ -45,21 +45,17 @@ const WordSubsection = ({ secretFound, setSecretFound }) => {
 			);
 		} else if (secretFound === "PENDING") {
 			return (
-				<>
-					<div className="arrowContainer" onClick={finalArrowHandler}>
-						<i className="fas fa-arrow-up"></i>
-						<h2 className="pressme">Press me!</h2>
-					</div>
-				</>
+				<div className="arrowContainer" onClick={finalArrowHandler}>
+					<i className="fas fa-arrow-up"></i>
+					<h2 className="pressme">Press me!</h2>
+				</div>
 			);
 		} else {
 			return (
-				<>
-					<div className="arrowContainer" onClick={goBackHandler}>
-						<i className="fas fa-arrow-down"></i>
-						<h2 className="pressme">Go back?</h2>
-					</div>
-				</>
+				<div className="arrowContainer" onClick={goBackHandler}>
+					<i className="fas fa-arrow-down"></i>
+					<h2 className="pressme">Go back?</h2>
+				</div>
 			);
 		}
 	};
