@@ -13,3 +13,18 @@
         font-size: 1.7rem;
     }
 }
+
+@media (min-width:1400px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .sign {
+        &__name {
+            font-size: 1.3rem;
+        }
+
+        & i {
+            font-size: 2rem;
+        }
+    }
+
+}

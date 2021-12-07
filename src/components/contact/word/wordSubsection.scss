@@ -136,9 +136,16 @@
     /* big landscape tablets, laptops, and desktops */
     .wordSubsection {
         width: 50vw;
-
-
     }
 
 
+}
+
+@media screen and (min-width: 1400px) {
+    .wordSubsection>.wordSubsection__guessContainer {
+
+        & .indication {
+            font-size: 1.7rem;
+        }
+    }
 }

@@ -74,3 +74,18 @@
 
 
 }
+
+
+@media (min-width:1400px) {
+
+    /* big landscape tablets, laptops, and desktops */
+    .namesCharacter {
+
+        &__title {
+            &>h3 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+}
