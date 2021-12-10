@@ -1,11 +1,11 @@
 // COMPONENTS
-import MainLogo from "../global/MainLogo";
-import ContactLinks from "../global/ContactLinks";
+import MainLogo from "components/global/MainLogo";
+import ContactLinks from "components/global/ContactLinks";
 // STYLES
 import "./finalphrase.scss";
 // IMAGES
-import DannyDesktop from "../../assets/img/dannydesktop.webp";
-import DannyMobile from "../../assets/img/dannymobile.webp";
+import DannyDesktop from "assets/img/dannydesktop.webp";
+import DannyMobile from "assets/img/dannymobile.webp";
 const FinalPhrase = () => {
 	return (
 		<section className="finalPhrase">
@@ -17,7 +17,8 @@ const FinalPhrase = () => {
 			</picture>
 			<blockquote>
 				<p className="phrase">
-					“If you are having fun you’re <br /> probably in the <span className="wordFound">right</span> way”
+					“If you are having fun you’re <br /> probably in the{" "}
+					<span className="wordFound">right</span> way”
 				</p>
 				<cite className="name">Danny Carvajal</cite>
 				<ContactLinks contacts={["linkedin", "github", "email"]} color="WHITE" />

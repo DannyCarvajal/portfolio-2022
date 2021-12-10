@@ -1,6 +1,6 @@
 // COMPONENTS
-import ContactLinks from "../global/ContactLinks";
-import Sign from "../global/Sign";
+import ContactLinks from "components/global/ContactLinks";
+import Sign from "components/global/Sign";
 // STYLES
 import "./footer.scss";
 

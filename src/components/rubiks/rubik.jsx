@@ -1,12 +1,25 @@
 // STYLES
 import "./rubik.scss";
 // LOGIC
-import {useRubikAnimations, useRubikColumnLogic} from "../../hooks/rubiksLogic";
+import { useRubikAnimations, useRubikColumnLogic } from "hooks/rubiksLogic";
 
-const Rubik = ({columnColors, index, isRubikSolved, setIsRubikSolved, Columnsolution, showTip}) => {
-	const {colorHandler, currentPosition, updatePosition} = useRubikColumnLogic(columnColors, index, isRubikSolved, setIsRubikSolved, Columnsolution);
+const Rubik = ({
+	columnColors,
+	index,
+	isRubikSolved,
+	setIsRubikSolved,
+	Columnsolution,
+	showTip,
+}) => {
+	const { colorHandler, currentPosition, updatePosition } = useRubikColumnLogic(
+		columnColors,
+		index,
+		isRubikSolved,
+		setIsRubikSolved,
+		Columnsolution
+	);
 
-	const {activeArrow, arrowAnimation} = useRubikAnimations();
+	const { activeArrow, arrowAnimation } = useRubikAnimations();
 
 	return (
 		<div className={`rubiksColumn ${activeArrow ? "active" : ""}`}>

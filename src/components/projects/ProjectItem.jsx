@@ -1,10 +1,10 @@
 // 	STYLES
 import "./projectitem.scss";
 // COMPONENTS
-import SpecificLinks from "../global/SpecificLinks";
+import SpecificLinks from "components/global/SpecificLinks";
 import ProjectButtons from "./ProjectButtons";
 // LOGIC
-import projectItemHandlers from "../../hooks/projectItem";
+import projectItemHandlers from "hooks/projectItem";
 
 const ProjectItem = ({
 	image,

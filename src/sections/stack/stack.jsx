@@ -1,7 +1,7 @@
 import { useState } from "react";
 // LOGIC
-import slidePuzzleGenerator from "../../hooks/slidePuzzleGenerator.js";
-import useSlidePuzzleAdditionals, { useScreenSize } from "../../hooks/additionals";
+import slidePuzzleGenerator from "hooks/slidePuzzleGenerator.js";
+import useSlidePuzzleAdditionals, { useScreenSize } from "hooks/additionals";
 // COMPONENTS
 import TabletDesktopStack from "./TabletDesktopStack";
 import MobileStack from "./MobileStack";

@@ -1,9 +1,9 @@
 import { useState } from "react";
 // COMPONENTS
-import ProjectItem from "../../components/projects/ProjectItem";
+import ProjectItem from "components/projects/ProjectItem";
 // LOGIC
-import { useScreenSize } from "../../hooks/additionals";
-import PROJECT_LIST from "../../constants/projectList";
+import { useScreenSize } from "hooks/additionals";
+import PROJECT_LIST from "constants/projectList";
 // STYLES
 import "./projects.scss";
 

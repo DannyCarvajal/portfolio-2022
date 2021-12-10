@@ -2,7 +2,7 @@
 import AlertIndication from "./AlertIndication";
 import SecretWord from "./SecretWord";
 // CONSTANTS
-import { COLORS } from "../../constants/colors";
+import { COLORS } from "constants/colors";
 
 const CheckSecretWord = ({ solved, letter, letterColor = "white", bgColor }) => {
 	const message = letter.length === 1 ? "Letter found" : "Two letters found";

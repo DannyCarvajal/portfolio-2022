@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
 // LOGIC
 import sendEmail from "./formLogic";
-import { useScreenSize } from "../../../hooks/additionals";
+import { useScreenSize } from "hooks/additionals";
 // COMPONENTS
 import NamesCharacter from "./NamesCharacter";
 import SubmitButton from "./SubmitButton";
-import Message from "../../global/Message";
+import Message from "components/global/Message";
 // STYLES
 import "./formSubsection.scss";
 

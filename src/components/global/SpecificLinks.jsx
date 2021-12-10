@@ -1,11 +1,11 @@
 // STYLES
 import "./contactlinks.scss";
 // CONSTANTS
-import { CONTACT_TYPES } from "../../constants/contactTypes";
-import { COLORS } from "../../constants/colors";
-import { SIZES } from "../../constants/contactlinksizes";
+import { CONTACT_TYPES } from "constants/contactTypes";
+import { COLORS } from "constants/colors";
+import { SIZES } from "constants/contactlinksizes";
 // HELPERS
-import { keyBasedOnHour } from "../../helpers/globalFunctions";
+import { keyBasedOnHour } from "helpers/globalFunctions";
 
 const ContactLinks = ({ contacts, size }) => {
 	const iconSize = SIZES[size];

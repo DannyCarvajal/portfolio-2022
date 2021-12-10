@@ -1,17 +1,17 @@
 // LOGIC
-import usePianoLogic from "../../hooks/pianoLogic";
-import { useScreenSize } from "../../hooks/additionals";
+import usePianoLogic from "hooks/pianoLogic";
+import { useScreenSize } from "hooks/additionals";
 // COMPONENTS
-import Piano from "../../components/creative/Piano.jsx";
-import SecretWord from "../../components/global/SecretWord";
-import CheckSecretWord from "../../components/global/CheckSecretWord";
-import BehanceContact from "../../components/creative/BehanceContact";
-import PianoIndications from "../../components/creative/PianoIndications";
+import Piano from "components/creative/Piano.jsx";
+import SecretWord from "components/global/SecretWord";
+import CheckSecretWord from "components/global/CheckSecretWord";
+import BehanceContact from "components/creative/BehanceContact";
+import PianoIndications from "components/creative/PianoIndications";
 // STYLES
 import "./creative.scss";
 // CONSTANTS
-import { COLORS } from "../../constants/colors";
-import { PUZZLES_TEXT } from "../../constants/puzzlesText";
+import { COLORS } from "constants/colors";
+import { PUZZLES_TEXT } from "constants/puzzlesText";
 
 const Creative = () => {
 	const { playPianoHandler, pianoKeyHandler, notePlayingInMelody, turn, level } = usePianoLogic();

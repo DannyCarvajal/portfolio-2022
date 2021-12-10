@@ -1,17 +1,17 @@
 // LOGIC
-import { technologies, additionalTechnologies } from "../../constants/listOfTechnologies.js";
+import { technologies, additionalTechnologies } from "constants/listOfTechnologies.js";
 // COMPONENTS
-import TechCard from "../../components/stack/TechCard";
-import TechCircle from "../../components/stack/TechCircleCard";
-import SecretWord from "../../components/global/SecretWord";
-import PuzzleInteraction from "../../components/stack/PuzzleInteraction";
-import CheckSecretWord from "../../components/global/CheckSecretWord";
+import TechCard from "components/stack/TechCard";
+import TechCircle from "components/stack/TechCircleCard";
+import SecretWord from "components/global/SecretWord";
+import PuzzleInteraction from "components/stack/PuzzleInteraction";
+import CheckSecretWord from "components/global/CheckSecretWord";
 // STYLES
 import "./stack.scss";
 // IMAGES
-import Thunder from "../../assets/img/thunder.svg";
+import Thunder from "assets/img/thunder.svg";
 // CONSTANTS
-import { COLORS } from "../../constants/colors";
+import { COLORS } from "constants/colors";
 
 const MobileStack = ({ mixPuzzleAgain, isSlidePuzzleSolved, isTabletOrDesktop }) => {
 	return (

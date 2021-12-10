@@ -1,7 +1,7 @@
 import "./behanceContact.scss";
 //IMAGES
-import Behance from "../../assets/img/behancecontact.png";
-import BehanceArrow from "../../assets/img/behancearrow.png";
+import Behance from "assets/img/behancecontact.png";
+import BehanceArrow from "assets/img/behancearrow.png";
 
 const CreativeContact = () => {
 	return (

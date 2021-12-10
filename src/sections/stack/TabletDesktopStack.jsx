@@ -1,12 +1,12 @@
 // COMPONENTS
-import SlidePuzzle from "../../components/stack/SlidePuzzle";
-import SecretWord from "../../components/global/SecretWord";
-import PuzzleInteraction from "../../components/stack/PuzzleInteraction";
+import SlidePuzzle from "components/stack/SlidePuzzle";
+import SecretWord from "components/global/SecretWord";
+import PuzzleInteraction from "components/stack/PuzzleInteraction";
 // STYLES
 import "./stack.scss";
 // IMAGES
-import Queen from "../../assets/img/queen.svg";
-import ChessBg from "../../assets/img/chessbg.svg";
+import Queen from "assets/img/queen.svg";
+import ChessBg from "assets/img/chessbg.svg";
 
 const TabletDesktopStack = ({
 	setIsSlidePuzzleSolved,

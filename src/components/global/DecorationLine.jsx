@@ -1,5 +1,5 @@
 // IMAGES
-import gradientLine from "../../assets/img/decorationLine.png";
+import gradientLine from "assets/img/decorationLine.png";
 // STYLES
 import "./decorationLine.scss";
 

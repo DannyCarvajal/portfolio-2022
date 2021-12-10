@@ -1,12 +1,12 @@
 // COMPONENTS
-import PersonalData from "../../components/introduction/PersonalData.jsx";
-import MainLogo from "../../components/global/MainLogo.jsx";
+import PersonalData from "components/introduction/PersonalData.jsx";
+import MainLogo from "components/global/MainLogo.jsx";
 // STYLES
 import "./intro.scss";
 // IMAGES
-import Danny from "../../assets/img/olivercircle.png";
+import Danny from "assets/img/olivercircle.png";
 // CONSTANTS
-import {PUZZLES_TEXT} from "../../constants/puzzlesText";
+import { PUZZLES_TEXT } from "constants/puzzlesText";
 
 const Intro = () => {
 	return (

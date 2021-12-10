@@ -1,10 +1,10 @@
 //IMAGES
-import PlayButton from "../../assets/img/playbutton.png";
-import PlayArrow from "../../assets/img/playarrow.png";
+import PlayButton from "assets/img/playbutton.png";
+import PlayArrow from "assets/img/playarrow.png";
 // STYLES
 import "./pianoIndications.scss";
 
-const PianoIndications = ({turn, level, playPianoHandler}) => {
+const PianoIndications = ({ turn, level, playPianoHandler }) => {
 	return (
 		<div className="pianoGame">
 			<p className="pianoGame__indications">{turn}</p>

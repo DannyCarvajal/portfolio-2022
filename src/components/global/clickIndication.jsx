@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./clickIndication.scss";
 // IMAGES
-import HandIndicator from "../../assets/img/handindicator.png";
+import HandIndicator from "assets/img/handindicator.png";
 
 const ClickIndication = ({ message, containerClass, elemntsToFade }) => {
 	const [show, setshow] = useState("");
