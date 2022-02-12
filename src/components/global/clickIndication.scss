@@ -1,35 +1,41 @@
 .clickIndication {
-    border-radius: 5px;
+  font-family: "Reenie Beanie", cursive;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 220px;
+  height: 40px;
+
+  border-radius: 5px;
+  border: 1px solid #353841;
+
+  color: #353841;
+
+  &__msg {
+    font-size: 1.8rem;
+  }
+
+  &__hand {
+    width: 30px;
     position: absolute;
-    width: 220px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #353841;
-    color: white;
-
-    &__hand {
-        width: 30px;
-        position: absolute;
-        top: -30px;
-        right: -30px;
-
-
-    }
+    top: -30px;
+    right: -30px;
+  }
 }
 
 .fadeOut {
-    animation: hide 2s forwards ease-in-out;
+  animation: hide 2s forwards ease-in-out;
 }
 
 @keyframes hide {
+  0% {
+    opacity: 1;
+  }
 
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }

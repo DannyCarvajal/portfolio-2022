@@ -1,72 +1,70 @@
 .alertIndication {
-    pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: appearFromBottom 4s ease-in-out forwards;
+
+  &__letterFound {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 12rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  &__message {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    width: 250px;
-    height: 250px;
-    border-radius: 30px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: appearFromBottom 4s ease-in-out forwards;
+    font-size: 1.2rem;
+    bottom: 25px;
+    font-weight: 300;
+    color: white;
+  }
+
+  @keyframes appearFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+
+    40% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    70% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  /* tablet, landscape iPad */
+
+  .alertIndication {
+    width: 370px;
+    height: 370px;
 
     &__letterFound {
-        font-family: 'Reenie Beanie', cursive;
-        font-size: 12rem;
-        margin-bottom: 20px;
-        color: white;
+      font-size: 17rem;
     }
 
     &__message {
-        position: absolute;
-        font-size: 1.2rem;
-        bottom: 25px;
-        font-weight: 300;
-        color: white;
+      font-size: 1.5rem;
     }
-
-    @keyframes appearFromBottom {
-        0% {
-            opacity: 0;
-            transform: translateY(10%);
-        }
-
-        40% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        70% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-}
-
-
-@media (min-width:700px) {
-    /* tablet, landscape iPad */
-
-    .alertIndication {
-
-        width: 370px;
-        height: 370px;
-
-        &__letterFound {
-            font-size: 17rem;
-        }
-
-        &__message {
-            font-size: 1.5rem;
-        }
-    }
-
+  }
 }

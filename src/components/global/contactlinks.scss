@@ -1,29 +1,31 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .contactLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
-    & a {
-        text-decoration: none;
-    }
+  & a {
+    text-decoration: none;
+  }
 
-    & i {
-        color: $darkBlue;
-        font-size: 2rem;
+  & i {
+    font-size: 2rem;
+
+    &:hover {
+      opacity: 0.9 !important;
     }
+  }
 }
 
-@media (min-width:1400px) {
+@media (min-width: 1400px) {
+  /* tablet, landscape iPad */
+  .contactLinks > .contactLink > i {
+    font-size: 3rem !important;
+  }
 
-    /* tablet, landscape iPad */
-    .contactLinks>.contactLink>i {
-        font-size: 3rem !important;
-    }
-
-    .contactLinks>.contactLinkSpecific>i {
-        font-size: 2.5rem !important;
-    }
+  .contactLinks > .contactLinkSpecific > i {
+    font-size: 2.5rem !important;
+  }
 }

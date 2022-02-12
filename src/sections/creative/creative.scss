@@ -1,180 +1,188 @@
 .creativeSection {
-    background: linear-gradient(106.17deg, #F98DEE 0%, #00a78b 100%);
-    opacity: 0.9;
-    overflow: hidden;
+  background: linear-gradient(106.17deg, #f98dee 0%, #00a78b 100%);
+  opacity: 0.9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  // DESCRIPTION
+  &__descContainer {
+    width: 100vw;
+    margin-top: 30px;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    background: linear-gradient(
+      268.54deg,
+      #ffffff 2.16%,
+      rgba(255, 255, 255, 0.4) 108.67%
+    );
+
+    .descContainer__desc {
+      font-size: 20px;
+      font-weight: 300;
+      max-width: 90vw;
+      text-align: justify;
+      color: black;
+      padding: 50px 0px;
+    }
+  }
+
+  // PIANO
+  .piano {
+    padding-bottom: 30px;
+    opacity: 0.7;
+  }
+
+  .whiteKey {
+    width: 40px;
+    height: 180px;
+    border: 0.1px solid #e2dcdc4b;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+
+    &.active {
+      background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
+    }
+  }
+
+  .blackKey {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 100px;
+
+    &.active {
+      background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
+    }
+
+    &.cs {
+      top: 0;
+      left: 25px;
+    }
+
+    &.ds {
+      top: 0;
+      left: 68px;
+    }
+
+    &.fs {
+      top: 0;
+      left: 140px;
+    }
+
+    &.gs {
+      top: 0;
+      left: 185px;
+    }
+
+    &.as {
+      top: 0;
+      left: 227px;
+    }
+  }
+
+  // PLAY BUTTON
+
+  .pianoGame {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  /* big landscape tablets, laptops, and desktops */
+  .creativeSection {
+    min-height: 700px;
+    background: linear-gradient(
+      106.17deg,
+      #f98dee -3.5%,
+      #8461b3 42.49%,
+      #00c3a4 72.82%,
+      #353841 102.41%
+    );
+    opacity: 1;
     position: relative;
 
     // DESCRIPTION
     &__descContainer {
-        width: 100vw;
-        margin-top: 30px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(268.54deg, #FFFFFF 2.16%, rgba(255, 255, 255, 0.4) 108.67%);
+      height: 250px;
 
-        .descContainer__desc {
-            font-size: 20px;
-            font-weight: 300;
-            max-width: 90vw;
-            text-align: justify;
-            color: black;
-            padding: 50px 0px;
-        }
+      .descContainer__desc {
+        margin-left: 50%;
+        max-width: 40vw;
+      }
+    }
+
+    // BEHANCE CONTACT
+
+    & .behanceContact {
+      top: 40%;
+      right: 10px;
     }
 
     // PIANO
     .piano {
-        padding-bottom: 30px;
-        opacity: 0.7;
+      padding-bottom: 0px;
+      transform: scale(1.9) rotate(22deg) translateX(-150px);
+      opacity: 1;
+      box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.781);
+
+      position: absolute;
+      top: 420px;
     }
 
-    .whiteKey {
-        width: 40px;
-        height: 180px;
-        border: 0.1px solid #e2dcdc4b;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        cursor: pointer;
-
-        &.active {
-            background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
-
-        }
-    }
-
-    .blackKey {
-        cursor: pointer;
-        position: absolute;
-        width: 30px;
-        height: 100px;
-
-
-        &.active {
-            background: linear-gradient(106.17deg, #008ea7 0%, #00a78b 100%);
-        }
-
-
-        &.cs {
-            top: 0;
-            left: 25px;
-        }
-
-        &.ds {
-            top: 0;
-            left: 68px;
-        }
-
-        &.fs {
-            top: 0;
-            left: 140px;
-        }
-
-        &.gs {
-            top: 0;
-            left: 185px;
-        }
-
-        &.as {
-            top: 0;
-            left: 227px;
-        }
-
-
-    }
-
-    // PLAY BUTTON 
-
+    // PLAY BUTTON
     .pianoGame {
-        display: none;
+      display: block;
+      position: absolute;
+      top: 2%;
+      left: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    .alertIndication {
+      margin-top: 12%;
+    }
+  }
 }
 
-
-@media (min-width:1100px) {
-
-    /* big landscape tablets, laptops, and desktops */
-    .creativeSection {
-        min-height: 700px;
-        background: linear-gradient(106.17deg, #F98DEE -3.5%, #8461B3 42.49%, #00C3A4 72.82%, #353841 102.41%);
-        opacity: 1;
-        position: relative;
-
-        // DESCRIPTION
-        &__descContainer {
-            height: 250px;
-
-            .descContainer__desc {
-                margin-left: 50%;
-                max-width: 40vw;
-            }
-        }
-
-        // BEHANCE CONTACT
-
-        & .behanceContact {
-            top: 40%;
-            right: 10px;
-        }
-
-        // PIANO
-        .piano {
-            padding-bottom: 0px;
-            transform: scale(1.9) rotate(22deg) translateX(-150px);
-            opacity: 1;
-            box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.781);
-
-            position: absolute;
-            top: 420px;
-        }
-
-        // PLAY BUTTON 
-        .pianoGame {
-            display: block;
-            position: absolute;
-            top: 2%;
-            left: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .alertIndication {
-            margin-top: 12%;
-        }
+@media (min-width: 1400px) {
+  /* big landscape tablets, laptops, and desktops */
+  .creativeSection {
+    // DESCRIPTION
+    &__descContainer {
+      .descContainer__desc {
+        font-size: 1.5rem;
+      }
     }
+
+    // PIANO
+    .piano {
+      transform: scale(2) rotate(20deg) translateX(-170px) translateY(10px);
+    }
+  }
 }
 
-
-@media (min-width:1400px) {
-
-    /* big landscape tablets, laptops, and desktops */
-    .creativeSection {
-
-        // DESCRIPTION
-        &__descContainer {
-
-            .descContainer__desc {
-                font-size: 1.5rem;
-            }
-        }
-
-        // PIANO 
-        .piano {
-            transform: scale(2) rotate(20deg) translateX(-170px) translateY(10px);
-        }
-
-        .pianoGame {
-            left: 30%;
-            width: 380px;
-        }
-
+@media (min-width: 1620px) {
+  .creativeSection {
+    .pianoGame {
+      left: 30%;
+      width: 380px;
     }
+  }
+}
+
+@media (min-width: 1900px) {
+  .creativeSection {
+    .pianoGame {
+      left: 35vw;
+    }
+  }
 }
