@@ -1,153 +1,137 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .logicSection {
-    min-height: 80vh;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__story {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    width: 90vw;
+    margin-top: 120px;
+    max-width: 700px;
+  }
+
+  &__puzzleContainer {
+    min-height: 300px;
+    width: 400px;
+    height: fit-content;
+    padding: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 240px;
     position: relative;
+  }
+
+  & .decorationLine {
+    top: 60px;
+    left: -120px;
+  }
+
+  .solvedAnimation {
+    transition: 1s ease-in-out;
+    transform: rotate(360deg);
+  }
+
+  // HAND INDICATOR
+  .clickIndication {
+    bottom: 80px;
+    left: 22%;
+    pointer-events: none;
+
+    &__hand {
+      display: none;
+    }
+  }
+
+  // INSTRUCTION TO SOLVE
+  &__tip {
+    opacity: 0;
+    position: absolute;
+    bottom: 80px;
+    font-family: "Reenie Beanie";
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 700px) {
+  /* tablet, landscape iPad */
+
+  .logicSection {
+    min-height: unset;
 
     &__story {
-        font-size: 20px;
-        font-weight: 300;
-        text-align: justify;
-        width: 90vw;
-        margin-top: 120px;
-        max-width: 700px;
+      font-size: 1.3rem;
     }
+  }
+}
 
-    &__puzzleContainer {
-        min-height: 300px;
-        width: 400px;
-        height: fit-content;
-        padding: 50px;
-        display: flex;
-        justify-content: space-evenly;
-        padding-bottom: 240px;
-        position: relative;
+@media (min-width: 1000px) {
+  /* tablet, landscape iPad */
+  .logicSection {
+    min-height: 700px;
+    max-height: 900px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__story {
+      max-width: 45vw;
+
+      margin: 0;
     }
 
     & .decorationLine {
-        top: 60px;
-        left: -120px;
+      top: 100px;
+      left: 0;
     }
 
+    &__puzzleContainer {
+      width: 320px;
 
-    .solvedAnimation {
-        transition: 1s ease-in-out;
-        transform: rotate(360deg);
+      padding: 0px;
     }
 
     // HAND INDICATOR
     .clickIndication {
-        bottom: 80px;
-        left: 22%;
-        pointer-events: none;
+      left: -170px;
+      bottom: -100px;
 
-        &__hand {
-            display: none;
-        }
+      &__hand {
+        display: block;
+      }
     }
 
     // INSTRUCTION TO SOLVE
     &__tip {
-        opacity: 0;
-        position: absolute;
-        bottom: 80px;
-        font-family: 'Reenie Beanie';
-        font-size: 1.9rem;
+      position: absolute;
+      width: 400px;
+      top: -50px;
+      font-size: 2rem;
+      height: 50px;
+      text-align: center;
     }
+  }
 }
 
-@media (min-width:700px) {
-    /* tablet, landscape iPad */
-
-    .logicSection {
-        min-height: unset;
-
-        &__story {
-            font-size: 1.3rem;
-        }
-
-    }
-}
-
-
-
-@media (min-width:1000px) {
-
-    /* tablet, landscape iPad */
-    .logicSection {
-        min-height: 700px;
-        max-height: 900px;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        &__story {
-            max-width: 45vw;
-            margin: 0 auto;
-        }
-
-        & .decorationLine {
-            top: 100px;
-            left: 0;
-        }
-
-        &__puzzleContainer {
-            padding: 40px;
-            margin-right: 50px;
-            margin-bottom: 20px;
-        }
-
-        // HAND INDICATOR
-        .clickIndication {
-            left: -130px;
-            bottom: -120px;
-
-
-            &__hand {
-                display: block;
-            }
-        }
-
-        // INSTRUCTION TO SOLVE
-        &__tip {
-            position: absolute;
-            width: 400px;
-            top: 22%;
-            font-size: 2rem;
-            right: 50px;
-            height: 50px;
-            text-align: center;
-        }
-
-
-
+@media (min-width: 1400px) {
+  /* tablet, landscape iPad */
+  .logicSection {
+    &__story {
+      font-size: 1.5rem;
     }
 
-}
-
-@media (min-width:1400px) {
-
-    /* tablet, landscape iPad */
-    .logicSection {
-
-        &__story {
-            font-size: 1.5rem;
-        }
-
-        &__tip {
-            top: 17%;
-            font-size: 2.5rem;
-            right: 50px;
-
-        }
-
-        &__puzzleContainer {
-            transform: scale(1.15);
-            margin-bottom: 30px;
-        }
+    &__tip {
+      font-size: 2.5rem;
     }
+
+    &__puzzleContainer {
+      transform: scale(1.15);
+    }
+  }
 }

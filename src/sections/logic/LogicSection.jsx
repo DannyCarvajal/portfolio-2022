@@ -48,10 +48,10 @@ const Logic = () => {
           containerClass="logicIndicator"
           elemntsToFade=".downArrowRubik"
         />
+        <p className={`logicSection__tip ${showIndicationMessage}`}>
+          {messageIndication}
+        </p>
       </div>
-      <p className={`logicSection__tip ${showIndicationMessage}`}>
-        {messageIndication}
-      </p>
       <CheckSecretWord
         solved={checkIfSolved()}
         letter="r"
