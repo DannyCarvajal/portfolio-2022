@@ -57,6 +57,12 @@ const Logic = () => {
         letter="r"
         bgColor="SMOOTH_BLACK"
       />
+      {checkIfSolved() && (
+        <p className="logicSection__boxIndication">
+          <i class="fas fa-lightbulb"></i>
+          Your letters found will appear in small boxes
+        </p>
+      )}
     </section>
   );
 };

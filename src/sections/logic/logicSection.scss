@@ -57,6 +57,10 @@
     font-family: "Reenie Beanie";
     font-size: 1.9rem;
   }
+
+  &__boxIndication {
+    display: none;
+  }
 }
 
 @media (min-width: 700px) {
@@ -111,10 +115,48 @@
     &__tip {
       position: absolute;
       width: 400px;
-      top: -50px;
+      top: -60px;
       font-size: 2rem;
       height: 50px;
       text-align: center;
+    }
+
+    &__boxIndication {
+      animation: fromBottom 5s ease-in-out forwards;
+
+      display: block;
+
+      position: absolute;
+      bottom: 35px;
+      left: 120px;
+
+      padding: 20px;
+
+      border: 1px solid black;
+      border-radius: 4px;
+
+      & .fa-lightbulb {
+        margin-right: 10px;
+
+        color: #ffd7b8;
+      }
+    }
+
+    @keyframes fromBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      50% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 }
@@ -127,7 +169,7 @@
     }
 
     &__tip {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
 
     &__puzzleContainer {
