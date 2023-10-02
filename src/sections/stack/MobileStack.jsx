@@ -8,7 +8,7 @@ import TechCard from "components/stack/techCard";
 import TechCircle from "components/stack/techCircleCard";
 import SecretWord from "components/global/secretword";
 import PuzzleInteraction from "components/stack/puzzleInteraction";
-import CheckSecretWord from "components/global/checkSecretWord";
+import CheckSecretWord from "components/global/CheckSecretWord";
 // STYLES
 import "./stack.scss";
 // IMAGES

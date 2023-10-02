@@ -1,6 +1,6 @@
 // COMPONENTS
 import Rubik from "components/rubiks/rubik";
-import CheckSecretWord from "components/global/checkSecretWord";
+import CheckSecretWord from "components/global/CheckSecretWord";
 import ClickIndication from "components/global/clickIndication";
 import DecorationLine from "components/global/DecorationLine";
 // STYLES
