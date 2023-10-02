@@ -4,7 +4,7 @@ import { useState } from "react";
 import Intro from "sections/introduction/Intro";
 import Logic from "sections/logic/LogicSection";
 import Creative from "sections/creative/Creative";
-import Stack from "sections/stack/Stack.jsx";
+import Stack from "sections/stack/Stack";
 import Projects from "sections/projects/Projects";
 import Contact from "sections/contact/Contact";
 import FinalPhrase from "components/finalPhrase/FinalPhrase";
