@@ -4,10 +4,10 @@ import {
   additionalTechnologies,
 } from "constants/listOfTechnologies.js";
 // COMPONENTS
-import TechCard from "components/stack/TechCard";
-import TechCircle from "components/stack/TechCircleCard";
+import TechCard from "components/stack/techCard";
+import TechCircle from "components/stack/techCircleCard";
 import SecretWord from "components/global/Secretword";
-import PuzzleInteraction from "components/stack/PuzzleInteraction";
+import PuzzleInteraction from "components/stack/puzzleInteraction";
 import CheckSecretWord from "components/global/CheckSecretWord";
 // STYLES
 import "./stack.scss";

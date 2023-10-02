@@ -12,34 +12,34 @@ import FinalPhrase from "components/finalPhrase/FinalPhrase";
 import "./app.scss";
 
 function App() {
-	// FALSE, PENDING, TRUE
-	const [secretFound, setSecretFound] = useState(false);
+  // FALSE, PENDING, TRUE
+  const [secretFound, setSecretFound] = useState(false);
 
-	const MainContent = () => {
-		if (secretFound === true) {
-			return (
-				<div className="AppSecret">
-					<FinalPhrase />
-				</div>
-			);
-		} else {
-			return (
-				<>
-					<Intro />
-					<Logic />
-					<Creative />
-					<Stack />
-					<Projects />
-				</>
-			);
-		}
-	};
-	return (
-		<div className="App">
-			<MainContent />
-			<Contact secretFound={secretFound} setSecretFound={setSecretFound} />
-		</div>
-	);
+  const MainContent = () => {
+    if (secretFound === true) {
+      return (
+        <div className="AppSecret">
+          <FinalPhrase />
+        </div>
+      );
+    } else {
+      return (
+        <>
+          <Intro />
+          <Logic />
+          <Creative />
+          <Stack />
+          <Projects />
+        </>
+      );
+    }
+  };
+  return (
+    <div className="App">
+      <MainContent />
+      <Contact secretFound={secretFound} setSecretFound={setSecretFound} />
+    </div>
+  );
 }
 
 export default App;

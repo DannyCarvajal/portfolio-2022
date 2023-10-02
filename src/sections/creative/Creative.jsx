@@ -2,7 +2,7 @@
 import usePianoLogic from "hooks/pianoLogic";
 import { useScreenSize } from "hooks/additionals";
 // COMPONENTS
-import Piano from "components/creative/Piano.jsx";
+import Piano from "components/creative/piano.jsx";
 import SecretWord from "components/global/Secretword";
 import CheckSecretWord from "components/global/CheckSecretWord";
 import BehanceContact from "components/creative/BehanceContact";

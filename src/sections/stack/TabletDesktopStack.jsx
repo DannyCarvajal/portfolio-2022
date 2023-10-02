@@ -1,7 +1,7 @@
 // COMPONENTS
-import SlidePuzzle from "components/stack/SlidePuzzle";
+import SlidePuzzle from "components/stack/slidePuzzle";
 import SecretWord from "components/global/Secretword";
-import PuzzleInteraction from "components/stack/PuzzleInteraction";
+import PuzzleInteraction from "components/stack/puzzleInteraction";
 // STYLES
 import "./stack.scss";
 // IMAGES
