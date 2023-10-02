@@ -1,6 +1,6 @@
 // COMPONENTS
-import AlertIndication from "./AlertIndication";
-import SecretWord from "./Secretword";
+import AlertIndication from "./alertIndication";
+import SecretWord from "./secretword";
 // CONSTANTS
 import { COLORS } from "constants/colors";
 

@@ -1,7 +1,7 @@
 // COMPONENTS
 import PuzzleItem from "./slidePuzzleItem.jsx";
 import SlideItemBg from "./slideItemBg.jsx";
-import ClickIndication from "components/global/ClickIndication.jsx";
+import ClickIndication from "components/global/clickIndication.jsx";
 // STYLES
 import "./slidepuzzle.scss";
 

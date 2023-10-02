@@ -6,9 +6,9 @@ import {
 // COMPONENTS
 import TechCard from "components/stack/techCard";
 import TechCircle from "components/stack/techCircleCard";
-import SecretWord from "components/global/Secretword";
+import SecretWord from "components/global/secretword";
 import PuzzleInteraction from "components/stack/puzzleInteraction";
-import CheckSecretWord from "components/global/CheckSecretWord";
+import CheckSecretWord from "components/global/checkSecretWord";
 // STYLES
 import "./stack.scss";
 // IMAGES

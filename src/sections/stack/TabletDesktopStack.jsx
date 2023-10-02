@@ -1,6 +1,6 @@
 // COMPONENTS
 import SlidePuzzle from "components/stack/slidePuzzle";
-import SecretWord from "components/global/Secretword";
+import SecretWord from "components/global/secretword";
 import PuzzleInteraction from "components/stack/puzzleInteraction";
 // STYLES
 import "./stack.scss";

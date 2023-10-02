@@ -3,8 +3,8 @@ import usePianoLogic from "hooks/pianoLogic";
 import { useScreenSize } from "hooks/additionals";
 // COMPONENTS
 import Piano from "components/creative/piano.jsx";
-import SecretWord from "components/global/Secretword";
-import CheckSecretWord from "components/global/CheckSecretWord";
+import SecretWord from "components/global/secretword";
+import CheckSecretWord from "components/global/checkSecretWord";
 import BehanceContact from "components/creative/BehanceContact";
 import PianoIndications from "components/creative/PianoIndications";
 // STYLES
